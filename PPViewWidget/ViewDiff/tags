@@ -1,0 +1,106 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CGIHTTPRequestHandler	web/server.py	/^from CGIHTTPServer import CGIHTTPRequestHandler $/;"	i
+CmpInfoByPatch	Cmp/CmpResp.py	/^    def CmpInfoByPatch(self):$/;"	m	class:RespCmp
+CmpInfoByQid	Cmp/CmpResp.py	/^    def CmpInfoByQid(self):$/;"	m	class:RespCmp
+CmpResp	Cmp/run.py	/^import CmpResp$/;"	i
+DBHandle	Cmp/CmpResp.py	/^from DBHandle import DBHandle$/;"	i
+DBHandle	DBHandle.py	/^class DBHandle():$/;"	c
+DBHandle	web/cgi-bin/index.py	/^from DBHandle import DBHandle$/;"	i
+DictCursor	DBHandle.py	/^from MySQLdb.cursors import DictCursor$/;"	i
+ExecuteSQL	DBHandle.py	/^	def ExecuteSQL(self,sql, args = None):$/;"	m	class:DBHandle
+ExecuteSQLs	DBHandle.py	/^	def ExecuteSQLs(self,sql, args = None):$/;"	m	class:DBHandle
+GetConnection	DBHandle.py	/^	def GetConnection(self):$/;"	m	class:DBHandle
+HTTPServer	web/server.py	/^from BaseHTTPServer import HTTPServer $/;"	i
+LoadReqAndRespByPatch	Cmp/CmpResp.py	/^    def LoadReqAndRespByPatch(self):$/;"	m	class:RespCmp
+LoadReqAndRespByQid	Cmp/CmpResp.py	/^    def LoadReqAndRespByQid(self):$/;"	m	class:RespCmp
+Loadhost	Cmp/conf.py	/^Loadhost='10.10.107.246'$/;"	v
+Loadpasswd	Cmp/conf.py	/^Loadpasswd='miaoji1109'$/;"	v
+Loaduser	Cmp/conf.py	/^Loaduser='reader'$/;"	v
+MySQLdb	Cmp/CmpResp.py	/^import MySQLdb$/;"	i
+MySQLdb	Cmp/run.py	/^import MySQLdb$/;"	i
+MySQLdb	DBHandle.py	/^import MySQLdb$/;"	i
+OptionParser	Cmp/hget.py	/^from optparse import OptionParser$/;"	i
+QueryBySQL	DBHandle.py	/^	def QueryBySQL(self,sql, args = None):$/;"	m	class:DBHandle
+RespCmp	Cmp/CmpResp.py	/^class RespCmp:$/;"	c
+Storedb	Cmp/conf.py	/^Storedb="viewdiff"$/;"	v
+Storehost	Cmp/conf.py	/^Storehost='10.10.169.10'$/;"	v
+Storepasswd	Cmp/conf.py	/^Storepasswd="miaoji1109"$/;"	v
+Storeuser	Cmp/conf.py	/^Storeuser="root"$/;"	v
+__CmpInfo	Cmp/CmpResp.py	/^    def __CmpInfo(self,cmp1resp,cmp2resp):$/;"	m	class:RespCmp	file:
+__CmpProduct	Cmp/CmpResp.py	/^    def __CmpProduct(self,cmp1resp,cmp2resp):$/;"	m	class:RespCmp	file:
+__CmpView	Cmp/CmpResp.py	/^    def __CmpView(self,cmp1_view,cmp2_view,cidx):$/;"	m	class:RespCmp	file:
+__CmpViewDate	Cmp/CmpResp.py	/^    def __CmpViewDate(self,env,days,cidx):$/;"	m	class:RespCmp	file:
+__Fetch	Cmp/CmpResp.py	/^    def __Fetch(self):    #拿两个环境的response$/;"	m	class:RespCmp	file:
+__GetResp	Cmp/CmpResp.py	/^    def __GetResp(self):   #预处理一下error_id 和response,并存结果difference(ByPatch)$/;"	m	class:RespCmp	file:
+__Load	Cmp/CmpResp.py	/^    def __Load(self):$/;"	m	class:RespCmp	file:
+__Parsereq	Cmp/CmpResp.py	/^    def __Parsereq(self):$/;"	m	class:RespCmp	file:
+__Query	Cmp/CmpResp.py	/^    def __Query(self,qid,env,req):     #拿req 打不同的服务器$/;"	m	class:RespCmp	file:
+__Store	Cmp/CmpResp.py	/^    def __Store(self):      #将对比环境的各自响应信息存库$/;"	m	class:RespCmp	file:
+__init__	Cmp/CmpResp.py	/^    def __init__(self,kDate="",kType="",kNum="",kQid="",kCmp1="",kCmp2="",Mail="",fresh=""):$/;"	m	class:RespCmp
+__init__	DBHandle.py	/^	def __init__(self,host,user,pwd,db):$/;"	m	class:DBHandle
+__mymail	Cmp/CmpResp.py	/^    def __mymail(self,Dict):$/;"	m	class:RespCmp	file:
+cgi	web/cgi-bin/index.py	/^import cgi,cgitb$/;"	i
+cgitb	web/cgi-bin/index.py	/^import cgi,cgitb$/;"	i
+commands	Cmp/CmpResp.py	/^import commands$/;"	i
+conf	Cmp/CmpResp.py	/^import conf$/;"	i
+conn	web/cgi-bin/index.py	/^conn=DBHandle('10.10.169.10','root','','test')$/;"	v
+datetime	Cmp/CmpResp.py	/^import datetime$/;"	i
+datetime	Cmp/run.py	/^import datetime$/;"	i
+delete	Cmp/CmpResp.py	/^    delete=0$/;"	v	class:RespCmp
+do	DBHandle.py	/^	def do(self,sql,args = None):$/;"	m	class:DBHandle
+env	web/cgi-bin/index.py	/^env=form.getvalue('env')$/;"	v
+env_resp	web/cgi-bin/index.py	/^env_resp="%s_resp"%env$/;"	v
+form	web/cgi-bin/index.py	/^form =cgi.FieldStorage()$/;"	v
+httpd	web/server.py	/^httpd = HTTPServer(server_address, CGIHTTPRequestHandler)$/;"	v
+io	Cmp/CmpResp.py	/^import io$/;"	i
+io	Cmp/run.py	/^import io$/;"	i
+ip	Cmp/hget.py	/^    ip = "10.10.135.140"$/;"	v
+json	Cmp/CmpResp.py	/^import json$/;"	i
+json	Cmp/hget.py	/^import json$/;"	i
+lines	Cmp/hget.py	/^        lines = qf.readlines()$/;"	v
+load	web/cgi-bin/index.py	/^load=form.getvalue('load')$/;"	v
+main	Cmp/run.py	/^def main():$/;"	f
+mysql_db	DBHandle.py	/^	mysql_db = 'tmp'$/;"	v	class:DBHandle
+mysql_host	DBHandle.py	/^	mysql_host = '127.0.0.1'$/;"	v	class:DBHandle
+mysql_pwd	DBHandle.py	/^	mysql_pwd = 'miaoji@2014!'$/;"	v	class:DBHandle
+mysql_user	DBHandle.py	/^	mysql_user = 'root'$/;"	v	class:DBHandle
+new_line	Cmp/hget.py	/^        new_line=re.sub(r'qid=(\\d+)',str_re,lines[0])$/;"	v
+new_qid	Cmp/hget.py	/^        new_qid = int(round(time.time() * 1000))$/;"	v
+optparse	Cmp/CmpResp.py	/^import optparse$/;"	i
+optparse	Cmp/run.py	/^import optparse$/;"	i
+os	Cmp/CmpResp.py	/^import os$/;"	i
+os	Cmp/CmpResp.py	/^import os.path$/;"	i
+os	Cmp/run.py	/^import os$/;"	i
+parser	Cmp/hget.py	/^    parser = OptionParser()$/;"	v
+path	Cmp/CmpResp.py	/^import os.path$/;"	i
+ports_legal	Cmp/hget.py	/^    ports_legal = set()$/;"	v
+qid	web/cgi-bin/index.py	/^qid=form.getvalue('qid')$/;"	v
+qid_dic	Cmp/CmpResp.py	/^    qid_dic=dict()$/;"	v	class:RespCmp
+r	Cmp/hget.py	/^        r = requests.get(url)$/;"	v
+re	Cmp/CmpResp.py	/^import re$/;"	i
+re	Cmp/hget.py	/^import re$/;"	i
+re	Cmp/run.py	/^import re$/;"	i
+req	web/cgi-bin/index.py	/^    req=conn.do(sqlstr)$/;"	v
+requests	Cmp/CmpResp.py	/^import requests$/;"	i
+requests	Cmp/hget.py	/^import requests$/;"	i
+resp	Cmp/hget.py	/^            resp = json.loads(r.text)$/;"	v
+resp	web/cgi-bin/index.py	/^    resp=conn.do(sqlstr)$/;"	v
+result	Cmp/hget.py	/^            result = [ line +"\\n" for line in result ]$/;"	v
+result	Cmp/hget.py	/^            result = list()$/;"	v
+result	web/cgi-bin/index.py	/^    result=req[0]["ori_req"]$/;"	v
+result	web/cgi-bin/index.py	/^    result=resp[0][env_resp]$/;"	v
+server_address	web/server.py	/^server_address=('',8000) $/;"	v
+sys	Cmp/CmpResp.py	/^import sys$/;"	i
+sys	Cmp/hget.py	/^import sys$/;"	i
+sys	Cmp/run.py	/^import sys$/;"	i
+sys	web/cgi-bin/index.py	/^import sys$/;"	i
+time	Cmp/CmpResp.py	/^import time$/;"	i
+time	Cmp/hget.py	/^import time$/;"	i
+time	Cmp/run.py	/^import time$/;"	i
+url	Cmp/hget.py	/^        url="http:\/\/"+ip+":"+options.port+"\/"+new_line$/;"	v
+urllib2	Cmp/CmpResp.py	/^import urllib2$/;"	i

@@ -1,0 +1,12 @@
+#数据库信息
+db_host=10.10.151.68
+db_user=reader
+db_passwd=miaoji1109
+db_basedata=ppview
+
+#表信息
+
+test_cost_table=ppview_chat_test_cost_stats
+online_cost_table=ppview_chat_online_cost_stats
+
+#
