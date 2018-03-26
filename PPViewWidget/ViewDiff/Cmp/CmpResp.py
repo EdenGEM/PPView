@@ -220,7 +220,6 @@ class RespCmp:
             sqlstr+="values(%s,%s,%s,%s,%s,%s,%s,%s)"
         else:
             sqlstr+="values(%s,%s,%s,%s,%s,%s,%s)"
-        print "sql: ",sqlstr
         args=[]
         if self.fresh==1:
             T=(self.kDate,\
