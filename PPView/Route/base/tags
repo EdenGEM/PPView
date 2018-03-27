@@ -1,0 +1,1886 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADJUST_FINE	Utils.h	/^	ADJUST_FINE,  \/\/ 微调 <=10min$/;"	e	enum:ADJUST_LEVEL
+ADJUST_FIX	Utils.h	/^	ADJUST_FIX,  \/\/ 可调整至(1 - fix)，普通情况下压缩比$/;"	e	enum:ADJUST_LEVEL
+ADJUST_HALF_HOUR	Utils.h	/^	ADJUST_HALF_HOUR$/;"	e	enum:ADJUST_LEVEL
+ADJUST_LEVEL	Utils.h	/^enum ADJUST_LEVEL {$/;"	g
+ADJUST_MIN	Utils.h	/^	ADJUST_MIN,  \/\/ 特别紧迫情况压缩比，可调整至mincost$/;"	e	enum:ADJUST_LEVEL
+ADJUST_NO	Utils.h	/^	ADJUST_NO,  \/\/ 不可调整$/;"	e	enum:ADJUST_LEVEL
+ATTACH_TYPE_ALL	define.h	/^const int ATTACH_TYPE_ALL = ATTACH_TYPE_LUNCH | ATTACH_TYPE_SUPPER;$/;"	v
+ATTACH_TYPE_LUNCH	define.h	/^const int ATTACH_TYPE_LUNCH = RESTAURANT_TYPE_LUNCH;$/;"	v
+ATTACH_TYPE_NULL	define.h	/^const int ATTACH_TYPE_NULL = RESTAURANT_TYPE_NULL;$/;"	v
+ATTACH_TYPE_SUPPER	define.h	/^const int ATTACH_TYPE_SUPPER = RESTAURANT_TYPE_SUPPER;$/;"	v
+AddKeyNode	KeyNodeBuilder.cpp	/^int KeyNodeBuilder::AddKeyNode(Json::Value& req, BasePlan* basePlan) {$/;"	f	class:KeyNodeBuilder
+AddTrafShow	PathPerfect.cpp	/^int PathPerfect::AddTrafShow(BasePlan* basePlan) {$/;"	f	class:PathPerfect
+Alloc	PlaceInfoAlloc.cpp	/^int PlaceInfoAlloc::Alloc(BasePlan* basePlan) {$/;"	f	class:PlaceInfoAlloc
+AnalyzeLine	PrivateConstData.cpp	/^int PrivateConfig::AnalyzeLine(const std::string& line){$/;"	f	class:PrivateConfig
+Append	PathView.cpp	/^int PathView::Append(const LYPlace* place, const std::string& arvID, const std::string& deptID, const TrafficItem* arriveTraffic, const TrafficItem* departTraffic, time_t arriveTime, time_t departTime, const DurS* durS, const std::string& trafDate, time_t openTime, time_t closeTime, double cost, int type, double timeZone) {$/;"	f	class:PathView
+Append	PathView.cpp	/^int PathView::Append(const PlanItem* item) {$/;"	f	class:PathView
+AvailDurLevel	BasePlan.cpp	/^int BasePlan::AvailDurLevel() {$/;"	f	class:BasePlan
+BackHotelTimeChange	PathUtil.cpp	/^int PathUtil::BackHotelTimeChange(PathView & path)$/;"	f	class:PathUtil
+BagCost	LogDump.h	/^	BagCost() {$/;"	f	class:BagCost
+BagCost	LogDump.h	/^class BagCost {$/;"	c
+BagParam	BagParam.h	/^class BagParam {$/;"	c
+BagStat	LogDump.h	/^	BagStat() {$/;"	f	class:BagStat
+BagStat	LogDump.h	/^class BagStat {$/;"	c
+BaseCost	LogDump.h	/^	BaseCost() {$/;"	f	class:BaseCost
+BaseCost	LogDump.h	/^class BaseCost {$/;"	c
+BasePlan	BasePlan.cpp	/^BasePlan::BasePlan() {$/;"	f	class:BasePlan
+BasePlan	BasePlan.h	/^class BasePlan {$/;"	c
+BaseStat	LogDump.h	/^	BaseStat() {$/;"	f	class:BaseStat
+BaseStat	LogDump.h	/^class BaseStat {$/;"	c
+BlockBuilder	KeyNodeBuilder.h	/^class BlockBuilder {$/;"	c
+BuildBlock	KeyNodeBuilder.cpp	/^int BlockBuilder::BuildBlock(Json::Value& req, BasePlan* basePlan) {$/;"	f	class:BlockBuilder
+BuildKeyNode	KeyNodeBuilder.cpp	/^int KeyNodeBuilder::BuildKeyNode(Json::Value& req, BasePlan* basePlan) {$/;"	f	class:KeyNodeBuilder
+BuildKeyNodeAll	KeyNodeBuilder.cpp	/^int KeyNodeBuilder::BuildKeyNodeAll(Json::Value& req, BasePlan* basePlan) {$/;"	f	class:KeyNodeBuilder
+CDATA_PREFIX_CD	define.h	/^const std::string CDATA_PREFIX_CD = "CD:";$/;"	v
+CDATA_PREFIX_JD	define.h	/^const std::string CDATA_PREFIX_JD = "JD:";$/;"	v
+CDATA_PREFIX_PI	define.h	/^const std::string CDATA_PREFIX_PI = "PI:";$/;"	v
+CDATA_PREFIX_TI	define.h	/^const std::string CDATA_PREFIX_TI = "TI:";$/;"	v
+CITYPLACES	PrivateConstData.h	/^	typedef std::tr1::unordered_map<std::string, std::tr1::unordered_set<std::string> > CITYPLACES;$/;"	t	class:PrivateConstData
+CITY_LAST_TIME	define.h	5;"	d
+CROSS_NO	PathCross.h	/^	CROSS_NO, \/\/ 不交叉$/;"	e	enum:CROSS_TYPE
+CROSS_OVERLAP	PathCross.h	/^	CROSS_OVERLAP,  \/\/ 共点$/;"	e	enum:CROSS_TYPE
+CROSS_TYPE	PathCross.h	/^enum CROSS_TYPE {$/;"	g
+CROSS_YES	PathCross.h	/^	CROSS_YES$/;"	e	enum:CROSS_TYPE
+CalDistScoreCenter	DataList.cpp	/^int DataList::CalDistScoreCenter(std::vector<const ScoreNode*>& scoreNodeList, const LYPlace* &center) {$/;"	f	class:DataList
+CalDistScoreNear	DataList.cpp	/^int DataList::CalDistScoreNear(std::vector<const ScoreNode*>& scoreNodeList, std::vector<const LYPlace*>& nearPlaceList) {$/;"	f	class:DataList
+CalHotScore	DataList.cpp	/^int DataList::CalHotScore(std::vector <const ScoreNode*>& scoreNodeList) {$/;"	f	class:DataList
+CalIdel	PathUtil.cpp	/^int PathUtil::CalIdel(BasePlan* basePlan, PathView& path) {$/;"	f	class:PathUtil
+CalMiss	DataChecker.cpp	/^int DataChecker::CalMiss(BasePlan* basePlan) {$/;"	f	class:DataChecker
+CalPriceScore	DataList.cpp	/^int DataList::CalPriceScore(std::vector < const ScoreNode* >& scoreNodeList, std::vector < const HotelInfo* >& hotelInfoList) {$/;"	f	class:DataList
+CalPriceScore	DataList.cpp	/^int DataList::CalPriceScore(std::vector<const ScoreNode*>& scoreNodeList) {$/;"	f	class:DataList
+CalSphereDistCenter	DataList.cpp	/^int DataList::CalSphereDistCenter(std::vector < const LYPlace*>& userPlaceList , const LYPlace* center) {$/;"	f	class:DataList
+CalTraf	PathUtil.cpp	/^int PathUtil::CalTraf(BasePlan* basePlan, PathView& path) {$/;"	f	class:PathUtil
+CaluateSphereDist	LYConstData.cpp	/^double LYConstData::CaluateSphereDist(const LYPlace* place_a, const LYPlace* place_b) {$/;"	f	class:LYConstData
+CarStore	define.h	/^class CarStore: public LYPlace {$/;"	c
+ChangeContinueForDayOneLast3HNotPlan	KeyNodeBuilder.cpp	/^int KeyNodeBuilder::ChangeContinueForDayOneLast3HNotPlan(Json::Value& req, BasePlan* basePlan) {$/;"	f	class:KeyNodeBuilder
+ChangeTraf	RealTimeTraffic.cpp	/^int RealTimeTraffic::ChangeTraf(BasePlan* basePlan, PathView& path) {$/;"	f	class:RealTimeTraffic
+ChangeTrafPos	RealTimeTraffic.cpp	/^int RealTimeTraffic::ChangeTrafPos(BasePlan* basePlan, PathView& path) {$/;"	f	class:RealTimeTraffic
+ChangeTrafRev	RealTimeTraffic.cpp	/^int RealTimeTraffic::ChangeTrafRev(BasePlan* basePlan, PathView& path) {$/;"	f	class:RealTimeTraffic
+CheckB116	ReqChecker.cpp	/^int ReqChecker::CheckB116(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckCity	ReqChecker.cpp	/^int ReqChecker::CheckCity(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckCityInfo	ReqChecker.cpp	/^int ReqChecker::CheckCityInfo(const QueryParam& param, Json::Value& jCity, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckCityPrefer	ReqChecker.cpp	/^int ReqChecker::CheckCityPrefer(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckCoord	ToolFunc.cpp	/^int FormatChecker::CheckCoord(const std::string& coordStr) {$/;"	f	class:ToolFunc::FormatChecker
+CheckCostomTraffic	ReqChecker.cpp	/^int ReqChecker::CheckCostomTraffic(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckDate	ConstDataCheck.cpp	/^bool ConstDataCheck::CheckDate(const std::string& dateRuleStr) {$/;"	f	class:ConstDataCheck
+CheckDate	ToolFunc.cpp	/^int FormatChecker::CheckDate(const std::string& dateStr) {$/;"	f	class:ToolFunc::FormatChecker
+CheckDay	ConstDataCheck.cpp	/^bool ConstDataCheck::CheckDay(const std::string& dayRuleStr) {$/;"	f	class:ConstDataCheck
+CheckDays	ReqChecker.cpp	/^int ReqChecker::CheckDays(const QueryParam& param, Json::Value& jDays, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckFilter	ReqChecker.cpp	/^int ReqChecker::CheckFilter(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckHM	ToolFunc.cpp	/^int FormatChecker::CheckHM(const std::string& HMStr) {$/;"	f	class:ToolFunc::FormatChecker
+CheckId	ReqChecker.cpp	/^int ReqChecker::CheckId(const std::string& str) {$/;"	f	class:ReqChecker
+CheckInfo	DataChecker.cpp	/^int DataChecker::CheckInfo(BasePlan* basePlan) {$/;"	f	class:DataChecker
+CheckIntensity	ConstDataCheck.cpp	/^bool ConstDataCheck::CheckIntensity(const std::tr1::unordered_map<std::string, std::string>& labelMap, const std::string& rcmdIntensity, const std::string& intensityStr, std::string& errStr) {$/;"	f	class:ConstDataCheck
+CheckNotConfictPerCity	KeyNodeBuilder.cpp	/^int KeyNodeBuilder::CheckNotConfictPerCity(BasePlan* basePlan) {$/;"	f	class:KeyNodeBuilder
+CheckNotPlanDays	ReqChecker.cpp	/^int ReqChecker::CheckNotPlanDays(const QueryParam& param, Json::Value& jDays, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckOpenClose	ConstDataCheck.cpp	/^bool ConstDataCheck::CheckOpenClose(const std::string& openCloseStr, std::string& errStr) {$/;"	f	class:ConstDataCheck
+CheckP105	ReqChecker.cpp	/^int ReqChecker::CheckP105(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckPoiList	ReqChecker.cpp	/^int ReqChecker::CheckPoiList(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckProduct	ReqChecker.cpp	/^int ReqChecker::CheckProduct(const QueryParam& param, Json::Value& jProduct, ErrorInfo errorInfo) {$/;"	f	class:ReqChecker
+CheckProductInfo	ReqChecker.cpp	/^int ReqChecker::CheckProductInfo(const QueryParam& param, Json::Value& jProduct, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckRoute	ReqChecker.cpp	/^int ReqChecker::CheckRoute(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckS126	ReqChecker.cpp	/^int ReqChecker::CheckS126(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckS130	ReqChecker.cpp	/^int ReqChecker::CheckS130(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckSSV005	ReqChecker.cpp	/^int ReqChecker::CheckSSV005(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckSSV006	ReqChecker.cpp	/^int ReqChecker::CheckSSV006(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckSSV007	ReqChecker.cpp	/^int ReqChecker::CheckSSV007(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckSelectPois	ReqChecker.cpp	/^int ReqChecker::CheckSelectPois(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckStringFormat	ReqChecker.cpp	/^int ReqChecker::CheckStringFormat(const QueryParam& param, const std::string& str, int sType, const std::string& errStr, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckSure	ConstDataCheck.cpp	/^bool ConstDataCheck::CheckSure(const std::string& sureStr) {$/;"	f	class:ConstDataCheck
+CheckTime	ToolFunc.cpp	/^int FormatChecker::CheckTime(const std::string& timeStr) {$/;"	f	class:ToolFunc::FormatChecker
+CheckTimeRule	TimeIR.cpp	/^bool TimeIR::CheckTimeRule(const std::string &rule) {$/;"	f	class:TimeIR
+CheckTour	ReqChecker.cpp	/^int ReqChecker::CheckTour(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckTraf	DataChecker.cpp	/^int DataChecker::CheckTraf(BasePlan* basePlan, std::tr1::unordered_set<std::string>& idSet) {$/;"	f	class:DataChecker
+CheckTrafficPass	ReqChecker.cpp	/^int ReqChecker::CheckTrafficPass(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckType	ReqChecker.cpp	/^int ReqChecker::CheckType(const QueryParam& param, Json::Value& jValue, int jType, const std::string& errStr, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckType	ReqChecker.cpp	/^int ReqChecker::CheckType(const QueryParam& param, Json::Value& req, const std::string& memName, int jType, const std::string& errStr, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+CheckWeek	ConstDataCheck.cpp	/^bool ConstDataCheck::CheckWeek(const std::string& weekRuleStr) {$/;"	f	class:ConstDataCheck
+Check_date	TimeIR.cpp	/^bool TimeIR::Check_date(const Date_range &date_range, const std::string in_str) {$/;"	f	class:TimeIR
+Check_week	TimeIR.cpp	/^bool TimeIR::Check_week(const Week_range &week_range, const std::string in_str) {$/;"	f	class:TimeIR
+ChooseTraf	TrafficData.cpp	/^int TrafficData::ChooseTraf(BasePlan* basePlan, const std::string& trafKey, Json::Value& jValue, int trafPrefer, bool isRealTraf, TrafficItem* hitTrafItem) {$/;"	f	class:TrafficData
+ChooseTraf	TrafficData.cpp	/^int TrafficData::ChooseTraf(std::tr1::unordered_map<std::string, const TrafficItem*>& midMap, int trafPrefer, std::string& selectMid) {$/;"	f	class:TrafficData
+City	define.h	/^class City: public LYPlace {$/;"	c
+CityBParam	BagParam.cpp	/^CityBParam::CityBParam() {$/;"	f	class:CityBParam
+CityBParam	BagParam.h	/^	CityBParam(const CityBParam& cbP) {$/;"	f	class:CityBParam
+CityBParam	BagParam.h	/^	CityBParam(double bagWeightA,  double bagThre, int rootHeapLimit, int richHeapLimit, int dfsHeapLimit, int rootRetLimit, int richExtraDur, int richTopK, int richMissLimit) {$/;"	f	class:CityBParam
+CityBParam	BagParam.h	/^class CityBParam {$/;"	c
+CityPrefer	Prefer.h	/^	CityPrefer() {$/;"	f	class:CityPrefer
+CityPrefer	Prefer.h	/^class CityPrefer : public Prefer {$/;"	c
+Clear	define.h	/^	int Clear() {$/;"	f	class:PathScore
+ClearBlock	BasePlan.cpp	/^int BasePlan::ClearBlock() {$/;"	f	class:BasePlan
+ClearNode	Utils.cpp	/^int TimeBlock::ClearNode() {$/;"	f	class:TimeBlock
+CloseMysql	PrivateConstData.cpp	/^int PrivateConstData::CloseMysql() {\/\/配套调用$/;"	f	class:PrivateConstData
+CmpBus	PathTraffic.h	/^	static bool CmpBus(const TrafficDetail* pa, const TrafficDetail* pb) {$/;"	f	class:DetailCmp
+CmpOfDate	DataList.cpp	/^	int CmpOfDate(const Tour* plhs, const Tour* prhs) const {$/;"	f	class:TourCmp	file:
+CmpOfPrice	DataList.cpp	/^	bool CmpOfPrice(const Tour* plhs, const Tour* prhs) const {$/;"	f	class:TourCmp	file:
+CmpTaxi	PathTraffic.h	/^	static bool CmpTaxi(const TrafficDetail* pa, const TrafficDetail* pb) {$/;"	f	class:DetailCmp
+CmpTrafficStatOrder	TrafficData.cpp	/^bool TrafficData::CmpTrafficStatOrder(const TrafficDetail* A, const TrafficDetail* B) {$/;"	f	class:TrafficData
+CmpWalk	PathTraffic.h	/^	static bool CmpWalk(const TrafficDetail* pa, const TrafficDetail* pb) {$/;"	f	class:DetailCmp
+CompleteHotel	ReqParser.cpp	/^int ReqParser::CompleteHotel(const QueryParam& param, Json::Value& req, BasePlan* basePlan, int routeIdx) {$/;"	f	class:ReqParser
+ConstDataCheck	ConstDataCheck.h	/^class ConstDataCheck {$/;"	c
+ContainVector	ToolFunc.cpp	/^bool ContainVector(const std::vector<T>& ori,const std::vector<T>& dest){$/;"	f	namespace:ToolFunc
+Copy	BagParam.h	/^	int Copy(double bagWeightA, double bagThre, int rootHeapLimit, int richHeapLimit, int dfsHeapLimit, int rootRetLimit, int richExtraDur, int richTopK, int richMissLimit) {$/;"	f	class:CityBParam
+Copy	PathView.cpp	/^int PathView::Copy(const PathView& path) {$/;"	f	class:PathView
+Copy	PathView.cpp	/^int PathView::Copy(const PathView* path) {$/;"	f	class:PathView
+Copy	PathView.cpp	/^int PlanItem::Copy(const LYPlace* place, const std::string& arvID, const std::string& deptID, const TrafficItem* arriveTraffic, const TrafficItem* departTraffic, const std::string& trafDate, time_t arriveTime, time_t departTime, const DurS* durS, time_t openTime, time_t closeTime, double cost, int type, double timeZone) {$/;"	f	class:PlanItem
+Copy	PathView.cpp	/^int PlanItem::Copy(const PlanItem& item) {$/;"	f	class:PlanItem
+Copy	PathView.cpp	/^int PlanItem::Copy(const PlanItem* p) {$/;"	f	class:PlanItem
+Copy	PrivateConstData.h	/^	int Copy(const PrivateConstData* priData) {$/;"	f	class:PrivateConstData
+Copy	Utils.h	/^	int Copy(int type, int begin, int end, int time_cost, int min_time_cost) {$/;"	f	class:RestaurantTime
+Copy	define.h	/^	int Copy(const TrafficItem* pTrafItem) {$/;"	f	class:TrafficItem
+CopyAndInsert	PrivateConstData.cpp	/^int PrivateConstData::CopyAndInsert(const T* place,std::string id){$/;"	f	class:PrivateConstData
+CopyData	PrivateConstData.cpp	/^int PrivateConstData::CopyData(const PrivateConstData& priData) {$/;"	f	class:PrivateConstData
+CopyN	PathView.cpp	/^int PathView::CopyN(const PathView& path, int begIdx, int endIdx) {$/;"	f	class:PathView
+CountBit	ToolFunc.cpp	/^int CountBit(unsigned int n) {$/;"	f	namespace:ToolFunc
+Country	define.h	/^    Country() {$/;"	f	class:Country
+Country	define.h	/^    Country(const Country& country) {$/;"	f	class:Country
+Country	define.h	/^class Country {$/;"	c
+CrossDist	PathEval.cpp	/^int PathEval::CrossDist(int dist, int cross) {$/;"	f	class:PathEval
+CutPathBySegment	PathUtil.cpp	/^int PathUtil::CutPathBySegment(BasePlan* basePlan, PathView& path, std::vector<PathView*>& pathList) {$/;"	f	class:PathUtil
+Cylindrical	LYConstData.cpp	/^int Cylindrical(double latitude, double longitude, double& x, double& y) {$/;"	f
+DataChecker	DataChecker.h	/^class DataChecker {$/;"	c
+DataList	DataList.h	/^class DataList {$/;"	c
+Date_range	TimeIR.h	/^class Date_range {$/;"	c
+Date_rule	TimeIR.cpp	/^void TimeIR::Date_rule(const std::string &in_str, Rule_node &rule) {$/;"	f	class:TimeIR
+DealClashOfSpecialPois	ReqParser.cpp	/^int ReqParser::DealClashOfSpecialPois(BasePlan* basePlan, std::vector<PlaceOrder>& orderList, std::tr1::unordered_set<const LYPlace*>& delPoisSet) {$/;"	f	class:ReqParser
+DebugInfo	LogDump.h	/^class DebugInfo {$/;"	c
+DelCityLYPlace	PrivateConstData.cpp	/^int PrivateConstData::DelCityLYPlace(const LYPlace* place) {$/;"	f	class:PrivateConstData
+DelClashPois	ReqParser.cpp	/^int ReqParser::DelClashPois(BasePlan* basePlan, const PlaceOrder placeOrder, std::tr1::unordered_set<const LYPlace*>& delPoisSet) {$/;"	f	class:ReqParser
+DelFromPlaceMap	PrivateConstData.cpp	/^int PrivateConstData::DelFromPlaceMap(const LYPlace* place) {$/;"	f	class:PrivateConstData
+DelGridMapPlaceId	PrivateConstData.cpp	/^int PrivateConstData::DelGridMapPlaceId(const LYPlace* place) { \/\/删除GridMap中Id的映射 Eden$/;"	f	class:PrivateConstData
+DelLYPlace	PrivateConstData.cpp	/^int PrivateConstData::DelLYPlace(const std::string& priID,std::string ptid) {$/;"	f	class:PrivateConstData
+DelPlace	BasePlan.cpp	/^int BasePlan::DelPlace(const LYPlace* dPlace) {$/;"	f	class:BasePlan
+DelPlaceDur	Utils.cpp	/^int PlanStats::DelPlaceDur(const LYPlace* place) {$/;"	f	class:PlanStats
+DelPlaceStats	Utils.cpp	/^int PlanStats::DelPlaceStats(const LYPlace* place) {$/;"	f	class:PlanStats
+Destroy	PrivateConstData.cpp	/^int PrivateConstData::Destroy() {$/;"	f	class:PrivateConstData
+DetailCmp	PathTraffic.h	/^class DetailCmp {$/;"	c
+DoAlloc	PlaceInfoAlloc.cpp	/^int PlaceInfoAlloc::DoAlloc(BasePlan* basePlan) {$/;"	f	class:PlaceInfoAlloc
+DoCheck	DataChecker.cpp	/^int DataChecker::DoCheck(BasePlan* basePlan) {$/;"	f	class:DataChecker
+DoCheck	ReqChecker.cpp	/^int ReqChecker::DoCheck(const QueryParam& param, Json::Value& req, ErrorInfo& errorInfo) {$/;"	f	class:ReqChecker
+DoConnectForMysql	PrivateConstData.cpp	/^int PrivateConstData::DoConnectForMysql(const std::string& host, const std::string& user,$/;"	f	class:PrivateConstData
+DoInsert	PrivateConstData.cpp	/^int PrivateConstData::DoInsert(LYPlace* place) {$/;"	f	class:PrivateConstData
+DoParse	ReqParser.cpp	/^int ReqParser::DoParse(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+DoParseB116	ReqParser.cpp	/^int ReqParser::DoParseB116(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+DoParseP101	ReqParser.cpp	/^int ReqParser::DoParseP101(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+DoParseP104	ReqParser.cpp	/^int ReqParser::DoParseP104(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+DoParseP105	ReqParser.cpp	/^int ReqParser::DoParseP105(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+DoParseSSV005	ReqParser.cpp	/^int ReqParser::DoParseSSV005(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+DoParseSSV006	ReqParser.cpp	/^int ReqParser::DoParseSSV006(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+DoPerfect	PathPerfect.cpp	/^int PathPerfect::DoPerfect(BasePlan* basePlan) {$/;"	f	class:PathPerfect
+DoReplace	RealTimeTraffic.cpp	/^int RealTimeTraffic::DoReplace(BasePlan* basePlan, PathView& path) {$/;"	f	class:RealTimeTraffic
+DoRoute	TrafRoute.cpp	/^int TrafRoute::DoRoute(BasePlan* basePlan, std::vector<PlaceOrder>& orderList, PathView* path, bool needLog) {$/;"	f	class:TrafRoute
+DoZipDur	PathUtil.cpp	/^int PathUtil::DoZipDur(BasePlan* basePlan, PathView& path) {$/;"	f	class:PathUtil
+Dump	LogDump.cpp	/^int ErrDump::Dump(const QueryParam& qParam, ErrorInfo& errInfo, Json::Value& req, Json::Value& resp) {$/;"	f	class:ErrDump
+Dump	LogDump.cpp	/^int LogDump::Dump(const QueryParam& qParam, ErrorInfo& errInfo, int runType, BaseCost& baseCost, BagCost& bagCost, BaseStat& baseStat, BagStat& bagStat, Json::Value& jLog) {$/;"	f	class:LogDump
+Dump	LogDump.cpp	/^int LogDump::Dump(const QueryParam& qParam, ErrorInfo& errInfo, int runType, BaseCost& baseCost, ProcCost& procCost, BaseStat& baseStat, ProcStat& procStat, Json::Value& jLog) {$/;"	f	class:LogDump
+Dump	PathView.cpp	/^int PathView::Dump(BasePlan* basePlan, bool log) const {$/;"	f	class:PathView
+Dump	PathView.cpp	/^int PlanItem::Dump(BasePlan* basePlan, bool log) const {$/;"	f	class:PlanItem
+Dump	Prefer.h	/^	int Dump() {$/;"	f	class:CityPrefer
+Dump	Utils.cpp	/^int KeyNode::Dump(bool log) const {$/;"	f	class:KeyNode
+Dump	Utils.cpp	/^int Line::Dump() {$/;"	f	class:Line
+Dump	Utils.cpp	/^int TimeBlock::Dump(bool log) const {$/;"	f	class:TimeBlock
+Dump	Utils.h	/^	int Dump(bool log = false) {$/;"	f	class:PlaceOrder
+Dump	define.h	/^	int Dump() const {$/;"	f	class:HotelInfo
+Dump	define.h	/^	int Dump() const {$/;"	f	class:PlaceInfo
+DumpAvail	define.h	/^	int DumpAvail() const {$/;"	f	class:PlaceInfo
+DumpPath	BasePlan.cpp	/^int BasePlan::DumpPath(bool log) {$/;"	f	class:BasePlan
+DurS	define.h	/^	DurS(): m_min(0), m_zip(0), m_rcmd(0), m_extend(0), m_max(0) {}$/;"	f	class:DurS
+DurS	define.h	/^	DurS(const DurS& durS) {$/;"	f	class:DurS
+DurS	define.h	/^	DurS(int minDur, int zipDur, int rcmdDur, int extendDur, int maxDur): m_min(minDur), m_zip(zipDur), m_rcmd(rcmdDur), m_extend(extendDur), m_max(maxDur) {}$/;"	f	class:DurS
+DurS	define.h	/^class DurS {$/;"	c
+ERR_THRES	define.h	7;"	d
+EquatorRadius	LYConstData.cpp	/^static int EquatorRadius = 6378.137;\/\/地球赤道半径(km)$/;"	v	file:
+Erase	PathView.cpp	/^int PathView::Erase(int index) {$/;"	f	class:PathView
+ErrDump	LogDump.h	/^class ErrDump {$/;"	c
+ErrorInfo	LogDump.h	/^	ErrorInfo() {$/;"	f	class:ErrorInfo
+ErrorInfo	LogDump.h	/^	ErrorInfo(int errID) {$/;"	f	class:ErrorInfo
+ErrorInfo	LogDump.h	/^	ErrorInfo(int errID, const std::string& errReason) {$/;"	f	class:ErrorInfo
+ErrorInfo	LogDump.h	/^	ErrorInfo(int errID, const std::string& errReason, const std::string& errStr) {$/;"	f	class:ErrorInfo
+ErrorInfo	LogDump.h	/^class ErrorInfo {$/;"	c
+Eval	PathEval.cpp	/^int PathEval::Eval(BasePlan* basePlan, PathView* path) {$/;"	f	class:PathEval
+ExpandBlock	TrafRoute.cpp	/^int TrafRoute::ExpandBlock(BasePlan* basePlan, std::vector<PlaceOrder>& orderList, PathView* path) {$/;"	f	class:TrafRoute
+ExpandKeynode	TrafRoute.cpp	/^int TrafRoute::ExpandKeynode(BasePlan* basePlan, std::vector<PlaceOrder>& orderList, PathView* path) {$/;"	f	class:TrafRoute
+ExpandNode	TrafRoute.cpp	/^int TrafRoute::ExpandNode(BasePlan* basePlan, const LYPlace* place, const DurS* durS, int nodeType, int cost, const std::string& arvID, const std::string& deptID, const std::vector<const OpenClose*> &openCloseList, PathView* path) {$/;"	f	class:TrafRoute
+FAR_DIST_LIMIT	define.h	/^const int FAR_DIST_LIMIT = 40000;$/;"	v
+FORMAT_TYPE	ReqChecker.h	/^enum FORMAT_TYPE {$/;"	g
+FillInfo	PrivateConstData.cpp	/^int PrivateConstData::FillInfo(LYPlace* place) {$/;"	f	class:PrivateConstData
+FillInfoByConstData	PrivateConstData.cpp	/^int PrivateConstData::FillInfoByConstData(const VarPlace* vPlaceConst, VarPlace* vPlace) {$/;"	f	class:PrivateConstData
+FillVarPlaceInfo	PrivateConstData.cpp	/^int PrivateConstData::FillVarPlaceInfo(VarPlace* vPlace) {$/;"	f	class:PrivateConstData
+FilterIdPairSetForMultiAndCoreHotel	PathTraffic.cpp	/^int PathTraffic::FilterIdPairSetForMultiAndCoreHotel(std::tr1::unordered_set<std::string>& idPairSet) {$/;"	f	class:PathTraffic
+FilterIdSetForMultiAndCoreHotel	PathTraffic.cpp	/^int PathTraffic::FilterIdSetForMultiAndCoreHotel(std::tr1::unordered_set<std::string>& idSet) {$/;"	f	class:PathTraffic
+FilterTraffic	PathTraffic.cpp	/^int PathTraffic::FilterTraffic(const QueryParam& param, const std::string& userMid, std::tr1::unordered_map<int, std::vector<const TrafficDetail*> >& trafficDetailMap) {$/;"	f	class:PathTraffic
+FindLeftNum	ConstDataCheck.cpp	/^bool ConstDataCheck::FindLeftNum(const std::string key, const std::string& str,int &num) {$/;"	f	class:ConstDataCheck
+FindRightNum	ConstDataCheck.cpp	/^bool ConstDataCheck::FindRightNum(const std::string key, const std::string& str,int &num) {$/;"	f	class:ConstDataCheck
+Fix	define.h	/^	int Fix() {$/;"	f	class:DurS
+FixDurS	Utils.cpp	/^int KeyNode::FixDurS() {$/;"	f	class:KeyNode
+FixOpenRule	LYConstData.cpp	/^std::string FixOpenRule(const std::string& ori_open_rule) {$/;"	f
+FixRestOrShopIntensity	LYConstData.cpp	/^bool LYConstData::FixRestOrShopIntensity(VarPlace* varPlace) {$/;"	f	class:LYConstData
+FixTrafDate	KeyNodeBuilder.cpp	/^int KeyNodeBuilder::FixTrafDate(BasePlan* basePlan, std::vector<KeyNode*>& sleepKeyList, KeyNode* reclaimLuggageKey, KeyNode* arvKey, KeyNode* deptKey) {$/;"	f	class:KeyNodeBuilder
+FixViewIntensity	LYConstData.cpp	/^bool LYConstData::FixViewIntensity(VarPlace* varPlace, std::string rcmdIntensity, std::string intensityStr) {$/;"	f	class:LYConstData
+FormatChecker	ToolFunc.h	/^class FormatChecker {$/;"	c	namespace:ToolFunc
+GROUP_STATUS_DOWN	PlaceGroup.h	/^	GROUP_STATUS_DOWN,$/;"	e	enum:GROUP_STATUS_TYPE
+GROUP_STATUS_STAY	PlaceGroup.h	/^	GROUP_STATUS_STAY,$/;"	e	enum:GROUP_STATUS_TYPE
+GROUP_STATUS_TYPE	PlaceGroup.h	/^enum GROUP_STATUS_TYPE {$/;"	g
+GROUP_STATUS_UP	PlaceGroup.h	/^	GROUP_STATUS_UP$/;"	e	enum:GROUP_STATUS_TYPE
+GROUP_TYPE	define.h	/^enum GROUP_TYPE {$/;"	g
+GROUP_TYPE_ALL	PlaceGroup.h	/^const int GROUP_TYPE_ALL = GROUP_TYPE_LAST | GROUP_TYPE_NEXT;$/;"	v
+GROUP_TYPE_IND	PlaceGroup.h	/^const int GROUP_TYPE_IND = 0x00000004;  \/\/ independent 独立成组$/;"	v
+GROUP_TYPE_LAST	PlaceGroup.h	/^const int GROUP_TYPE_LAST = 0x00000001;  \/\/ 与last成group$/;"	v
+GROUP_TYPE_MASTER	define.h	/^	GROUP_TYPE_MASTER,$/;"	e	enum:GROUP_TYPE
+GROUP_TYPE_NEXT	PlaceGroup.h	/^const int GROUP_TYPE_NEXT = 0x00000002;$/;"	v
+GROUP_TYPE_NULL	PlaceGroup.h	/^const int GROUP_TYPE_NULL = 0x00000000;$/;"	v
+GROUP_TYPE_SLAVE	define.h	/^	GROUP_TYPE_SLAVE$/;"	e	enum:GROUP_TYPE
+GetActNum	PathStat.cpp	/^int PathStat::GetActNum(Json::Value& jDayList) {$/;"	f	class:PathStat
+GetAdjacentDaysOpenCloseTime	BasePlan.cpp	/^int BasePlan::GetAdjacentDaysOpenCloseTime(const std::string& date, const LYPlace* place, std::vector<std::pair<int, int>>& openCloseList) {$/;"	f	class:BasePlan
+GetAllocDur	BasePlan.cpp	/^int BasePlan::GetAllocDur(const LYPlace* place) {$/;"	f	class:BasePlan
+GetAvailableSources	LYConstData.cpp	/^std::tr1::unordered_set<std::string> LYConstData::GetAvailableSources(const std::string & ptid){$/;"	f	class:LYConstData
+GetAvgAllocDur	BasePlan.cpp	/^int BasePlan::GetAvgAllocDur(const LYPlace* place) {$/;"	f	class:BasePlan
+GetAvgTraf	DataChecker.cpp	/^int DataChecker::GetAvgTraf(BasePlan* basePlan) {$/;"	f	class:DataChecker
+GetAvgTraf	DataChecker.cpp	/^int DataChecker::GetAvgTraf(BasePlan* basePlan, std::vector<const LYPlace*>& placeList) {$/;"	f	class:DataChecker
+GetAvgTrafDist	BasePlan.cpp	/^int BasePlan::GetAvgTrafDist(const std::string& id) {$/;"	f	class:BasePlan
+GetAvgTrafTime	BasePlan.cpp	/^int BasePlan::GetAvgTrafTime(const std::string& id) {$/;"	f	class:BasePlan
+GetBlock	BasePlan.cpp	/^TimeBlock* BasePlan::GetBlock(int index) const {$/;"	f	class:BasePlan
+GetBlockNum	BasePlan.cpp	/^int BasePlan::GetBlockNum() const {$/;"	f	class:BasePlan
+GetBottomTicketAndPrice	LYConstData.cpp	/^bool LYConstData::GetBottomTicketAndPrice (const LYPlace* tour, const TicketsFun *& bottomTicket, float& bottomPrice) {$/;"	f	class:LYConstData
+GetCityPlace	DataList.cpp	/^int DataList::GetCityPlace(std::string cityID, int type, std::vector<const LYPlace*>& pList, const std::string& ptid, ErrorInfo& errorInfo ) {$/;"	f	class:DataList
+GetCityRestaurantPrivate	PrivateConstData.cpp	/^int PrivateConstData::GetCityRestaurantPrivate(const std::string& cityID, std::set<std::string>& restaurantList,std::string ptid) {$/;"	f	class:PrivateConstData
+GetCityShopPrivate	PrivateConstData.cpp	/^int PrivateConstData::GetCityShopPrivate(const std::string& cityID, std::set<std::string>& shopList,std::string ptid) {$/;"	f	class:PrivateConstData
+GetCityViewPrivate	PrivateConstData.cpp	/^int PrivateConstData::GetCityViewPrivate(const std::string& cityID, std::set<std::string>& viewList,std::string ptid) {$/;"	f	class:PrivateConstData
+GetCloseNum	PathStat.cpp	/^int PathStat::GetCloseNum(Json::Value& jDayList) {$/;"	f	class:PathStat
+GetCoinSign	ToolFunc.cpp	/^std::string RateExchange::GetCoinSign(const std::string& curCode) {$/;"	f	class:ToolFunc::RateExchange
+GetConstTickets	LYConstData.cpp	/^int LYConstData::GetConstTickets(const std::string pid, std::string ticketId, std::vector<std::vector<std::string> > &results) {$/;"	f	class:LYConstData
+GetCoreHotel	LYConstData.cpp	/^const LYPlace* LYConstData::GetCoreHotel(const std::string& cid) {$/;"	f	class:LYConstData
+GetCoreHotelCoord	LYConstData.cpp	/^const std::string LYConstData::GetCoreHotelCoord(const std::string& cid) {$/;"	f	class:LYConstData
+GetCountry	LYConstData.cpp	/^const Country* LYConstData::GetCountry(const std::string &cid) {$/;"	f	class:LYConstData
+GetCrossCnt	PathCross.cpp	/^int PathCross::GetCrossCnt(std::vector<const LYPlace*>& place_list) {$/;"	f	class:PathCross
+GetCrossCnt	PathCross.cpp	/^int PathCross::GetCrossCnt(std::vector<const LYPlace*>& place_list, std::tr1::unordered_map<std::string, int>& cross_map) {$/;"	f	class:PathCross
+GetCrossCnt	PathStat.cpp	/^int PathStat::GetCrossCnt(BasePlan* basePlan, Json::Value& jDayList) {$/;"	f	class:PathStat
+GetCrossMap	BasePlan.cpp	/^std::tr1::unordered_map<std::string, int>& BasePlan::GetCrossMap() {$/;"	f	class:BasePlan
+GetCustomTraffic	BasePlan.cpp	/^const TrafficItem* BasePlan::GetCustomTraffic(const std::string& trafKey) {$/;"	f	class:BasePlan
+GetCutId	BasePlan.cpp	/^std::string BasePlan::GetCutId(const std::string& id) {$/;"	f	class:BasePlan
+GetDayIdxByIndex	PathView.cpp	/^int PathView::GetDayIdxByIndex(int index) {$/;"	f	class:PathView
+GetDayNum	PathStat.cpp	/^int PathStat::GetDayNum(Json::Value& jDayList) {$/;"	f	class:PathStat
+GetDayRange	BasePlan.cpp	/^std::pair<time_t, time_t> BasePlan::GetDayRange(const std::string& date) {$/;"	f	class:BasePlan
+GetDbgStr	LogDump.cpp	/^const std::string& DebugInfo::GetDbgStr() {$/;"	f	class:DebugInfo
+GetDirection	PathCross.cpp	/^double PathCross::GetDirection(const Point& pa, const Point& pb, const Point& pc) {$/;"	f	class:PathCross
+GetDur	PathView.cpp	/^int PlanItem::GetDur() const {$/;"	f	class:PlanItem
+GetDurS	BasePlan.cpp	/^const DurS BasePlan::GetDurS(const LYPlace* place) {$/;"	f	class:BasePlan
+GetDurS	Utils.cpp	/^const DurS* KeyNode::GetDurS() const {$/;"	f	class:KeyNode
+GetDurSP	BasePlan.cpp	/^const DurS* BasePlan::GetDurSP(const LYPlace* place) {$/;"	f	class:BasePlan
+GetEarliestDept	PathUtil.cpp	/^time_t PathUtil::GetEarliestDept(BasePlan* basePlan, int start, int index, PathView& path) {$/;"	f	class:PathUtil
+GetEntryTime	BasePlan.cpp	/^const int BasePlan::GetEntryTime(const LYPlace* place) {$/;"	f	class:BasePlan
+GetEntryZipTime	BasePlan.cpp	/^const int  BasePlan::GetEntryZipTime(const LYPlace* place) {$/;"	f	class:BasePlan
+GetExitTime	BasePlan.cpp	/^const int BasePlan::GetExitTime(const LYPlace* place) {$/;"	f	class:BasePlan
+GetExitZipTime	BasePlan.cpp	/^const int  BasePlan::GetExitZipTime(const LYPlace* place) {$/;"	f	class:BasePlan
+GetExtendDur	BasePlan.cpp	/^int BasePlan::GetExtendDur(const LYPlace* place) {$/;"	f	class:BasePlan
+GetExtendDur	Utils.cpp	/^int KeyNode::GetExtendDur() const {$/;"	f	class:KeyNode
+GetFunc	Utils.cpp	/^unsigned int TimeBlock::GetFunc(const std::string& id) const {$/;"	f	class:TimeBlock
+GetGatherLocal	define.h	/^	const std::vector<const LYPlace*> GetGatherLocal() const {$/;"	f	class:Tour
+GetHot	BasePlan.cpp	/^int BasePlan::GetHot(const LYPlace* place) {$/;"	f	class:BasePlan
+GetHotLevel	PathUtil.cpp	/^int StretchItem::GetHotLevel(const StretchItem* sItem) {$/;"	f	class:StretchItem
+GetHotLevel	define.h	/^	int GetHotLevel(int prefer = 0) const{$/;"	f	class:Tour
+GetHotLevel	define.h	/^	int GetHotLevel(int restPrefer = 0) const {$/;"	f	class:Restaurant
+GetHotLevel	define.h	/^	int GetHotLevel(int shopPrefer = SHOP_INTENSITY_NULL) const {$/;"	f	class:Shop
+GetHotLevel	define.h	/^	int GetHotLevel(int viewPrefer = 0) const {$/;"	f	class:View
+GetHotelByDidx	BasePlan.cpp	/^const HInfo* BasePlan::GetHotelByDidx(int didx) {$/;"	f	class:BasePlan
+GetHotelByDidx	ReqParser.cpp	/^const LYPlace* ReqParser::GetHotelByDidx (BasePlan* basePlan, int didx) {$/;"	f	class:ReqParser
+GetHttpData	TrafficData.cpp	/^int TrafficData::GetHttpData(const QueryParam& qParam, const std::string& addr, const int& port, const int& timeout, MJ::MJHttpMethod mjMethod , const std::string& urlPath, const std::string& type, const std::string& query, Json::Value& resp) {$/;"	f	class:TrafficData
+GetIDStr	PathView.cpp	/^std::string PathView::GetIDStr() const {$/;"	f	class:PathView
+GetIntensity	PathStat.cpp	/^double PathStat::GetIntensity(BasePlan* basePlan, Json::Value& jDayList) {$/;"	f	class:PathStat
+GetIntensityLabel	PathStat.cpp	/^int PathStat::GetIntensityLabel(BasePlan* basePlan, Json::Value& jDayList) {$/;"	f	class:PathStat
+GetItemIndex	PathView.cpp	/^PlanItem* PathView::GetItemIndex(int index) {$/;"	f	class:PathView
+GetItemIndex	PathView.cpp	/^const PlanItem* PathView::GetItemIndex(int index) const {$/;"	f	class:PathView
+GetItemLast	PathView.cpp	/^PlanItem* PathView::GetItemLast() {$/;"	f	class:PathView
+GetItemLastHotel	PathView.cpp	/^PlanItem* PathView::GetItemLastHotel(int index, int &indexLast) {$/;"	f	class:PathView
+GetItemNextDayChange	PathView.cpp	/^PlanItem* PathView::GetItemNextDayChange(int index,int &indexNext) {$/;"	f	class:PathView
+GetItemNextHotel	PathView.cpp	/^PlanItem* PathView::GetItemNextHotel(int index, int &indexNext) {$/;"	f	class:PathView
+GetItemsBracket	ConstDataCheck.cpp	/^bool ConstDataCheck::GetItemsBracket(const std::string& left, const std::string& right, const std::string& rule, std::vector<std::string>& items) {$/;"	f	class:ConstDataCheck
+GetKey	BasePlan.cpp	/^KeyNode* BasePlan::GetKey(int index) const {$/;"	f	class:BasePlan
+GetKeyNum	BasePlan.cpp	/^int BasePlan::GetKeyNum() const {$/;"	f	class:BasePlan
+GetLYPlace	BasePlan.cpp	/^const LYPlace* BasePlan::GetLYPlace(const std::string& id) {$/;"	f	class:BasePlan
+GetLYPlace	LYConstData.cpp	/^const LYPlace* LYConstData::GetLYPlace(const std::string& id, const std::string& ptid){$/;"	f	class:LYConstData
+GetLYPlace	PrivateConstData.cpp	/^LYPlace* PrivateConstData::GetLYPlace(std::string priID,std::string ptid) {$/;"	f	class:PrivateConstData
+GetLYPlace	ReqParser.cpp	/^const LYPlace* ReqParser::GetLYPlace(BasePlan* basePlan, const std::string& id, int pType, const QueryParam& param, ErrorInfo& errorInfo) {$/;"	f	class:ReqParser
+GetLYPlace	ReqParser.cpp	/^const LYPlace* ReqParser::GetLYPlace(const std::string& id, int pType, const QueryParam& param, ErrorInfo& errorInfo) {$/;"	f	class:ReqParser
+GetLYPlaceList	DataList.cpp	/^int DataList::GetLYPlaceList(BasePlan* basePlan,int placeType,  std::vector<const LYPlace*>& pList) {$/;"	f	class:DataList
+GetLatestArv	PathUtil.cpp	/^time_t PathUtil::GetLatestArv(BasePlan* basePlan, int end, int index, PathView& path) {$/;"	f	class:PathUtil
+GetLeftLocal	define.h	/^	const std::vector<const LYPlace*> GetLeftLocal() const {$/;"	f	class:Tour
+GetMaxBlank	PathEval.cpp	/^int PathEval::GetMaxBlank(const PathView* path) {$/;"	f	class:PathEval
+GetMaxDur	BasePlan.cpp	/^int BasePlan::GetMaxDur(const LYPlace* place) {$/;"	f	class:BasePlan
+GetMaxDur	Utils.cpp	/^int KeyNode::GetMaxDur() const {$/;"	f	class:KeyNode
+GetMiddleDurDay	PathStat.cpp	/^int PathStat::GetMiddleDurDay(Json::Value& jViewList) {$/;"	f	class:PathStat
+GetMinAllocDur	BasePlan.cpp	/^int BasePlan::GetMinAllocDur(const LYPlace* place) {$/;"	f	class:BasePlan
+GetMinDur	BasePlan.cpp	/^int BasePlan::GetMinDur(const LYPlace* place) {$/;"	f	class:BasePlan
+GetMinDur	Utils.cpp	/^int KeyNode::GetMinDur() const {$/;"	f	class:KeyNode
+GetMissLevel	BasePlan.cpp	/^int BasePlan::GetMissLevel(const LYPlace* place) {$/;"	f	class:BasePlan
+GetOpenCloseTime	BasePlan.cpp	/^int BasePlan::GetOpenCloseTime(const std::string& date, const VarPlace* vPlace, std::vector<std::pair<int, int>>& openCloseList) {$/;"	f	class:BasePlan
+GetPlace	define.h	/^	const LYPlace *GetPlace() const {$/;"	f	struct:POIDetail
+GetPlace	define.h	/^    const LYPlace* GetPlace() const {$/;"	f	class:ShowItem
+GetPlaceDurDay	PathStat.cpp	/^int PathStat::GetPlaceDurDay(Json::Value& jViewList) {$/;"	f	class:PathStat
+GetPlaceInfo	Utils.cpp	/^const PlaceInfo* TimeBlock::GetPlaceInfo(const std::string& id) const {$/;"	f	class:TimeBlock
+GetPlayPer	PathStat.cpp	/^double PathStat::GetPlayPer(Json::Value& jDayList) {$/;"	f	class:PathStat
+GetPriDataPtr	LYConstData.cpp	/^PrivateConstData* LYConstData::GetPriDataPtr() {$/;"	f	class:LYConstData
+GetPrivateData	LYConstData.cpp	/^int LYConstData::GetPrivateData(const std::string &sql, std::vector<std::vector<std::string> > &results) {$/;"	f	class:LYConstData
+GetPrivateData	PrivateConstData.cpp	/^int PrivateConstData::GetPrivateData(const std::string &sql, std::vector<std::vector<std::string> > &results) {$/;"	f	class:PrivateConstData
+GetPrivateTourByType	PrivateConstData.cpp	/^int PrivateConstData::GetPrivateTourByType(const std::string &cityID, std::set<std::string>& TourList, int type, std::string ptid) {$/;"	f	class:PrivateConstData
+GetProdTicketsById	PrivateConstData.cpp	/^int PrivateConstData::GetProdTicketsById(const int& id, const TicketsFun*& ticketsFun) {$/;"	f	class:PrivateConstData
+GetProdTicketsByPlaceAndId	LYConstData.cpp	/^int LYConstData::GetProdTicketsByPlaceAndId(const LYPlace* place, const int& id, const TicketsFun*& tickets) {$/;"	f	class:LYConstData
+GetProdTicketsListByPid	LYConstData.cpp	/^int LYConstData::GetProdTicketsListByPid(const std::string& pid, std::vector<const TicketsFun*>& tickets) {$/;"	f	class:LYConstData
+GetProdTicketsListByPid	PrivateConstData.cpp	/^int PrivateConstData::GetProdTicketsListByPid(const std::string& pid, std::vector<const TicketsFun*>& ticketsList) {$/;"	f	class:PrivateConstData
+GetProdTicketsListByPlace	BasePlan.cpp	/^int BasePlan::GetProdTicketsListByPlace(const LYPlace* place, std::vector<const TicketsFun*> &tickets, const std::string& date) {$/;"	f	class:BasePlan
+GetProdTicketsListByPlace	LYConstData.cpp	/^int LYConstData::GetProdTicketsListByPlace(const LYPlace* place, std::vector<const TicketsFun*>& tickets) {$/;"	f	class:LYConstData
+GetQueryParam	LYConstData.h	/^	static const QueryParam* GetQueryParam()$/;"	f	class:LYConstData
+GetRangePlaceId	LYConstData.cpp	/^bool LYConstData::GetRangePlaceId(std::string mapInfo,int maxDist,std::set<std::pair<std::string, std::string>> &idList){$/;"	f	class:LYConstData
+GetRcmdDur	BasePlan.cpp	/^int BasePlan::GetRcmdDur(const LYPlace* place) {$/;"	f	class:BasePlan
+GetRcmdDur	Utils.cpp	/^int KeyNode::GetRcmdDur() const {$/;"	f	class:KeyNode
+GetRcmdDurDay	PathStat.cpp	/^int PathStat::GetRcmdDurDay(BasePlan* basePlan, Json::Value& jViewList) {$/;"	f	class:PathStat
+GetRealID	BasePlan.cpp	/^std::string BasePlan::GetRealID(const std::string& id) {$/;"	f	class:BasePlan
+GetRealID	LYConstData.cpp	/^const std::string LYConstData::GetRealID(const std::string& id) {$/;"	f	class:LYConstData
+GetRealTimeTraf	RealTimeTraffic.cpp	/^int RealTimeTraffic::GetRealTimeTraf(BasePlan* basePlan, PathView& path) {$/;"	f	class:RealTimeTraffic
+GetRest	PathStat.cpp	/^int PathStat::GetRest(BasePlan* basePlan, Json::Value& jDayList) {$/;"	f	class:PathStat
+GetRestDay	PathStat.cpp	/^int PathStat::GetRestDay(BasePlan* basePlan, const std::string& date, Json::Value& jViewList) {$/;"	f	class:PathStat
+GetRestNum	PathStat.cpp	/^int PathStat::GetRestNum(Json::Value& jDayList) {$/;"	f	class:PathStat
+GetRestType	BasePlan.cpp	/^int BasePlan::GetRestType(const LYPlace* place, time_t arrive, time_t depart) {$/;"	f	class:BasePlan
+GetRestaurant	DataChecker.cpp	/^int DataChecker::GetRestaurant(BasePlan* basePlan) {$/;"	f	class:DataChecker
+GetSNode	DataList.cpp	/^ScoreNode* DataList::GetSNode(int type, const LYPlace* place) {$/;"	f	class:DataList
+GetSNodeList	DataList.cpp	/^int DataList::GetSNodeList(int nodeType, std::vector<const LYPlace*>& pList, std::vector<const ScoreNode*>& scoreNodeList) {$/;"	f	class:DataList
+GetScale	PathUtil.cpp	/^int PathUtil::GetScale(BasePlan* basePlan, std::tr1::unordered_map<std::string, int>& allocDurMap) {$/;"	f	class:PathUtil
+GetScore	define.h	/^    double GetScore() const {$/;"	f	class:ShowItem
+GetShop	DataChecker.cpp	/^int DataChecker::GetShop(BasePlan* basePlan) {$/;"	f	class:DataChecker
+GetSourceNameBySid	LYConstData.cpp	/^std::string LYConstData::GetSourceNameBySid(const std::string& sid) {$/;"	f	class:LYConstData
+GetSourceNameBySid	PrivateConstData.cpp	/^std::string PrivateConstData::GetSourceNameBySid(std::string sid) {$/;"	f	class:PrivateConstData
+GetStats	Utils.cpp	/^int PlanStats::GetStats(Json::Value& jStats) {$/;"	f	class:PlanStats
+GetStretchRate	PathUtil.cpp	/^double StretchItem::GetStretchRate(const StretchItem* sItem) {$/;"	f	class:StretchItem
+GetTagStrByName	LYConstData.cpp	/^std::string LYConstData::GetTagStrByName(const std::string &name) {$/;"	f	class:LYConstData
+GetTicketPriceOfTheDate	LYConstData.cpp	/^bool LYConstData::GetTicketPriceOfTheDate (const TicketsFun* ticket, const std::string& date, float& low_price) {$/;"	f	class:LYConstData
+GetTotDist	PathStat.cpp	/^int PathStat::GetTotDist(Json::Value& jDayList) {$/;"	f	class:PathStat
+GetTotPrice	PathStat.cpp	/^double PathStat::GetTotPrice(Json::Value& jDayList) {$/;"	f	class:PathStat
+GetTour	DataChecker.cpp	/^int DataChecker::GetTour(BasePlan* basePlan) {$/;"	f	class:DataChecker
+GetTour	DataList.cpp	/^int DataList::GetTour(const std::string &cid, int type, std::vector<const LYPlace*>& pList, const std::string& ptid, ErrorInfo& errorInfo ) {$/;"	f	class:DataList
+GetTourByType	LYConstData.cpp	/^int LYConstData::GetTourByType(const std::string &cityID, std::set<std::string> &TourList, int type, const std::string& ptid) {$/;"	f	class:LYConstData
+GetTourList	DataList.cpp	/^int DataList::GetTourList(BasePlan* basePlan,int placeType,  std::vector<const LYPlace*>& pList) {$/;"	f	class:DataList
+GetTourListByType	LYConstData.cpp	/^int LYConstData::GetTourListByType (const std::string &cityID, std::vector<const LYPlace*>& TourList, int type, const std::string& ptid) {$/;"	f	class:LYConstData
+GetTraf8002	TrafficData.cpp	/^int TrafficData::GetTraf8002(BasePlan* basePlan, const std::vector<std::string>& idList, int carRent, std::tr1::unordered_map<std::string, Json::Value>& jTrafMap, std::string& query, int& timeCost) {$/;"	f	class:TrafficData
+GetTraf8003	TrafficData.cpp	/^int TrafficData::GetTraf8003(BasePlan* basePlan, const std::tr1::unordered_set<std::string>& pairSet, bool needReal, std::tr1::unordered_map<std::string, Json::Value>& jTrafMap, std::string& query, int& timeCost, int carRent) {$/;"	f	class:TrafficData
+GetTrafDay	PathStat.cpp	/^int PathStat::GetTrafDay(Json::Value& jViewList) {$/;"	f	class:PathStat
+GetTrafID	PathTraffic.cpp	/^int PathTraffic::GetTrafID(BasePlan* basePlan, std::tr1::unordered_set<std::string>& place_id_set) {$/;"	f	class:PathTraffic
+GetTrafID	TrafficData.cpp	/^int TrafficData::GetTrafID(BasePlan* basePlan, const std::tr1::unordered_set<std::string>& placeIdSet, std::string& query, int& timeCost) {$/;"	f	class:TrafficData
+GetTrafItem	PathTraffic.cpp	/^const TrafficItem* PathTraffic::GetTrafItem(BasePlan* basePlan, const std::string& from_id, const std::string& to_id) {$/;"	f	class:PathTraffic
+GetTrafItem	PathTraffic.cpp	/^const TrafficItem* PathTraffic::GetTrafItem(BasePlan* basePlan, const std::string& from_id, const std::string& to_id, const std::string& date) {$/;"	f	class:PathTraffic
+GetTrafPair	PathTraffic.cpp	/^int PathTraffic::GetTrafPair(BasePlan* basePlan, std::tr1::unordered_set<std::string>& pairSet, bool needReal) {$/;"	f	class:PathTraffic
+GetTrafPair	TrafficData.cpp	/^int TrafficData::GetTrafPair(BasePlan* basePlan, const std::tr1::unordered_set<std::string>& pairSet, bool needReal, std::string& query, int& timeCost) {$/;"	f	class:TrafficData
+GetTrafPer	PathStat.cpp	/^double PathStat::GetTrafPer(Json::Value& jDayList) {$/;"	f	class:PathStat
+GetTrafStatic	TrafficData.cpp	/^int TrafficData::GetTrafStatic(BasePlan* basePlan, const std::vector<std::string>& idList, int carRent, std::tr1::unordered_map<std::string, Json::Value>& jTrafMap, std::string& query, int& timeCost) {$/;"	f	class:TrafficData
+GetTrafStaticReal	TrafficData.cpp	/^int TrafficData::GetTrafStaticReal(BasePlan* basePlan, const std::tr1::unordered_set<std::string>& pairSet, bool needReal, std::tr1::unordered_map<std::string, Json::Value>& jTrafMap, std::string& query, int& timeCost, int carRent) {$/;"	f	class:TrafficData
+GetTraffic	BasePlan.cpp	/^const TrafficItem* BasePlan::GetTraffic(const std::string& ida, const std::string& idb) {$/;"	f	class:BasePlan
+GetTraffic	BasePlan.cpp	/^const TrafficItem* BasePlan::GetTraffic(const std::string& ida, const std::string& idb, const std::string& date) {$/;"	f	class:BasePlan
+GetTraffic	DataChecker.cpp	/^int DataChecker::GetTraffic(BasePlan* basePlan) {$/;"	f	class:DataChecker
+GetTraffic	TrafficPair.cpp	/^int TrafficPair::GetTraffic(BasePlan* basePlan) {$/;"	f	class:TrafficPair
+GetTrafficFromServer8004	TrafficData.cpp	/^int TrafficData::GetTrafficFromServer8004(BasePlan* basePlan, std::tr1::unordered_set<std::string>& midSet, std::tr1::unordered_map<std::string, Json::Value>& trafficSummaryList, std::string& query, int& timeCost) {$/;"	f	class:TrafficData
+GetTrafficSummary	PathTraffic.cpp	/^int PathTraffic::GetTrafficSummary(BasePlan* basePlan, std::vector<TrafficItem*>& trafficList) {$/;"	f	class:PathTraffic
+GetTrafficSummary	TrafficData.cpp	/^int TrafficData::GetTrafficSummary(BasePlan* basePlan, std::vector<TrafficItem*>& trafficList, std::string& query, int& timeCost) {$/;"	f	class:TrafficData
+GetTrafficSummaryStatic	TrafficData.cpp	/^int TrafficData::GetTrafficSummaryStatic(BasePlan* basePlan, std::vector<TrafficItem*>& trafficList, std::string& query, int& timeCost) {$/;"	f	class:TrafficData
+GetTratItemRealStatic	TrafficData.cpp	/^Json::Value TrafficData::GetTratItemRealStatic(BasePlan* basePlan, const std::string& idA, const std::string& idB) {$/;"	f	class:TrafficData
+GetTratItemStatic	TrafficData.cpp	/^Json::Value TrafficData::GetTratItemStatic(BasePlan* basePlan, const std::string& idA, const std::string& idB) {$/;"	f	class:TrafficData
+GetView	DataChecker.cpp	/^int DataChecker::GetView(BasePlan* basePlan) {$/;"	f	class:DataChecker
+GetViewByViewTicket	LYConstData.cpp	/^const LYPlace* LYConstData::GetViewByViewTicket(ViewTicket* viewTicket, const std::string& ptid) {$/;"	f	class:LYConstData
+GetViewNum	PathStat.cpp	/^int PathStat::GetViewNum(Json::Value& jDayList) {$/;"	f	class:PathStat
+GetZipDur	BasePlan.cpp	/^int BasePlan::GetZipDur(const LYPlace* place) {$/;"	f	class:BasePlan
+GetZipDur	Utils.cpp	/^int KeyNode::GetZipDur() const {$/;"	f	class:KeyNode
+Getm_view	define.h	/^	std::string Getm_view() const {$/;"	f	class:ViewTicket
+HInfo	define.h	/^	HInfo(const LYPlace* hotel = NULL, std::string checkIn = "", std::string checkOut = "", bool isCoreHotel = false) {$/;"	f	class:HInfo
+HInfo	define.h	/^class HInfo {$/;"	c
+HOTEL_NODATA	define.h	/^const int HOTEL_NODATA = -3;  \/\/ 接口无结果$/;"	v
+HOTEL_NONEXIST	define.h	/^const int HOTEL_NONEXIST = -1;  \/\/ id不存在$/;"	v
+HOTEL_OK	define.h	/^const int HOTEL_OK = 1;  \/\/ hotel正常$/;"	v
+HOTEL_TIMEOUT	define.h	/^const int HOTEL_TIMEOUT = -2;  \/\/ 请求接口超时$/;"	v
+Has	Utils.cpp	/^bool TimeBlock::Has(const std::string& id) const {$/;"	f	class:TimeBlock
+HasPlaceStats	Utils.cpp	/^bool PlanStats::HasPlaceStats(const LYPlace* place) {$/;"	f	class:PlanStats
+HasUnionPeriod	ToolFunc.cpp	/^bool HasUnionPeriod(time_t aTimeS, time_t aTimeE, time_t bTimeS, time_t bTimeE) {$/;"	f	namespace:ToolFunc
+Hotel	define.h	/^class Hotel: public LYPlace {$/;"	c
+HotelInfo	define.h	/^	HotelInfo() {$/;"	f	class:HotelInfo
+HotelInfo	define.h	/^class HotelInfo: public PlaceInfo {$/;"	c
+IMPOSSIBLE_PATH_SCORE	define.h	6;"	d
+IncreaseCapacity	PathView.cpp	/^int PathView::IncreaseCapacity(int length) {$/;"	f	class:PathView
+Init	BagParam.cpp	/^int BagParam::Init(const std::string& dataPath) {$/;"	f	class:BagParam
+Init	PathView.cpp	/^int PathView::Init(int capacity) {$/;"	f	class:PathView
+Init	ToolFunc.cpp	/^int FormatChecker::Init() {$/;"	f	class:ToolFunc::FormatChecker
+Init	TrafficData.cpp	/^int TrafficData::Init() {$/;"	f	class:TrafficData
+InitBase	BagParam.cpp	/^int BagParam::InitBase(const std::string& dataPath) {$/;"	f	class:BagParam
+InitCBP	BagParam.cpp	/^int BagParam::InitCBP(const std::string& dataPath) {$/;"	f	class:BagParam
+InitFreq	PlaceGroup.cpp	/^int PlaceGroup::InitFreq() {$/;"	f	class:PlaceGroup
+InnerTrafMode2UserDefine	define.h	/^	static int InnerTrafMode2UserDefine(int innerMode, bool isCharterCar = false, bool custom = false) {$/;"	f	class:TrafficItem
+Insert	PathView.cpp	/^int PathView::Insert(int index, const LYPlace* place, const std::string& arvID, const std::string& deptID, const TrafficItem* arriveTraffic, const TrafficItem* departTraffic, time_t arriveTime, time_t departTime, const DurS* durS, const std::string& trafDate, time_t openTime, time_t closeTime, double cost, int type, double timeZone) {$/;"	f	class:PathView
+Insert2CityPlaceMap	LYConstData.cpp	/^bool LYConstData::Insert2CityPlaceMap(const std::string& cid, const LYPlace* place, std::tr1::unordered_map<std::string, std::set<std::string>>& cid2PlaceList) {$/;"	f	class:LYConstData
+Insert2MultiMap	BasePlan.cpp	/^std::string BasePlan::Insert2MultiMap(const std::string& id) {$/;"	f	class:BasePlan
+Insert2Shield	PrivateConstData.cpp	/^int PrivateConstData::Insert2Shield(int type, const std::string& id, const std::string& ptid) {$/;"	f	class:PrivateConstData
+InsertCityPlaceList	PrivateConstData.cpp	/^int PrivateConstData::InsertCityPlaceList(const LYPlace* place) {$/;"	f	class:PrivateConstData
+InsertCoreHotel	PrivateConstData.cpp	/^int PrivateConstData::InsertCoreHotel(const LYPlace* city)$/;"	f	class:PrivateConstData
+InsertLYPlace	PrivateConstData.cpp	/^int PrivateConstData::InsertLYPlace(LYPlace* place) {$/;"	f	class:PrivateConstData
+InsertjDataList	TrafficData.cpp	/^int TrafficData::InsertjDataList(BasePlan* basePlan, const std::string& start, const std::string& dest, const std::string& time, Json::Value& jData, std::tr1::unordered_set<std::string>& jDataList, const std::string& pairKey) {$/;"	f	class:TrafficData
+Intensity	define.h	/^	Intensity() {$/;"	f	class:Intensity
+Intensity	define.h	/^	Intensity(const std::string& label, const std::string& name, int dur, double price, bool ignore_open, const std::string& currency_code="CNY") {$/;"	f	class:Intensity
+Intensity	define.h	/^class Intensity {$/;"	c
+IntensityDurCmp	LYConstData.cpp	/^bool IntensityDurCmp(const Intensity* item_a, const Intensity* item_b) {$/;"	f
+IsAllocable	PlaceInfoAlloc.cpp	/^bool PlaceInfoAlloc::IsAllocable(BasePlan* basePlan, const VarPlace* vPlace) {$/;"	f	class:PlaceInfoAlloc
+IsApi	LYConstData.cpp	/^int LYConstData::IsApi(const std::string& sid) {$/;"	f	class:LYConstData
+IsBadTraf	DataChecker.cpp	/^bool DataChecker::IsBadTraf(const TrafficItem* trafItem) {$/;"	f	class:DataChecker
+IsBaoChe	ReqParser.cpp	/^bool ReqParser::IsBaoChe(BasePlan* basePlan, Json::Value& req) {$/;"	f	class:ReqParser
+IsCross	PathCross.cpp	/^int PathCross::IsCross(const LYPlace* pa, const LYPlace* pb, const LYPlace* pc, const LYPlace* pd) {$/;"	f	class:PathCross
+IsCross	PathCross.cpp	/^int PathCross::IsCross(const LYPlace* pa, const LYPlace* pb, const LYPlace* pc, const LYPlace* pd, std::tr1::unordered_map<std::string, int>& cross_map) {$/;"	f	class:PathCross
+IsCross	PathCross.cpp	/^int PathCross::IsCross(const Point& pa, const Point& pb, const Point& pc, const Point& pd) {$/;"	f	class:PathCross
+IsDeletable	BasePlan.cpp	/^bool BasePlan::IsDeletable(const LYPlace* dPlace) {$/;"	f	class:BasePlan
+IsFreq	PlaceGroup.cpp	/^bool PlaceGroup::IsFreq(const std::string& id_a, const std::string& id_b) {$/;"	f	class:PlaceGroup
+IsNotPlay	Utils.h	/^	bool IsNotPlay(){ return _is_not_play; }$/;"	f	class:TimeBlock
+IsOnSegment	PathCross.cpp	/^bool PathCross::IsOnSegment(const Point& pa, const Point& pb, const Point& pc) {$/;"	f	class:PathCross
+IsParkCity	LYConstData.cpp	/^bool LYConstData::IsParkCity(const std::string& cityId) {$/;"	f	class:LYConstData
+IsReal	TrafficData.cpp	/^bool TrafficData::IsReal(const std::string& mid) {$/;"	f	class:TrafficData
+IsRealID	LYConstData.cpp	/^bool LYConstData::IsRealID(const std::string& id) {$/;"	f	class:LYConstData
+IsRestaurant	BasePlan.cpp	/^bool BasePlan::IsRestaurant(const LYPlace* place) {$/;"	f	class:BasePlan
+IsShieldId	PrivateConstData.cpp	/^bool PrivateConstData::IsShieldId(const std::string& ptid, const std::string& Id) {$/;"	f	class:PrivateConstData
+IsSourceAvailable	LYConstData.cpp	/^bool LYConstData::IsSourceAvailable(const string & ptid,const string & source){$/;"	f	class:LYConstData
+IsTimeOut	BasePlan.cpp	/^bool BasePlan::IsTimeOut() {$/;"	f	class:BasePlan
+IsTourAvailable	BasePlan.cpp	/^bool BasePlan::IsTourAvailable(const Tour* tour, const std::string& date) {$/;"	f	class:BasePlan
+IsTourAvailable	LYConstData.cpp	/^bool LYConstData::IsTourAvailable(const Tour* tour, const std::string& date) {$/;"	f	class:LYConstData
+IsTourHasTicketofTheDate	LYConstData.cpp	/^bool LYConstData::IsTourHasTicketofTheDate (const LYPlace* tour, const std::string& date, const TicketsFun*& ticketFun) {$/;"	f	class:LYConstData
+IsUserDateAvail	BasePlan.cpp	/^int BasePlan::IsUserDateAvail(const LYPlace* place, const std::string& date) {$/;"	f	class:BasePlan
+IsVarPlaceOpen	BasePlan.cpp	/^bool BasePlan::IsVarPlaceOpen(const VarPlace* varplace) {$/;"	f	class:BasePlan
+IsVarPlaceOpen	BasePlan.cpp	/^bool BasePlan::IsVarPlaceOpen(const VarPlace* varplace, const std::string& date, std::vector<std::string>& time_rule) {$/;"	f	class:BasePlan
+JSON_TYPE	ReqChecker.h	/^enum JSON_TYPE {$/;"	g
+JSON_TYPE_ARRAY	ReqChecker.h	/^	JSON_TYPE_ARRAY,$/;"	e	enum:JSON_TYPE
+JSON_TYPE_DOUBLE	ReqChecker.h	/^	JSON_TYPE_DOUBLE$/;"	e	enum:JSON_TYPE
+JSON_TYPE_INT	ReqChecker.h	/^	JSON_TYPE_INT,$/;"	e	enum:JSON_TYPE
+JSON_TYPE_NULL	ReqChecker.h	/^	JSON_TYPE_NULL,$/;"	e	enum:JSON_TYPE
+JSON_TYPE_OBJECT	ReqChecker.h	/^	JSON_TYPE_OBJECT,$/;"	e	enum:JSON_TYPE
+JSON_TYPE_STRING	ReqChecker.h	/^	JSON_TYPE_STRING,$/;"	e	enum:JSON_TYPE
+KEY_NODE_CONTI_NO	Utils.h	13;"	d
+KEY_NODE_CONTI_OK	Utils.h	14;"	d
+KeyNode	Utils.h	/^	KeyNode() {$/;"	f	class:KeyNode
+KeyNode	Utils.h	/^	KeyNode(const LYPlace* place, time_t open, time_t close, const std::string& trafDate, int minDur, int zipDur, int rcmdDur, int extendDur, int maxDur, int continuous, int cost, int type, int adjustable, bool deletable, double time_zone) {$/;"	f	class:KeyNode
+KeyNode	Utils.h	/^class KeyNode {$/;"	c
+KeyNodeBuilder	KeyNodeBuilder.h	/^class KeyNodeBuilder {$/;"	c
+KeynodeCmp	KeyNodeBuilder.cpp	/^bool KeynodeCmp(KeyNode* KeyNodeA, KeyNode* KeyNodeB) {$/;"	f
+LAST_DEST_PLACE	define.h	4;"	d
+LYConstData	LYConstData.h	/^class LYConstData{$/;"	c
+LYPlace	define.h	/^	LYPlace() {$/;"	f	class:LYPlace
+LYPlace	define.h	/^class LYPlace {$/;"	c
+LYPlaceType2TrafPoiType	TrafficData.cpp	/^int TrafficData::LYPlaceType2TrafPoiType(int type) {$/;"	f	class:TrafficData
+LY_PLACE_TYPE_ACTIVITY	define.h	/^const int LY_PLACE_TYPE_ACTIVITY = 0x00010000|0x00000200;	\/\/活动$/;"	v
+LY_PLACE_TYPE_AIRPORT	define.h	/^const int LY_PLACE_TYPE_AIRPORT = 0x00000010;$/;"	v
+LY_PLACE_TYPE_ALL	define.h	/^const int LY_PLACE_TYPE_ALL = 0xFFFFFFFF;$/;"	v
+LY_PLACE_TYPE_ARRIVE	define.h	/^const int LY_PLACE_TYPE_ARRIVE = LY_PLACE_TYPE_AIRPORT | LY_PLACE_TYPE_STATION | LY_PLACE_TYPE_BUS_STATION | LY_PLACE_TYPE_SAIL_STATION;$/;"	v
+LY_PLACE_TYPE_BLANK	define.h	/^const int LY_PLACE_TYPE_BLANK = 0x00001000;$/;"	v
+LY_PLACE_TYPE_BUS_STATION	define.h	/^const int LY_PLACE_TYPE_BUS_STATION = 0x00000080;$/;"	v
+LY_PLACE_TYPE_CAR_STORE	define.h	/^const int LY_PLACE_TYPE_CAR_STORE = 0x00000040;$/;"	v
+LY_PLACE_TYPE_CITY	define.h	/^const int LY_PLACE_TYPE_CITY = 0x00000001;$/;"	v
+LY_PLACE_TYPE_HALFDAYTOUR	define.h	/^const int LY_PLACE_TYPE_HALFDAYTOUR = 0x00020000|0x00000200;	\/\/半日游$/;"	v
+LY_PLACE_TYPE_HOTEL	define.h	/^const int LY_PLACE_TYPE_HOTEL = 0x00000004;$/;"	v
+LY_PLACE_TYPE_MOREDAYTOUR	define.h	/^const int LY_PLACE_TYPE_MOREDAYTOUR = 0x00080000|0x00000200;	\/\/多日游$/;"	v
+LY_PLACE_TYPE_NULL	define.h	/^const int LY_PLACE_TYPE_NULL = 0x00000000;$/;"	v
+LY_PLACE_TYPE_ONEDAYTOUR	define.h	/^const int LY_PLACE_TYPE_ONEDAYTOUR = 0x00040000|0x00000200;	\/\/一日游$/;"	v
+LY_PLACE_TYPE_PLAN	define.h	/^const int LY_PLACE_TYPE_PLAN = 0x00008000|0x00000200;			\/\/演出$/;"	v
+LY_PLACE_TYPE_RESTAURANT	define.h	/^const int LY_PLACE_TYPE_RESTAURANT = 0x00000008;$/;"	v
+LY_PLACE_TYPE_SAIL_STATION	define.h	/^const int LY_PLACE_TYPE_SAIL_STATION = 0x00002000;\/\/没有数字用了····$/;"	v
+LY_PLACE_TYPE_SHOP	define.h	/^const int LY_PLACE_TYPE_SHOP = 0x00000100;$/;"	v
+LY_PLACE_TYPE_STATION	define.h	/^const int LY_PLACE_TYPE_STATION = 0x00000020;$/;"	v
+LY_PLACE_TYPE_TOUR	define.h	/^const int LY_PLACE_TYPE_TOUR = 0x00000200;$/;"	v
+LY_PLACE_TYPE_TOURALL	define.h	/^const int LY_PLACE_TYPE_TOURALL = 0x00004000|0x00008000|0x00010000|0x00020000|0x00040000|0x00080000|0x00000200;$/;"	v
+LY_PLACE_TYPE_VAR_PLACE	define.h	/^const int LY_PLACE_TYPE_VAR_PLACE = LY_PLACE_TYPE_VIEW | LY_PLACE_TYPE_RESTAURANT | LY_PLACE_TYPE_SHOP | LY_PLACE_TYPE_TOURALL;$/;"	v
+LY_PLACE_TYPE_VIEW	define.h	/^const int LY_PLACE_TYPE_VIEW = 0x00000002;$/;"	v
+LY_PLACE_TYPE_VIEWSHOP	define.h	/^const int LY_PLACE_TYPE_VIEWSHOP = LY_PLACE_TYPE_SHOP | LY_PLACE_TYPE_VIEW;$/;"	v
+LY_PLACE_TYPE_VIEWTICKET	define.h	/^const int LY_PLACE_TYPE_VIEWTICKET = 0x00004000|0x00000200;	\/\/景点门票$/;"	v
+Length	PathView.cpp	/^int PathView::Length() const {$/;"	f	class:PathView
+Line	Utils.h	/^	Line(const LYPlace* from_place, const LYPlace* to_place, const TrafficItem* traffic) {$/;"	f	class:Line
+Line	Utils.h	/^	Line(const Line* ptr) {$/;"	f	class:Line
+Line	Utils.h	/^class Line {$/;"	c
+Load	PlaceGroup.cpp	/^bool PlaceGroup::Load(const std::string& data_path, std::vector<std::string>& freq_group_file_list) {$/;"	f	class:PlaceGroup
+LoadCityData	LYConstData.cpp	/^bool LYConstData::LoadCityData() {$/;"	f	class:LYConstData
+LoadCoreHotel	LYConstData.cpp	/^bool LYConstData::LoadCoreHotel() {$/;"	f	class:LYConstData
+LoadCountryData	LYConstData.cpp	/^bool LYConstData::LoadCountryData() {$/;"	f	class:LYConstData
+LoadData	LYConstData.cpp	/^bool LYConstData::LoadData() {$/;"	f	class:LYConstData
+LoadDataWorker	LYConstData.h	/^		LoadDataWorker(int idx):m_loadIdx(idx) {$/;"	f	class:LoadDataWorker
+LoadDataWorker	LYConstData.h	/^class LoadDataWorker: public MJ::Worker {$/;"	c
+LoadHotelData	LYConstData.cpp	/^bool LYConstData::LoadHotelData() {$/;"	f	class:LYConstData
+LoadIntensity	LYConstData.cpp	/^bool LYConstData::LoadIntensity() {$/;"	f	class:LYConstData
+LoadPrivateCityData	PrivateConstData.cpp	/^int PrivateConstData::LoadPrivateCityData() {\/\/先加载基础信息 后加入其他逻辑补全$/;"	f	class:PrivateConstData
+LoadPrivateConfig	PrivateConstData.cpp	/^int PrivateConfig::LoadPrivateConfig(const char* fileName) {$/;"	f	class:PrivateConfig
+LoadPrivateData	PrivateConstData.cpp	/^int PrivateConstData::LoadPrivateData() {$/;"	f	class:PrivateConstData
+LoadPrivateHotelData	PrivateConstData.cpp	/^int PrivateConstData::LoadPrivateHotelData() {$/;"	f	class:PrivateConstData
+LoadPrivateSource	PrivateConstData.cpp	/^int PrivateConstData::LoadPrivateSource() {$/;"	f	class:PrivateConstData
+LoadRestaurant	LYConstData.cpp	/^bool LYConstData::LoadRestaurant() {$/;"	f	class:LYConstData
+LoadSource	LYConstData.cpp	/^bool LYConstData::LoadSource() {$/;"	f	class:LYConstData
+LoadSpecifiedTypeTicketsFun	PrivateConstData.cpp	/^int PrivateConstData::LoadSpecifiedTypeTicketsFun(std::string sql, int* dur, int* rowCnt) {\/\/先加载基础信息 后加入其他逻辑补全$/;"	f	class:PrivateConstData
+LoadSpecifiedTypeTour	LYConstData.cpp	/^bool LYConstData::LoadSpecifiedTypeTour(std::string typeT, std::string sql, int typeI) {$/;"	f	class:LYConstData
+LoadSpecifiedTypeTour	PrivateConstData.cpp	/^int PrivateConstData::LoadSpecifiedTypeTour(std::string typeT, std::string sql, int typeI, int* tdur, int* rowCnt) {$/;"	f	class:PrivateConstData
+LoadSpecifiedTypeVarPlace	LYConstData.cpp	/^int LYConstData::LoadSpecifiedTypeVarPlace(std::string tableName, std::string sqlstr, int typeI) {$/;"	f	class:LYConstData
+LoadSpecifiedTypeVarPlace	PrivateConstData.cpp	/^int PrivateConstData::LoadSpecifiedTypeVarPlace(std::string typeV, std::string sql, int typeI, int* dur, int* rowCnt) {\/\/先加载基础信息 后加入其他逻辑补全$/;"	f	class:PrivateConstData
+LoadStationData	LYConstData.cpp	/^bool LYConstData::LoadStationData(){$/;"	f	class:LYConstData
+LoadTag	PrivateConstData.cpp	/^int PrivateConstData::LoadTag() {$/;"	f	class:PrivateConstData
+LoadTicketsFun	LYConstData.cpp	/^bool LYConstData::LoadTicketsFun() {$/;"	f	class:LYConstData
+LoadTicketsFun	PrivateConstData.cpp	/^int PrivateConstData::LoadTicketsFun() {$/;"	f	class:PrivateConstData
+LoadTourData	LYConstData.cpp	/^bool LYConstData::LoadTourData() {$/;"	f	class:LYConstData
+LoadTourData	PrivateConstData.cpp	/^int PrivateConstData::LoadTourData() {$/;"	f	class:PrivateConstData
+LoadTrafficMode	TrafficData.cpp	/^int TrafficData::LoadTrafficMode() {$/;"	f	class:TrafficData
+LoadTrafficWhite	TrafficData.cpp	/^bool TrafficData::LoadTrafficWhite(const std::string& data_path, std::vector<std::string>& traffic_white_file_list) {$/;"	f	class:TrafficData
+LoadVarPlaceData	LYConstData.cpp	/^bool LYConstData::LoadVarPlaceData() {$/;"	f	class:LYConstData
+LoadVarPlaceData	PrivateConstData.cpp	/^int PrivateConstData::LoadVarPlaceData() {$/;"	f	class:PrivateConstData
+Log	define.h	/^	int Log() {$/;"	f	struct:QueryParam
+Log	define.h	/^	int Log(std::string& cid) {$/;"	f	struct:QueryParam
+LogDump	LogDump.h	/^class LogDump {$/;"	c
+MAX_HOTEL_COST	LYConstData.cpp	/^const int MAX_HOTEL_COST = 5000000;$/;"	v
+MAX_VIEW_DIS	LYConstData.cpp	/^const int MAX_VIEW_DIS = 50000;$/;"	v
+MAX_VIEW_DIS	PrivateConstData.cpp	/^const int MAX_VIEW_DIS = 50000;$/;"	v
+MULTIUSE_TYPE_MULT	define.h	22;"	d
+MULTIUSE_TYPE_UNIQ	define.h	23;"	d
+MakeCarStore	LYConstData.cpp	/^LYPlace* LYConstData::MakeCarStore(const std::string& id, const std::string& name, const std::string& lname, const std::string& coord, int custom) {$/;"	f	class:LYConstData
+MakeHotel	LYConstData.cpp	/^LYPlace* LYConstData::MakeHotel(const std::string& id, const std::string& name, const std::string& lname, const std::string& coord, int custom) {$/;"	f	class:LYConstData
+MakeQuery8002	TrafficData.cpp	/^int TrafficData::MakeQuery8002(BasePlan* basePlan, int carRent, const std::vector<std::string>& idList, std::string& query) {$/;"	f	class:TrafficData
+MakeQuery8003	TrafficData.cpp	/^int TrafficData::MakeQuery8003(BasePlan* basePlan, int needReal,const std::tr1::unordered_set<std::string>& pairSet, std::string& query, int carRent) {$/;"	f	class:TrafficData
+MakeQuery8004	TrafficData.cpp	/^std::string TrafficData::MakeQuery8004(BasePlan* basePlan, int needDetail,const std::tr1::unordered_set<std::string>& midSet) {$/;"	f	class:TrafficData
+MakeRestaurant	LYConstData.cpp	/^LYPlace* LYConstData::MakeRestaurant(const std::string& id, const std::string& name, const std::string& lname, const std::string& coord, int custom) {$/;"	f	class:LYConstData
+MakeShop	LYConstData.cpp	/^LYPlace* LYConstData::MakeShop(const std::string& id, const std::string& name, const std::string& lname, const std::string& coord, int custom) {$/;"	f	class:LYConstData
+MakeStation	LYConstData.cpp	/^LYPlace* LYConstData::MakeStation(const std::string& id,int type, const std::string& name, const std::string& lname, const std::string& coord, int custom) {$/;"	f	class:LYConstData
+MakeTicketSource	LYConstData.cpp	/^int LYConstData::MakeTicketSource(const Tour *tour, const std::string& ticketDate, const TicketsFun *ticket, Json::Value &source) {$/;"	f	class:LYConstData
+MakeTour	LYConstData.cpp	/^LYPlace* LYConstData::MakeTour(const std::string& id, const std::string& name, const std::string& lname, const std::string& coord, int type, int custom) {$/;"	f	class:LYConstData
+MakeView	LYConstData.cpp	/^LYPlace* LYConstData::MakeView(const std::string& id, const std::string& name, const std::string& lname, const std::string& coord, int custom) {$/;"	f	class:LYConstData
+MergeKeyNode	KeyNodeBuilder.cpp	/^int KeyNodeBuilder::MergeKeyNode(Json::Value& req, BasePlan* basePlan) {$/;"	f	class:KeyNodeBuilder
+MergeKeyNode	KeyNodeBuilder.cpp	/^int KeyNodeBuilder::MergeKeyNode(KeyNode* cur_node, KeyNode* next_node, bool keep_cur) {$/;"	f	class:KeyNodeBuilder
+MergeKeyNodeFaultToLerant	KeyNodeBuilder.cpp	/^int KeyNodeBuilder::MergeKeyNodeFaultToLerant(BasePlan* basePlan) {$/;"	f	class:KeyNodeBuilder
+MergeListUniq	ToolFunc.cpp	/^int MergeListUniq(const std::vector<std::string>& add_list, std::vector<std::string>& ori_list) {$/;"	f	namespace:ToolFunc
+MergeLuggAndSleep	PathUtil.cpp	/^int PathUtil::MergeLuggAndSleep(BasePlan* basePlan) {$/;"	f	class:PathUtil
+ModLuggageHotel	RealTimeTraffic.cpp	/^int RealTimeTraffic::ModLuggageHotel(BasePlan* basePlan, PathView& path) {$/;"	f	class:RealTimeTraffic
+MoneyPrice	define.h	/^		MoneyPrice() {$/;"	f	class:MoneyPrice
+MoneyPrice	define.h	/^class MoneyPrice{$/;"	c
+NODE_FUNC_ALL	define.h	/^const unsigned int NODE_FUNC_ALL = 0xFFFFFFFF;$/;"	v
+NODE_FUNC_KEY	define.h	/^const unsigned int NODE_FUNC_KEY = NODE_FUNC_KEY_STATION | NODE_FUNC_KEY_SEGMENT | NODE_FUNC_KEY_HOTEL;$/;"	v
+NODE_FUNC_KEY_ARRIVE	define.h	/^const unsigned int NODE_FUNC_KEY_ARRIVE = 0x00001000;$/;"	v
+NODE_FUNC_KEY_DEPART	define.h	/^const unsigned int NODE_FUNC_KEY_DEPART = 0x00002000;$/;"	v
+NODE_FUNC_KEY_HOTEL	define.h	/^const unsigned int NODE_FUNC_KEY_HOTEL = NODE_FUNC_KEY_HOTEL_SLEEP | NODE_FUNC_KEY_HOTEL_LEFT_LUGGAGE | NODE_FUNC_KEY_HOTEL_RECLAIM_LUGGAGE;$/;"	v
+NODE_FUNC_KEY_HOTEL_LEFT_LUGGAGE	define.h	/^const unsigned int NODE_FUNC_KEY_HOTEL_LEFT_LUGGAGE = 0x00020000;$/;"	v
+NODE_FUNC_KEY_HOTEL_LUGGAGE	define.h	/^const unsigned int NODE_FUNC_KEY_HOTEL_LUGGAGE = NODE_FUNC_KEY_HOTEL_LEFT_LUGGAGE | NODE_FUNC_KEY_HOTEL_RECLAIM_LUGGAGE;$/;"	v
+NODE_FUNC_KEY_HOTEL_RECLAIM_LUGGAGE	define.h	/^const unsigned int NODE_FUNC_KEY_HOTEL_RECLAIM_LUGGAGE = 0x00040000;$/;"	v
+NODE_FUNC_KEY_HOTEL_SLEEP	define.h	/^const unsigned int NODE_FUNC_KEY_HOTEL_SLEEP = 0x00010000;$/;"	v
+NODE_FUNC_KEY_SEGMENT	define.h	/^const unsigned int NODE_FUNC_KEY_SEGMENT = 0x001000000;$/;"	v
+NODE_FUNC_KEY_STATION	define.h	/^const unsigned int NODE_FUNC_KEY_STATION = NODE_FUNC_KEY_ARRIVE | NODE_FUNC_KEY_DEPART;$/;"	v
+NODE_FUNC_NULL	define.h	/^const unsigned int NODE_FUNC_NULL = 0x00000000;$/;"	v
+NODE_FUNC_PLACE	define.h	/^const unsigned int NODE_FUNC_PLACE = NODE_FUNC_PLACE_VIEW | NODE_FUNC_PLACE_SHOP | NODE_FUNC_PLACE_RESTAURANT | NODE_FUNC_PLACE_TOUR;$/;"	v
+NODE_FUNC_PLACE_CAR_STORE	define.h	/^const unsigned int NODE_FUNC_PLACE_CAR_STORE = NODE_FUNC_PLACE_GETCAR_STORE | NODE_FUNC_PLACE_RETURNCAR_STORE;$/;"	v
+NODE_FUNC_PLACE_GETCAR_STORE	define.h	/^const unsigned int NODE_FUNC_PLACE_GETCAR_STORE = 0x00000100;$/;"	v
+NODE_FUNC_PLACE_HOTEL_SLEEP	define.h	/^const unsigned int NODE_FUNC_PLACE_HOTEL_SLEEP = 0x00080000; \/\/不作为keyNode的酒店点 (目前无用)$/;"	v
+NODE_FUNC_PLACE_RESTAURANT	define.h	/^const uint8_t NODE_FUNC_PLACE_RESTAURANT = NODE_FUNC_PLACE_REST_BREAKFAST | NODE_FUNC_PLACE_REST_LUNCH | NODE_FUNC_PLACE_REST_AFTERNOON_TEA | NODE_FUNC_PLACE_REST_SUPPER;$/;"	v
+NODE_FUNC_PLACE_REST_AFTERNOON_TEA	define.h	/^const uint8_t NODE_FUNC_PLACE_REST_AFTERNOON_TEA = 0x00000004;$/;"	v
+NODE_FUNC_PLACE_REST_BREAKFAST	define.h	/^const uint8_t NODE_FUNC_PLACE_REST_BREAKFAST = 0x00000001;$/;"	v
+NODE_FUNC_PLACE_REST_LUNCH	define.h	/^const uint8_t NODE_FUNC_PLACE_REST_LUNCH = 0x00000002;$/;"	v
+NODE_FUNC_PLACE_REST_SUPPER	define.h	/^const uint8_t NODE_FUNC_PLACE_REST_SUPPER = 0x00000008;$/;"	v
+NODE_FUNC_PLACE_RETURNCAR_STORE	define.h	/^const unsigned int NODE_FUNC_PLACE_RETURNCAR_STORE = 0x00000200;$/;"	v
+NODE_FUNC_PLACE_SHOP	define.h	/^const uint8_t NODE_FUNC_PLACE_SHOP = 0x00000020;$/;"	v
+NODE_FUNC_PLACE_TOUR	define.h	/^const unsigned int NODE_FUNC_PLACE_TOUR = 0x00000040;$/;"	v
+NODE_FUNC_PLACE_VIEW	define.h	/^const uint8_t NODE_FUNC_PLACE_VIEW = 0x00000010;$/;"	v
+NODE_FUNC_PLACE_VIEW_SHOP	define.h	/^const uint8_t NODE_FUNC_PLACE_VIEW_SHOP = NODE_FUNC_PLACE_VIEW | NODE_FUNC_PLACE_SHOP;$/;"	v
+NewCity2OldCity	ReqParser.cpp	/^int ReqParser::NewCity2OldCity(const QueryParam& param, Json::Value& req) {$/;"	f	class:ReqParser
+NextItem	define.h	/^	NextItem() {$/;"	f	class:NextItem
+NextItem	define.h	/^	NextItem(const LYPlace* cur_view, const LYPlace* next_view, int dist, double score) {$/;"	f	class:NextItem
+NextItem	define.h	/^class NextItem {$/;"	c
+NextItemDistCmp	LYConstData.cpp	/^bool NextItemDistCmp(const NextItem* item_a, const NextItem* item_b) {$/;"	f
+NextItemHotCmp	LYConstData.cpp	/^bool NextItemHotCmp(const NextItem* item_a, const NextItem* item_b) {$/;"	f
+NextItemScoreCmp	LYConstData.cpp	/^bool NextItemScoreCmp(const NextItem* item_a, const NextItem* item_b) {$/;"	f
+Norm15Min	PathUtil.cpp	/^int PathUtil::Norm15Min(BasePlan* basePlan) {$/;"	f	class:PathUtil
+NormMinute	ToolFunc.cpp	/^int NormMinute(int dur) {$/;"	f	namespace:ToolFunc
+NormSeconds	ToolFunc.cpp	/^std::string NormSeconds(int dur) {$/;"	f	namespace:ToolFunc
+NormSecondsEn	ToolFunc.cpp	/^std::string NormSecondsEn(int dur) {$/;"	f	namespace:ToolFunc
+NotPlanBetweenSomeKeynodeByDate	KeyNodeBuilder.cpp	/^int KeyNodeBuilder::NotPlanBetweenSomeKeynodeByDate(Json::Value& req, BasePlan* basePlan) {$/;"	f	class:KeyNodeBuilder
+OpenClose	define.h	/^	OpenClose(const OpenClose& openClose) {$/;"	f	class:OpenClose
+OpenClose	define.h	/^	OpenClose(time_t open = 0, time_t close = 0, time_t latestArv = 0, int meals = 0) {$/;"	f	class:OpenClose
+OpenClose	define.h	/^class OpenClose {$/;"	c
+PLACE_PUSH_COMP	BasePlan.h	/^	PLACE_PUSH_COMP,$/;"	e	enum:PLACE_PUSH_TYPE
+PLACE_PUSH_MANU	BasePlan.h	/^	PLACE_PUSH_MANU$/;"	e	enum:PLACE_PUSH_TYPE
+PLACE_PUSH_NULL	BasePlan.h	/^	PLACE_PUSH_NULL,$/;"	e	enum:PLACE_PUSH_TYPE
+PLACE_PUSH_TYPE	BasePlan.h	/^enum PLACE_PUSH_TYPE {$/;"	g
+PLACE_STATS	Utils.h	/^enum PLACE_STATS {$/;"	g
+PLACE_STATS_THROW_ALLOC_FAIL	Utils.h	/^	PLACE_STATS_THROW_ALLOC_FAIL, \/\/分配失败扔点$/;"	e	enum:PLACE_STATS
+PLACE_STATS_THROW_DFS	Utils.h	/^	PLACE_STATS_THROW_DFS, \/\/dfs扔点$/;"	e	enum:PLACE_STATS
+PLACE_STATS_THROW_GREEDY	Utils.h	/^	PLACE_STATS_THROW_GREEDY \/\/greedy扔点$/;"	e	enum:PLACE_STATS
+PLACE_STATS_THROW_OTHER	Utils.h	/^	PLACE_STATS_THROW_OTHER, \/\/其他原因扔点$/;"	e	enum:PLACE_STATS
+PLACE_STATS_THROW_REST_LIMIT	Utils.h	/^	PLACE_STATS_THROW_REST_LIMIT, \/\/餐馆限制扔点$/;"	e	enum:PLACE_STATS
+PLACE_STATS_THROW_RICH	Utils.h	/^	PLACE_STATS_THROW_RICH, \/\/rich扔点$/;"	e	enum:PLACE_STATS
+PLACE_STATS_THROW_ROUTE	Utils.h	/^	PLACE_STATS_THROW_ROUTE, \/\/route扔点$/;"	e	enum:PLACE_STATS
+POIDetail	define.h	/^struct POIDetail {$/;"	s
+POI_CUSTOM_MODE	define.h	/^enum POI_CUSTOM_MODE {$/;"	g
+POI_CUSTOM_MODE_CONST	define.h	/^	POI_CUSTOM_MODE_CONST, \/\/共有库$/;"	e	enum:POI_CUSTOM_MODE
+POI_CUSTOM_MODE_CUSTOM	define.h	/^	POI_CUSTOM_MODE_CUSTOM, \/\/自定义$/;"	e	enum:POI_CUSTOM_MODE
+POI_CUSTOM_MODE_MAKE	define.h	/^	POI_CUSTOM_MODE_MAKE, \/\/自制点$/;"	e	enum:POI_CUSTOM_MODE
+POI_CUSTOM_MODE_PRIVATE	define.h	/^	POI_CUSTOM_MODE_PRIVATE \/\/ 私有库$/;"	e	enum:POI_CUSTOM_MODE
+PRIVATE_DO_SOMETHING_FAILED	PrivateConstData.h	/^	PRIVATE_DO_SOMETHING_FAILED$/;"	e	enum:PRIVATE_ERROR
+PRIVATE_ERROR	PrivateConstData.h	/^enum PRIVATE_ERROR{$/;"	g
+PRIVATE_ERROR_INFO_LOST	PrivateConstData.h	/^	PRIVATE_ERROR_INFO_LOST,$/;"	e	enum:PRIVATE_ERROR
+PRIVATE_ERROR_MEMORY	PrivateConstData.h	/^	PRIVATE_ERROR_MEMORY,$/;"	e	enum:PRIVATE_ERROR
+ParseBasicParam	ReqParser.cpp	/^int ReqParser::ParseBasicParam(const QueryParam& param, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseBasicReq	ReqParser.cpp	/^int ReqParser::ParseBasicReq(Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseCarRental	ReqParser.cpp	/^int ReqParser::ParseCarRental(const QueryParam& param, Json::Value& req, BasePlan* basePlan)$/;"	f	class:ReqParser
+ParseCid	ReqParser.cpp	/^int ReqParser::ParseCid(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseCity	ReqParser.cpp	/^int ReqParser::ParseCity(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseCityPrefer	ReqParser.cpp	/^int ReqParser::ParseCityPrefer(const QueryParam & param,Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseCustomHotel	ReqParser.cpp	/^int ReqParser::ParseCustomHotel(const QueryParam& qParam, Json::Value& jHotel, BasePlan* basePlan, const std::string& hid) {$/;"	f	class:ReqParser
+ParseCustomPois	ReqParser.cpp	/^int ReqParser::ParseCustomPois(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseCustomTraf	ReqParser.cpp	/^int ReqParser::ParseCustomTraf(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseDaysNotPlan	ReqParser.cpp	/^int ReqParser::ParseDaysNotPlan(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseDaysPois	ReqParser.cpp	/^int ReqParser::ParseDaysPois (const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseDaysProd	ReqParser.cpp	/^int ReqParser::ParseDaysProd(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseDetailList	ReqParser.cpp	/^int ReqParser::ParseDetailList(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseFilter	ReqParser.cpp	/^int ReqParser::ParseFilter(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseFilterP104	ReqParser.cpp	/^int ReqParser::ParseFilterP104(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseProduct	ReqParser.cpp	/^int ReqParser::ParseProduct(const QueryParam& param, Json::Value& req, BasePlan* basePlan)$/;"	f	class:ReqParser
+ParseProductIDList	ReqParser.cpp	/^int ReqParser::ParseProductIDList(const QueryParam& param, Json::Value& req, BasePlan* basePlan) {$/;"	f	class:ReqParser
+ParseTrafFromView	ReqParser.cpp	/^int ReqParser::ParseTrafFromView(Json::Value& jView, Json::Value& jCustomTrafList, Json::Value& jLastTripTrafList) {$/;"	f	class:ReqParser
+ParseTraffic2TrafItem	ReqParser.cpp	/^TrafficItem* ReqParser::ParseTraffic2TrafItem (const QueryParam& param, BasePlan* basePlan, std::string trafKey, Json::Value& jTraffic) {$/;"	f	class:ReqParser
+PathCross	PathCross.h	/^class PathCross {$/;"	c
+PathEval	PathEval.h	/^class PathEval {$/;"	c
+PathInfo	define.h	/^	PathInfo() {$/;"	f	class:PathInfo
+PathInfo	define.h	/^class PathInfo {$/;"	c
+PathPerfect	PathPerfect.h	/^class PathPerfect {$/;"	c
+PathScore	define.h	/^	PathScore(){$/;"	f	class:PathScore
+PathScore	define.h	/^class PathScore{$/;"	c
+PathStat	PathStat.h	/^class PathStat {$/;"	c
+PathTraffic	PathTraffic.h	/^class PathTraffic {$/;"	c
+PathUtil	PathUtil.h	/^class PathUtil {$/;"	c
+PathView	PathView.h	/^	PathView() {$/;"	f	class:PathView
+PathView	PathView.h	/^	PathView(int capacity) {$/;"	f	class:PathView
+PathView	PathView.h	/^class PathView {$/;"	c
+PerfectDelSet	PathUtil.cpp	/^int PathUtil::PerfectDelSet(BasePlan* basePlan, PathView& path) {$/;"	f	class:PathUtil
+PerfectVarPlace	LYConstData.cpp	/^int LYConstData::PerfectVarPlace(std::tr1::unordered_map<std::string, std::set<std::string> >& cityPlaceMap) {$/;"	f	class:LYConstData
+PlaceGroup	PlaceGroup.h	/^	PlaceGroup() {$/;"	f	class:PlaceGroup
+PlaceGroup	PlaceGroup.h	/^class PlaceGroup {$/;"	c
+PlaceIDCmp	define.h	/^struct PlaceIDCmp {$/;"	s
+PlaceInfo	define.h	/^	PlaceInfo() {$/;"	f	class:PlaceInfo
+PlaceInfo	define.h	/^class PlaceInfo {$/;"	c
+PlaceInfoAlloc	PlaceInfoAlloc.h	/^	PlaceInfoAlloc() {$/;"	f	class:PlaceInfoAlloc
+PlaceInfoAlloc	PlaceInfoAlloc.h	/^class PlaceInfoAlloc {$/;"	c
+PlaceOrder	Utils.h	/^	PlaceOrder(const LYPlace* place, const std::string& date, int index, unsigned char type) {$/;"	f	class:PlaceOrder
+PlaceOrder	Utils.h	/^	PlaceOrder(const PlaceOrder& placeOrder) {$/;"	f	class:PlaceOrder
+PlaceOrder	Utils.h	/^	PlaceOrder(const PlaceOrder* ptr) {$/;"	f	class:PlaceOrder
+PlaceOrder	Utils.h	/^class PlaceOrder {$/;"	c
+PlaceRanker	DataList.cpp	/^int DataList::PlaceRanker(int type, int rankType, std::vector<const ScoreNode*>& scoreNodeList, std::vector<ShowItem>& showItemList) {$/;"	f	class:DataList
+PlanItem	PathView.cpp	/^PlanItem::PlanItem() {$/;"	f	class:PlanItem
+PlanItem	PathView.h	/^	PlanItem(const LYPlace* place, const std::string& arvID, const std::string& deptID, const TrafficItem* arriveTraffic, const TrafficItem* departTraffic, const std::string& trafDate, time_t arriveTime, time_t departTime, const DurS* durS, time_t openTime, time_t closeTime, double cost, int type, double timeZone) {$/;"	f	class:PlanItem
+PlanItem	PathView.h	/^	PlanItem(const PlanItem& item) {$/;"	f	class:PlanItem
+PlanItem	PathView.h	/^	PlanItem(const PlanItem* p) {$/;"	f	class:PlanItem
+PlanItem	PathView.h	/^class PlanItem {$/;"	c
+PlanStats	Utils.h	/^	PlanStats() {$/;"	f	class:PlanStats
+PlanStats	Utils.h	/^class PlanStats {$/;"	c
+PloarRadius	LYConstData.cpp	/^static int PloarRadius=6356.9088;\/\/地球极半径(km)$/;"	v	file:
+Point	define.h	/^	Point() {$/;"	f	class:Point
+Point	define.h	/^	Point(double x, double y) {$/;"	f	class:Point
+Point	define.h	/^class Point {$/;"	c
+PointCylindrical	LYConstData.cpp	/^bool LYConstData::PointCylindrical() {$/;"	f	class:LYConstData
+Pop	PathView.cpp	/^int PathView::Pop() {$/;"	f	class:PathView
+Prefer	Prefer.h	/^	Prefer() {$/;"	f	class:Prefer
+Prefer	Prefer.h	/^class Prefer {$/;"	c
+PrivateConfig	PrivateConstData.h	/^class PrivateConfig {$/;"	c
+PrivateConstData	PrivateConstData.h	/^class PrivateConstData:boost::noncopyable{$/;"	c
+PrivateLoad	PrivateConstData.cpp	/^int PrivateConstData::PrivateLoad() {$/;"	f	class:PrivateConstData
+ProcCost	LogDump.h	/^	ProcCost() {$/;"	f	class:ProcCost
+ProcCost	LogDump.h	/^class ProcCost {$/;"	c
+ProcStat	LogDump.h	/^	ProcStat() {$/;"	f	class:ProcStat
+ProcStat	LogDump.h	/^class ProcStat {$/;"	c
+ProductTicket	define.h	/^struct ProductTicket {$/;"	s
+PushBlock	BasePlan.cpp	/^int BasePlan::PushBlock(time_t start, time_t stop, const std::string& trafDate, int avail_dur, uint8_t restNeed, double time_zone) {$/;"	f	class:BasePlan
+PushLine	Utils.cpp	/^int TimeBlock::PushLine(const LYPlace* from_place, const LYPlace* to_place, const TrafficItem* traffic) {$/;"	f	class:TimeBlock
+PushStable	Utils.cpp	/^int TimeBlock::PushStable(const LYPlace* place, int alloc_dur) {$/;"	f	class:TimeBlock
+QUERY_SOURCE_ANDORID	define.h	/^	QUERY_SOURCE_ANDORID$/;"	e	enum:QUERY_SOURCE_TYPE
+QUERY_SOURCE_IOS	define.h	/^	QUERY_SOURCE_IOS,$/;"	e	enum:QUERY_SOURCE_TYPE
+QUERY_SOURCE_TYPE	define.h	/^enum QUERY_SOURCE_TYPE {$/;"	g
+QUERY_SOURCE_WEB	define.h	/^	QUERY_SOURCE_WEB,$/;"	e	enum:QUERY_SOURCE_TYPE
+QueryParam	define.h	/^	QueryParam():dev(0),priDataThreadId(0){}$/;"	f	struct:QueryParam
+QueryParam	define.h	/^struct QueryParam {$/;"	s
+REAL_TRAF_ADVANCE	define.h	/^const unsigned int REAL_TRAF_ADVANCE = 0x00000001;  \/\/ 打TrafPair阶段获取$/;"	v
+REAL_TRAF_NULL	define.h	/^const unsigned int REAL_TRAF_NULL = 0x00000000;$/;"	v
+REAL_TRAF_REPLACE	define.h	/^const unsigned int REAL_TRAF_REPLACE = 0x00000002;  \/\/ PathView出来后后补$/;"	v
+RESTAURANT_TYPE_AFTERNOON_TEA	define.h	/^const int RESTAURANT_TYPE_AFTERNOON_TEA = 0x00000004;$/;"	v
+RESTAURANT_TYPE_ALL	define.h	/^const int RESTAURANT_TYPE_ALL = RESTAURANT_TYPE_BREAKFAST | RESTAURANT_TYPE_LUNCH | RESTAURANT_TYPE_AFTERNOON_TEA | RESTAURANT_TYPE_SUPPER;$/;"	v
+RESTAURANT_TYPE_BREAKFAST	define.h	/^const int RESTAURANT_TYPE_BREAKFAST = 0x00000001; \/\/ 受早餐时间限制，类推$/;"	v
+RESTAURANT_TYPE_COUNT	define.h	/^const int RESTAURANT_TYPE_COUNT = 0x00000010;$/;"	v
+RESTAURANT_TYPE_LUNCH	define.h	/^const int RESTAURANT_TYPE_LUNCH = 0x00000002;$/;"	v
+RESTAURANT_TYPE_NULL	define.h	/^const int RESTAURANT_TYPE_NULL = 0x00000000;  \/\/ 按自定义开关门，视为景点对待$/;"	v
+RESTAURANT_TYPE_SUPPER	define.h	/^const int RESTAURANT_TYPE_SUPPER = 0x00000008;$/;"	v
+REST_PREFER_AI	define.h	/^const int REST_PREFER_AI = REST_PREFER_ATTACH | REST_PREFER_SNACK | REST_PREFER_FEAST | REST_PREFER_MICHELIN;$/;"	v
+REST_PREFER_ATTACH	define.h	/^const int REST_PREFER_ATTACH = 0x01000000;  \/\/ 附近就餐$/;"	v
+REST_PREFER_FEAST	define.h	/^const int REST_PREFER_FEAST = 0x00000002;  \/\/ 美味大餐$/;"	v
+REST_PREFER_MICHELIN	define.h	/^const int REST_PREFER_MICHELIN = 0x00000004;  \/\/ 米其林$/;"	v
+REST_PREFER_NULL	define.h	/^const int REST_PREFER_NULL = 0x00000000;  \/\/ 无饭店$/;"	v
+REST_PREFER_SNACK	define.h	/^const int REST_PREFER_SNACK = 0x00000001;  \/\/ 特色小馆$/;"	v
+RUNMODE_MANU	define.h	14;"	d
+RUNMODE_TEST	define.h	13;"	d
+RUNMODE_TEST_3002	define.h	15;"	d
+RUNMODE_USER	define.h	12;"	d
+RUN_NULL	BasePlan.h	/^	RUN_NULL,$/;"	e	enum:RUN_TYPE
+RUN_PLANNER_ACO	BasePlan.h	/^	RUN_PLANNER_ACO$/;"	e	enum:RUN_TYPE
+RUN_PLANNER_BAG	BasePlan.h	/^	RUN_PLANNER_BAG,$/;"	e	enum:RUN_TYPE
+RUN_PROCESSOR	BasePlan.h	/^	RUN_PROCESSOR,$/;"	e	enum:RUN_TYPE
+RUN_TYPE	BasePlan.h	/^enum RUN_TYPE {$/;"	g
+RateExchange	ToolFunc.h	/^class RateExchange {$/;"	c	namespace:ToolFunc
+RealTimeTrafStat	PathPerfect.cpp	/^int PathPerfect::RealTimeTrafStat(BasePlan* basePlan) {$/;"	f	class:PathPerfect
+RealTimeTraffic	RealTimeTraffic.h	/^class RealTimeTraffic {$/;"	c
+RealTrafStat	LogDump.h	/^class RealTrafStat {$/;"	c
+Release	BasePlan.cpp	/^int BasePlan::Release() {$/;"	f	class:BasePlan
+Release	PathView.cpp	/^int PathView::Release() {$/;"	f	class:PathView
+Release	TrafficData.cpp	/^int TrafficData::Release() {$/;"	f	class:TrafficData
+Release	Utils.cpp	/^int KeyNode::Release() {$/;"	f	class:KeyNode
+Release	Utils.cpp	/^int TimeBlock::Release() {$/;"	f	class:TimeBlock
+RemoveNotPlanPlace	BasePlan.cpp	/^int BasePlan::RemoveNotPlanPlace(std::vector<const LYPlace*>& placeList) {$/;"	f	class:BasePlan
+RemoveTogoPoi	ReqParser.cpp	/^int ReqParser::RemoveTogoPoi(BasePlan *basePlan) {$/;"	f	class:ReqParser
+RemoveVector	ToolFunc.cpp	/^void RemoveVector(std::vector<T>& from,const std::vector<T>& remove){$/;"	f	namespace:ToolFunc
+Replace	RealTimeTraffic.cpp	/^int RealTimeTraffic::Replace(BasePlan* basePlan, PathView& path) {$/;"	f	class:RealTimeTraffic
+ReqChecker	ReqChecker.h	/^class ReqChecker {$/;"	c
+ReqHead	define.h	/^	const std::string& ReqHead() const {$/;"	f	struct:QueryParam
+ReqParser	ReqParser.h	/^class ReqParser {$/;"	c
+Reset	PathView.cpp	/^int PathView::Reset() {$/;"	f	class:PathView
+ResetLen	PathView.cpp	/^int PathView::ResetLen(int new_len) {$/;"	f	class:PathView
+Restaurant	define.h	/^class Restaurant: public VarPlace{$/;"	c
+Restaurant2PlaceInfo	BasePlan.cpp	/^int BasePlan::Restaurant2PlaceInfo(const VarPlace* vPlace, const std::string& date, PlaceInfo*& pInfo) {$/;"	f	class:BasePlan
+RestaurantInfo	define.h	/^class RestaurantInfo: public PlaceInfo {$/;"	c
+RestaurantTime	Utils.h	/^	RestaurantTime(int type, int begin, int end, int time_cost, int min_time_cost) {$/;"	f	class:RestaurantTime
+RestaurantTime	Utils.h	/^class RestaurantTime {$/;"	c
+RichAttach	PathPerfect.cpp	/^int PathPerfect::RichAttach(BasePlan* basePlan, Json::Value& jViewDayList) {$/;"	f	class:PathPerfect
+RichAttach	PathPerfect.cpp	/^int PathPerfect::RichAttach(BasePlan* basePlan, PathView& path, std::vector<RestaurantTime>& restTimeList) {$/;"	f	class:PathPerfect
+RichAttachNodeMark	PathPerfect.cpp	/^int PathPerfect::RichAttachNodeMark(BasePlan* basePlan, PathView& path, int begIdx, int endIdx, RestaurantTime& restTime) {$/;"	f	class:PathPerfect
+RouteBlock	Utils.h	/^	RouteBlock() {$/;"	f	class:RouteBlock
+RouteBlock	Utils.h	/^class RouteBlock {$/;"	c
+RouteConfig	RouteConfig.cpp	/^RouteConfig::RouteConfig(){$/;"	f	class:RouteConfig
+RouteConfig	RouteConfig.h	/^class RouteConfig{$/;"	c
+Rule_node	TimeIR.h	/^class Rule_node {$/;"	c
+SHOP_INTENSITY_LOOK_AROUND	define.h	/^	SHOP_INTENSITY_LOOK_AROUND,  \/\/ 随便看看$/;"	e	enum:SHOP_INTENSITY_TYPE
+SHOP_INTENSITY_NULL	define.h	/^	SHOP_INTENSITY_NULL,  \/\/ 不购物$/;"	e	enum:SHOP_INTENSITY_TYPE
+SHOP_INTENSITY_SHOPAHOLIC	define.h	/^	SHOP_INTENSITY_SHOPAHOLIC  \/\/ 购物狂$/;"	e	enum:SHOP_INTENSITY_TYPE
+SHOP_INTENSITY_TYPE	define.h	/^enum SHOP_INTENSITY_TYPE {$/;"	g
+SHOP_PREFER_AI	define.h	/^const int SHOP_PREFER_AI = SHOP_PREFER_OUTLETS | SHOP_PREFER_MALL | SHOP_PREFER_MARKET;$/;"	v
+SHOP_PREFER_MALL	define.h	/^const int SHOP_PREFER_MALL = 0x00000002;  \/\/ 大型商场$/;"	v
+SHOP_PREFER_MARKET	define.h	/^const int SHOP_PREFER_MARKET = 0x00000004;  \/\/ 当地市集$/;"	v
+SHOP_PREFER_NULL	define.h	/^const int SHOP_PREFER_NULL = 0x00000000;  \/\/ 无购物$/;"	v
+SHOP_PREFER_OUTLETS	define.h	/^const int SHOP_PREFER_OUTLETS = 0x00000001;  \/\/ 奥特莱斯$/;"	v
+STRING_TYPE_COORD	ReqChecker.h	/^	STRING_TYPE_COORD,$/;"	e	enum:FORMAT_TYPE
+STRING_TYPE_ID	ReqChecker.h	/^	STRING_TYPE_ID$/;"	e	enum:FORMAT_TYPE
+STRING_TYPE_TIME_HM	ReqChecker.h	/^	STRING_TYPE_TIME_HM,$/;"	e	enum:FORMAT_TYPE
+STRING_TYPE_TIME_YMD	ReqChecker.h	/^	STRING_TYPE_TIME_YMD,$/;"	e	enum:FORMAT_TYPE
+STRING_TYPE_TIME_YMD_HM	ReqChecker.h	/^	STRING_TYPE_TIME_YMD_HM,$/;"	e	enum:FORMAT_TYPE
+SelectTourTrans	TrafficData.cpp	/^int TrafficData::SelectTourTrans(const LYPlace* startPlace, const std::vector<const LYPlace* >& left, const std::vector<const LYPlace* >& gather, const LYPlace* endPlace, BasePlan* basePlan) {$/;"	f	class:TrafficData
+SelectTourTrans	TrafficData.cpp	/^int TrafficData::SelectTourTrans(const LYPlace* startPlace, const std::vector<const LYPlace* >& transPoi, const LYPlace* endPlace, BasePlan* basePlan) {$/;"	f	class:TrafficData
+SepTraffic	PathTraffic.cpp	/^int PathTraffic::SepTraffic(const QueryParam& param, const std::vector<const TrafficDetail*>& trafficDetailList, std::tr1::unordered_map<int, std::vector<const TrafficDetail*> >& trafficDetailMap) {$/;"	f	class:PathTraffic
+Set	LogDump.h	/^	int Set(int errID) {$/;"	f	class:ErrorInfo
+Set	LogDump.h	/^	int Set(int errID, const std::string& errReason) {$/;"	f	class:ErrorInfo
+Set	LogDump.h	/^	int Set(int errID, const std::string& errReason, const std::string& errStr) {$/;"	f	class:ErrorInfo
+Set	define.h	/^	int Set(int minDur, int zipDur, int rcmdDur, int extendDur, int maxDur) {$/;"	f	class:DurS
+Set	define.h	/^	int Set(time_t open, time_t close, time_t latestArv, int meals = 0) {$/;"	f	class:OpenClose
+SetClose	Utils.cpp	/^int KeyNode::SetClose(time_t close) {$/;"	f	class:KeyNode
+SetCustomPlace	BasePlan.cpp	/^const LYPlace* BasePlan::SetCustomPlace(const int& type, const std::string& id, const std::string& name, const std::string& lname, const std::string& coord, const int& customMod) {$/;"	f	class:BasePlan
+SetCustomPois	TrafficData.cpp	/^int TrafficData::SetCustomPois(BasePlan* basePlan, const LYPlace* pPlace, Json::Value& jCustomPoisList, std::tr1::unordered_set<std::string>& customId) {$/;"	f	class:TrafficData
+SetDur	Utils.cpp	/^int KeyNode::SetDur(int minDur, int zipDur, int rcmdDur, int extendDur, int maxDur) {$/;"	f	class:KeyNode
+SetDur	define.h	/^	int SetDur(int dur) {$/;"	f	class:Intensity
+SetDur2PlanStats	PathUtil.cpp	/^int PathUtil::SetDur2PlanStats(BasePlan* basePlan, PathView& path) {$/;"	f	class:PathUtil
+SetDurS	BasePlan.cpp	/^int BasePlan::SetDurS(const LYPlace* place, const DurS durS) {$/;"	f	class:BasePlan
+SetDurS	BasePlan.cpp	/^int BasePlan::SetDurS(const LYPlace* place, const DurS* durS) {$/;"	f	class:BasePlan
+SetDurS	BasePlan.cpp	/^int BasePlan::SetDurS(const LYPlace* place, int min, int zip, int rcmd, int extend, int max) {$/;"	f	class:BasePlan
+SetGatherLocal	define.h	/^	int SetGatherLocal(const LYPlace* place) {$/;"	f	class:Tour
+SetHotLevel	define.h	/^	int SetHotLevel(int hotLevel) {$/;"	f	class:VarPlace
+SetHotMap	DataChecker.cpp	/^int DataChecker::SetHotMap(BasePlan* basePlan) {$/;"	f	class:DataChecker
+SetLeftLocal	define.h	/^	int SetLeftLocal(const LYPlace* place) {$/;"	f	class:Tour
+SetMax	define.h	/^	int SetMax(int maxDur) {$/;"	f	class:DurS
+SetNotPlay	Utils.h	/^	void SetNotPlay(bool notPlay = true){_is_not_play = notPlay;};$/;"	f	class:TimeBlock
+SetOpen	Utils.cpp	/^int KeyNode::SetOpen(time_t open) {$/;"	f	class:KeyNode
+SetPlaceDur	Utils.cpp	/^int PlanStats::SetPlaceDur(const LYPlace* place, int dur) {$/;"	f	class:PlanStats
+SetPlaceIdx	LYConstData.cpp	/^int LYConstData::SetPlaceIdx() {$/;"	f	class:LYConstData
+SetPlaceList	LogDump.cpp	/^int DebugInfo::SetPlaceList(int errID, const std::string& errReason, int placeSum) {$/;"	f	class:DebugInfo
+SetPlaceStats	Utils.cpp	/^int PlanStats::SetPlaceStats(const LYPlace* place, int stats) {$/;"	f	class:PlanStats
+SetPlanErr	LogDump.cpp	/^int DebugInfo::SetPlanErr(int errID, const std::string& errReason) {$/;"	f	class:DebugInfo
+SetQueryParam	LYConstData.h	/^	static const QueryParam* SetQueryParam(const QueryParam *queryParam = NULL){$/;"	f	class:LYConstData
+SetS108	LogDump.cpp	/^int DebugInfo::SetS108(int errID, const std::string& errReason, int num) {$/;"	f	class:DebugInfo
+SetScore	define.h	/^    int SetScore(double s) {$/;"	f	class:ShowItem
+SetTourTraf8002	TrafficData.cpp	/^int TrafficData::SetTourTraf8002(BasePlan* basePlan, const std::tr1::unordered_set<std::string>& placeIdSet) {$/;"	f	class:TrafficData
+SetTourTraf8003	TrafficData.cpp	/^int TrafficData::SetTourTraf8003(BasePlan* basePlan, const std::tr1::unordered_set<std::string>& pairSet) {$/;"	f	class:TrafficData
+SetTrafDate	Utils.cpp	/^int KeyNode::SetTrafDate(const std::string& newTrafDate) {$/;"	f	class:KeyNode
+SetTrafDetail	LogDump.cpp	/^int DebugInfo::SetTrafDetail(int errID, const std::string& errReason, int resultSum){$/;"	f	class:DebugInfo
+SetTrafficPair	TrafficData.cpp	/^int TrafficData::SetTrafficPair(BasePlan* basePlan, const std::tr1::unordered_set<std::string>& pairSet, Json::Value& jData, Json::Value& jCustomPoisList) {$/;"	f	class:TrafficData
+SetWidget	LogDump.cpp	/^int DebugInfo::SetWidget(int leftTime, double trafRate, int intensity) {$/;"	f	class:DebugInfo
+Setm_view	define.h	/^	int Setm_view(const std::string& id) {$/;"	f	class:ViewTicket
+ShieldDump	PrivateConstData.cpp	/^int PrivateConstData::ShieldDump() {$/;"	f	class:PrivateConstData
+ShieldPlaceList	PrivateConstData.cpp	/^int PrivateConstData::ShieldPlaceList(std::set<std::string>& placeList, const std::string& ptid) {$/;"	f	class:PrivateConstData
+Shop	define.h	/^class Shop: public VarPlace {$/;"	c
+Shop2PlaceInfo	BasePlan.cpp	/^int BasePlan::Shop2PlaceInfo(const VarPlace* vPlace, const std::string& date, PlaceInfo*& pInfo) {$/;"	f	class:BasePlan
+ShopInfo	define.h	/^class ShopInfo: public PlaceInfo {$/;"	c
+Show	PrivateConstData.cpp	/^int PrivateConstData::Show() {$/;"	f	class:PrivateConstData
+ShowItem	define.h	/^    ShowItem() : m_place(NULL), m_score(0) {}$/;"	f	class:ShowItem
+ShowItem	define.h	/^    ShowItem(const LYPlace* place) : m_place(place), m_score(0) {}$/;"	f	class:ShowItem
+ShowItem	define.h	/^    ShowItem(const LYPlace* place, double s) : m_place(place), m_score(s) {}$/;"	f	class:ShowItem
+ShowItem	define.h	/^class ShowItem {$/;"	c
+SortAllPlace	DataChecker.cpp	/^int DataChecker::SortAllPlace(BasePlan* basePlan) {$/;"	f	class:DataChecker
+SortList	DataList.cpp	/^int DataList::SortList(BasePlan* basePlan, int reqMode, std::vector<const LYPlace*>& pList, std::vector<ShowItem>& showItemList)  {$/;"	f	class:DataList
+SortListHot	DataList.cpp	/^int DataList::SortListHot(BasePlan* basePlan, int reqMode, std::vector<const LYPlace*>& pList, std::vector<ShowItem>& showItemList) {$/;"	f	class:DataList
+SortListRanking	DataList.cpp	/^int DataList::SortListRanking(BasePlan* basePlan, int reqMode, std::vector<const LYPlace*>& pList, std::vector<ShowItem>& showItemList) {$/;"	f	class:DataList
+SortListTour	DataList.cpp	/^int DataList::SortListTour(BasePlan* basePlan, int reqMode, std::vector<const LYPlace*>& pList, std::vector<ShowItem>& showItemList) {$/;"	f	class:DataList
+SortListTourDatePrice	DataList.cpp	/^int DataList::SortListTourDatePrice(BasePlan* basePlan, int reqMode, std::vector<const LYPlace*>& pList, std::vector<ShowItem>& showItemList) {$/;"	f	class:DataList
+SortPlaceList	DataChecker.cpp	/^int DataChecker::SortPlaceList(const T& t, BasePlan* basePlan, std::vector<const LYPlace*>& sortList, bool isShopSortWithView) {$/;"	f	class:DataChecker
+Station	define.h	/^class Station: public LYPlace {$/;"	c
+StatsToString	Utils.cpp	/^std::string PlanStats::StatsToString(int stats) {$/;"	f	class:PlanStats
+StretchItem	PathUtil.h	/^	StretchItem() {$/;"	f	class:StretchItem
+StretchItem	PathUtil.h	/^	StretchItem(StretchItem& sItem) {$/;"	f	class:StretchItem
+StretchItem	PathUtil.h	/^	StretchItem(StretchItem* sItem) {$/;"	f	class:StretchItem
+StretchItem	PathUtil.h	/^	StretchItem(int& index, PlanItem*& pItem, int rcmdDur) {$/;"	f	class:StretchItem
+StretchItem	PathUtil.h	/^class StretchItem {\/\/拉伸用的类 参与排序的有分数 item的下标 时长$/;"	c
+StretchItemCmp	PathUtil.h	/^struct StretchItemCmp {$/;"	s
+StretchItemRateCmp	PathUtil.h	/^struct StretchItemRateCmp {$/;"	s
+SubN	PathView.cpp	/^int PathView::SubN(const PathView& path, int begIdx, int endIdx) {$/;"	f	class:PathView
+SwitchUpdate	PrivateConstData.cpp	/^int PrivateConstData::SwitchUpdate(const std::string& startT, const std::string& endT, const std::string& tableName, int* dur, int* rowCnt) {$/;"	f	class:PrivateConstData
+TAG_BITSET_SIZE	define.h	/^const int TAG_BITSET_SIZE = 0x00000200;\/\/tag的容量$/;"	v
+TIMEOUT	define.h	/^const int TIMEOUT = 500000000;$/;"	v
+TIME_INTENSITY	define.h	/^enum TIME_INTENSITY {$/;"	g
+TIME_INTENSITY_INSUFFISCIENT	define.h	/^	TIME_INTENSITY_INSUFFISCIENT$/;"	e	enum:TIME_INTENSITY
+TIME_INTENSITY_LOOSE	define.h	/^	TIME_INTENSITY_LOOSE,$/;"	e	enum:TIME_INTENSITY
+TIME_INTENSITY_SUITABLE	define.h	/^	TIME_INTENSITY_SUITABLE,$/;"	e	enum:TIME_INTENSITY
+TIME_INTENSITY_TIGHT	define.h	/^	TIME_INTENSITY_TIGHT,$/;"	e	enum:TIME_INTENSITY
+TRAF_MODE	define.h	/^enum TRAF_MODE {$/;"	g
+TRAF_MODE_BUS	define.h	/^	TRAF_MODE_BUS,  \/\/ 2 公共交通$/;"	e	enum:TRAF_MODE
+TRAF_MODE_DRIVING	define.h	/^	TRAF_MODE_DRIVING  \/\/ 4 自驾(租车)$/;"	e	enum:TRAF_MODE
+TRAF_MODE_TAXI	define.h	/^	TRAF_MODE_TAXI,  \/\/ 0 打车$/;"	e	enum:TRAF_MODE
+TRAF_MODE_UBER	define.h	/^	TRAF_MODE_UBER,  \/\/ 3 uber$/;"	e	enum:TRAF_MODE
+TRAF_MODE_WALKING	define.h	/^	TRAF_MODE_WALKING,  \/\/ 1 步行$/;"	e	enum:TRAF_MODE
+TRAF_PREFER_AI	define.h	/^const int TRAF_PREFER_AI = TRAF_PREFER_CAR | TRAF_PREFER_WALKING | TRAF_PREFER_BUS;$/;"	v
+TRAF_PREFER_BUS	define.h	/^const int TRAF_PREFER_BUS = 0x00000004;  \/\/ 公共交通$/;"	v
+TRAF_PREFER_CAR	define.h	/^const int TRAF_PREFER_CAR = TRAF_PREFER_TAXI | TRAF_PREFER_UBER | TRAF_PREFER_DRIVING;$/;"	v
+TRAF_PREFER_DRIVING	define.h	/^const int TRAF_PREFER_DRIVING = 0x00000010;  \/\/ 自驾$/;"	v
+TRAF_PREFER_NULL	define.h	/^const int TRAF_PREFER_NULL = 0x00000000;$/;"	v
+TRAF_PREFER_TAXI	define.h	/^const int TRAF_PREFER_TAXI = 0x00000001;  \/\/ 打车$/;"	v
+TRAF_PREFER_UBER	define.h	/^const int TRAF_PREFER_UBER = 0x00000008;  \/\/ uber$/;"	v
+TRAF_PREFER_WALKING	define.h	/^const int TRAF_PREFER_WALKING = 0x00000002;  \/\/ 步行$/;"	v
+TRAF_STAT	define.h	/^enum TRAF_STAT {$/;"	g
+TRAF_STAT_REAL_TIME	define.h	/^	TRAF_STAT_REAL_TIME  \/\/ 1 实时交通$/;"	e	enum:TRAF_STAT
+TRAF_STAT_STATIC	define.h	/^	TRAF_STAT_STATIC,  \/\/ 0 静态交通$/;"	e	enum:TRAF_STAT
+TRAVAL_MODE	define.h	/^enum TRAVAL_MODE {$/;"	g
+TRAVAL_MODE_CHARTER_CAR	define.h	/^	TRAVAL_MODE_CHARTER_CAR$/;"	e	enum:TRAVAL_MODE
+TRAVAL_MODE_NORMAL	define.h	/^	TRAVAL_MODE_NORMAL,$/;"	e	enum:TRAVAL_MODE
+TicketsFun	define.h	/^class TicketsFun{$/;"	c
+TimeBlock	Utils.h	/^	TimeBlock(const TimeBlock* block) {$/;"	f	class:TimeBlock
+TimeBlock	Utils.h	/^	TimeBlock(time_t start, time_t stop, const std::string& trafDate, int avail_dur, uint8_t restNeed, double time_zone) {$/;"	f	class:TimeBlock
+TimeBlock	Utils.h	/^class TimeBlock {$/;"	c
+TimeEnrich	PathUtil.cpp	/^int PathUtil::TimeEnrich(BasePlan* basePlan, PathView& path) {$/;"	f	class:PathUtil
+TimeIR	TimeIR.h	/^class TimeIR$/;"	c
+TimeStretch	PathUtil.cpp	/^int PathUtil::TimeStretch(BasePlan* basePlan, int start, int stop,  PathView& path) {$/;"	f	class:PathUtil
+Time_rule	TimeIR.cpp	/^void TimeIR::Time_rule(const std::string &in_str, Rule_node &rule) {$/;"	f	class:TimeIR
+ToDouble	ConstDataCheck.cpp	/^bool ConstDataCheck::ToDouble(const std::string& str, double& num) {$/;"	f	class:ConstDataCheck
+ToInt	ConstDataCheck.cpp	/^bool ConstDataCheck::ToInt(const std::string& str, int& num) {$/;"	f	class:ConstDataCheck
+ToolFunc	ToolFunc.cpp	/^namespace ToolFunc$/;"	n	file:
+ToolFunc	ToolFunc.h	/^namespace ToolFunc$/;"	n
+Tour	define.h	/^	Tour() {$/;"	f	class:Tour
+Tour	define.h	/^	Tour(const Tour &p):VarPlace(p) {$/;"	f	class:Tour
+Tour	define.h	/^class Tour: public VarPlace {$/;"	c
+Tour2PlaceInfo	BasePlan.cpp	/^int BasePlan::Tour2PlaceInfo(const VarPlace* vPlace, const std::string& date, PlaceInfo*& pInfo) {$/;"	f	class:BasePlan
+TourCmp	DataList.cpp	/^	TourCmp(BasePlan *basePlan):m_basePlan(basePlan) {}$/;"	f	class:TourCmp
+TourCmp	DataList.cpp	/^class TourCmp {$/;"	c	file:
+TrafDistCmp	TrafficData.h	/^struct TrafDistCmp {$/;"	s
+TrafRoute	TrafRoute.h	/^	TrafRoute(){$/;"	f	class:TrafRoute
+TrafRoute	TrafRoute.h	/^class TrafRoute {$/;"	c
+TrafTimeCmp	TrafficData.h	/^struct TrafTimeCmp {$/;"	s
+TrafficData	TrafficData.h	/^class TrafficData {$/;"	c
+TrafficDetail	define.h	/^	TrafficDetail() {$/;"	f	class:TrafficDetail
+TrafficDetail	define.h	/^class TrafficDetail{$/;"	c
+TrafficItem	define.h	/^	TrafficItem() {$/;"	f	class:TrafficItem
+TrafficItem	define.h	/^	TrafficItem(const TrafficItem& trafItem) {$/;"	f	class:TrafficItem
+TrafficItem	define.h	/^class TrafficItem {$/;"	c
+TrafficPair	TrafficPair.h	/^class TrafficPair {$/;"	c
+TryErrMapIt	BasePlan.h	/^		typedef	std::multimap<int, std::pair<int, std::string> >::iterator TryErrMapIt;\/\/ 仅for 团游$/;"	t	class:BasePlan
+Type_rule	TimeIR.cpp	/^void TimeIR::Type_rule(const std::string &in_str, Rule_node &rule) {$/;"	f	class:TimeIR
+USER_PREF_INTENSITY_HIGH	define.h	17;"	d
+USER_PREF_INTENSITY_LOW	define.h	19;"	d
+USER_PREF_INTENSITY_NORMAL	define.h	18;"	d
+UniqListOrder	ToolFunc.cpp	/^int UniqListOrder(std::vector<std::string>& in_list) {$/;"	f	namespace:ToolFunc
+Update	PrivateConstData.cpp	/^int PrivateConstData::Update(const std::string& startT, const std::string& endT, const std::string& dataBase, const std::string& tableName, int* dur, int* rowCnt) {$/;"	f	class:PrivateConstData
+UpdateCity	PrivateConstData.cpp	/^int PrivateConstData::UpdateCity(const std::string& startT, const std::string& endT, const std::string& tableName, int* dur, int* rowCnt) {$/;"	f	class:PrivateConstData
+UpdateHotel	PrivateConstData.cpp	/^int PrivateConstData::UpdateHotel(const std::string& startT, const std::string& endT, const std::string& tableName, int* dur, int* rowCnt) {$/;"	f	class:PrivateConstData
+UpdateTicketsFun	PrivateConstData.cpp	/^int PrivateConstData::UpdateTicketsFun(const std::string& startT, const std::string& endT, const std::string& tableName, int* dur, int* rowCnt) {$/;"	f	class:PrivateConstData
+UpdateTourData	PrivateConstData.cpp	/^int PrivateConstData::UpdateTourData(const std::string& startT, const std::string& endT, const std::string& tableName, int* dur, int* rowCnt) {$/;"	f	class:PrivateConstData
+UpdateVarPlaceData	PrivateConstData.cpp	/^int PrivateConstData::UpdateVarPlaceData(const std::string& startT, const std::string& endT, const std::string& tableName, int* dur, int* rowCnt) {$/;"	f	class:PrivateConstData
+UserTrafMode2InnerDefine	define.h	/^	static int UserTrafMode2InnerDefine(int userMode) {$/;"	f	class:TrafficItem
+UserTrafMode2String	define.h	/^	static std::string UserTrafMode2String(int userMode) {$/;"	f	class:TrafficItem
+VIEW_BAN_ATTACHED	define.h	/^const int VIEW_BAN_ATTACHED = 0x00000002;  \/\/ 附属不选$/;"	v
+VIEW_BAN_CLOSE	define.h	/^const int VIEW_BAN_CLOSE = 0x00000008;  \/\/ 关门不选$/;"	v
+VIEW_BAN_FAR	define.h	/^const int VIEW_BAN_FAR = 0x00000004;  \/\/ 偏远不选$/;"	v
+VIEW_BAN_LACK_TIME	define.h	/^const int VIEW_BAN_LACK_TIME = 0x00000010;  \/\/ 时间不够不选$/;"	v
+VIEW_BAN_MUTEX	define.h	/^const int VIEW_BAN_MUTEX = 0x00000020;  \/\/ 景点互斥$/;"	v
+VIEW_BAN_NULL	define.h	/^const int VIEW_BAN_NULL = 0x00000000;$/;"	v
+VIEW_BAN_USER	define.h	/^const int VIEW_BAN_USER = 0x00000001;  \/\/ 用户指定不选$/;"	v
+VIEW_LEVEL_NULL	define.h	/^const int VIEW_LEVEL_NULL = 0;$/;"	v
+VIEW_LEVEL_SYSOPT	define.h	/^const int VIEW_LEVEL_SYSOPT = 1;  \/\/ 前15%$/;"	v
+VISITED_BAN	define.h	/^	VISITED_BAN,$/;"	e	enum:VISITED_TYPE
+VISITED_OCCUR	define.h	/^	VISITED_OCCUR$/;"	e	enum:VISITED_TYPE
+VISITED_TYPE	define.h	/^enum VISITED_TYPE {$/;"	g
+VISITED_VALID	define.h	/^	VISITED_VALID,$/;"	e	enum:VISITED_TYPE
+VPlaceGradeCmp	DataList.h	/^struct VPlaceGradeCmp {$/;"	s
+VPlaceHotCmp	DataList.h	/^struct VPlaceHotCmp {$/;"	s
+VPlaceRankCmp	DataList.h	/^struct VPlaceRankCmp {$/;"	s
+VarPlace	define.h	/^	VarPlace() {$/;"	f	class:VarPlace
+VarPlace	define.h	/^	VarPlace(const VarPlace& vPlace):LYPlace(vPlace) {$/;"	f	class:VarPlace
+VarPlace	define.h	/^class VarPlace: public LYPlace {$/;"	c
+VarPlace2PlaceInfo	BasePlan.cpp	/^int BasePlan::VarPlace2PlaceInfo(const VarPlace* vPlace, const std::string& date, PlaceInfo*& pInfo) {$/;"	f	class:BasePlan
+View	define.h	/^	View() {$/;"	f	class:View
+View	define.h	/^	View(const View& view):VarPlace(view) {$/;"	f	class:View
+View	define.h	/^class View: public VarPlace{$/;"	c
+View2PlaceInfo	BasePlan.cpp	/^int BasePlan::View2PlaceInfo(const VarPlace* vPlace, const std::string& date, PlaceInfo*& pInfo) {$/;"	f	class:BasePlan
+ViewInfo	define.h	/^class ViewInfo: public PlaceInfo {$/;"	c
+ViewTicket	define.h	/^	ViewTicket():Tour() {}$/;"	f	class:ViewTicket
+ViewTicket	define.h	/^	ViewTicket(const ViewTicket &p):Tour(p) {$/;"	f	class:ViewTicket
+ViewTicket	define.h	/^class ViewTicket:public Tour {$/;"	c
+ViewType	define.h	/^	ViewType(const std::string& id, const std::string& name, int code) {$/;"	f	class:ViewType
+ViewType	define.h	/^class ViewType {$/;"	c
+Week_range	TimeIR.h	/^class Week_range {$/;"	c
+Week_rule	TimeIR.cpp	/^void TimeIR::Week_rule(const std::string &in_str, Rule_node &rule) {$/;"	f	class:TimeIR
+ZeroTrafDur	PathTraffic.cpp	/^int PathTraffic::ZeroTrafDur(BasePlan* basePlan) {$/;"	f	class:PathTraffic
+_BAG_PARAM_H_	BagParam.h	2;"	d
+_BASE_PLAN_H_	BasePlan.h	2;"	d
+_CONST_DATA_CHECK_	ConstDataCheck.h	2;"	d
+_DATA_CHECKER_H_	DataChecker.h	2;"	d
+_DATA_LIST_H_	DataList.h	2;"	d
+_ID	define.h	/^	std::string _ID;$/;"	m	class:LYPlace
+_ID	define.h	/^    std::string _ID; \/\/country id$/;"	m	class:Country
+_KEY_NODE_BUILDER_H_	KeyNodeBuilder.h	2;"	d
+_LOG_DUMP_H_	LogDump.h	2;"	d
+_LYCONSTDATA_H_	LYConstData.h	2;"	d
+_PATH_PERFECT_H_	PathPerfect.h	2;"	d
+_PATH_STAT_H_	PathStat.h	2;"	d
+_PATH_UTIL_H_	PathUtil.h	2;"	d
+_PATH_VIEW_H_	PathView.h	2;"	d
+_PLACE_GROUP_H	PlaceGroup.h	2;"	d
+_PLACE_INFO_ALLOC_H_	PlaceInfoAlloc.h	2;"	d
+_PRIVATE_CONST_DATA_H_	PrivateConstData.h	2;"	d
+_REAL_TIME_TRAFFFIC_H_	RealTimeTraffic.h	2;"	d
+_REQ_CHECKER_H_	ReqChecker.h	2;"	d
+_REQ_PARSER_H_	ReqParser.h	2;"	d
+_TIME_IR_H_	TimeIR.h	12;"	d
+_TRAFFIC_DATA_H	TrafficData.h	2;"	d
+_TRAFFIC_PAIR_H_	TrafficPair.h	2;"	d
+_TRAF_ROUTE_H_	TrafRoute.h	2;"	d
+__LY_DEFINE_H__	define.h	2;"	d
+__PATH_CROSS_H__	PathCross.h	2;"	d
+__PATH_EVAL_H__	PathEval.h	2;"	d
+__PATH_TRAFFIC_H__	PathTraffic.h	2;"	d
+__PREFER_H__	Prefer.h	2;"	d
+__ROUTE_CONFIG_H__	RouteConfig.h	2;"	d
+__TOOLFUNC_H__	ToolFunc.h	2;"	d
+__UTILS_H__	Utils.h	2;"	d
+_adjustable	Utils.h	/^	int _adjustable;		\/\/ 是否可缩放dur$/;"	m	class:KeyNode
+_allocable_place_set	PlaceInfoAlloc.h	/^	std::tr1::unordered_set<std::string> _allocable_place_set;$/;"	m	class:PlaceInfoAlloc
+_allocated_rest_cnt	PlaceInfoAlloc.h	/^	int _allocated_rest_cnt;$/;"	m	class:PlaceInfoAlloc
+_allocated_shop_cnt	PlaceInfoAlloc.h	/^	int _allocated_shop_cnt;$/;"	m	class:PlaceInfoAlloc
+_arriveDate	PathView.h	/^	std::string _arriveDate;$/;"	m	class:PlanItem
+_arriveTime	PathView.h	/^	time_t _arriveTime;					\/\/ 到达时间$/;"	m	class:PlanItem
+_arriveTraffic	PathView.h	/^	const TrafficItem* _arriveTraffic;	\/\/ 到达景点的交通信息$/;"	m	class:PlanItem
+_arrive_dur	Utils.h	/^	time_t _arrive_dur;  \/\/ 到达地停留时间$/;"	m	class:RouteBlock
+_arrive_place	Utils.h	/^	const LYPlace* _arrive_place;$/;"	m	class:RouteBlock
+_arrive_time	Utils.h	/^	time_t _arrive_time;$/;"	m	class:RouteBlock
+_arvID	PathView.h	/^	std::string _arvID;$/;"	m	class:PlanItem
+_avail_dur	Utils.h	/^	int _avail_dur;  \/\/ 真实可用时长$/;"	m	class:TimeBlock
+_baseTagIds	LYConstData.cpp	/^std::tr1::unordered_set<std::string> LYConstData::_baseTagIds;$/;"	m	class:LYConstData	file:
+_baseTagIds	LYConstData.h	/^	static std::tr1::unordered_set<std::string> _baseTagIds;$/;"	m	class:LYConstData
+_begin	Utils.h	/^	int _begin;$/;"	m	class:RestaurantTime
+_blank	PathView.h	/^	int _blank;$/;"	m	class:PathView
+_blank_traffic_item	TrafficData.cpp	/^TrafficItem* TrafficData::_blank_traffic_item = NULL;$/;"	m	class:TrafficData	file:
+_blank_traffic_item	TrafficData.h	/^	static TrafficItem* _blank_traffic_item;$/;"	m	class:TrafficData
+_capacity	PathView.h	/^	int _capacity;$/;"	m	class:PathView
+_checkIn	Utils.h	/^	std::string _checkIn;	\/\/入住日期,用于补全酒店$/;"	m	class:RouteBlock
+_checkOut	Utils.h	/^	std::string _checkOut;	\/\/退房日期$/;"	m	class:RouteBlock
+_checkin	define.h	/^	std::string _checkin;           \/\/酒店入住时间$/;"	m	class:HotelInfo
+_checkout	define.h	/^	std::string _checkout;          \/\/酒店离开时间$/;"	m	class:HotelInfo
+_cid2country	LYConstData.cpp	/^std::tr1::unordered_map<std::string, const Country*> LYConstData::_cid2country;$/;"	m	class:LYConstData	file:
+_cid2country	LYConstData.h	/^	static std::tr1::unordered_map<std::string, const Country*> _cid2country;$/;"	m	class:LYConstData
+_cid_list	define.h	/^	std::vector<std::string> _cid_list;$/;"	m	class:LYPlace
+_cityRestaurants	LYConstData.cpp	/^std::tr1::unordered_map<std::string, std::set<std::string> > LYConstData::_cityRestaurants;$/;"	m	class:LYConstData	file:
+_cityRestaurants	LYConstData.h	/^	static std::tr1::unordered_map<std::string, std::set<std::string> > _cityRestaurants;	\/\/ CityID->Restaurant_list$/;"	m	class:LYConstData
+_cityShops	LYConstData.cpp	/^std::tr1::unordered_map<std::string, std::set<std::string> > LYConstData::_cityShops;$/;"	m	class:LYConstData	file:
+_cityShops	LYConstData.h	/^	static std::tr1::unordered_map<std::string, std::set<std::string> > _cityShops;	\/\/CityID->Shop_list$/;"	m	class:LYConstData
+_cityTours	LYConstData.cpp	/^std::tr1::unordered_map<std::string, std::set<std::string> > LYConstData::_cityTours;$/;"	m	class:LYConstData	file:
+_cityTours	LYConstData.h	/^	static std::tr1::unordered_map<std::string, std::set<std::string> > _cityTours;$/;"	m	class:LYConstData
+_cityViews	LYConstData.cpp	/^std::tr1::unordered_map<std::string, std::set<std::string> > LYConstData::_cityViews;$/;"	m	class:LYConstData	file:
+_cityViews	LYConstData.h	/^	static std::tr1::unordered_map<std::string, std::set<std::string> > _cityViews;$/;"	m	class:LYConstData
+_city_idx	Utils.h	/^	int _city_idx;$/;"	m	class:RouteBlock
+_close	Utils.h	/^	time_t _close;  \/\/ 必须在哪个时间段内活动$/;"	m	class:KeyNode
+_closeTime	PathView.h	/^	time_t _closeTime;$/;"	m	class:PlanItem
+_close_date	Utils.h	/^	std::string _close_date;$/;"	m	class:KeyNode
+_code	define.h	/^	int _code;$/;"	m	class:ViewType
+_continuous	Utils.h	/^	int _continuous;		\/\/ 此keynode与上个keynode之间是否能插入其他活动(0\/1) 仅考虑逻辑 不考虑时间$/;"	m	class:KeyNode
+_corp	define.h	/^	std::string _corp;$/;"	m	class:LYPlace
+_cost	PathView.h	/^	double _cost;							\/\/ 景点或酒店的花费$/;"	m	class:PlanItem
+_cost	Utils.h	/^	double _cost;			\/\/ money花费$/;"	m	class:KeyNode
+_cost	define.h	/^	int _cost;		\/\/总花费$/;"	m	class:PathScore
+_country	define.h	/^	std::string _country;$/;"	m	class:City
+_cross	PathView.h	/^	int _cross;$/;"	m	class:PathView
+_cur_view	define.h	/^	const LYPlace* _cur_view;$/;"	m	class:NextItem
+_date	Utils.h	/^	std::string _date;$/;"	m	class:PlaceOrder
+_dates	Utils.h	/^	std::vector<std::string> _dates;$/;"	m	class:RouteBlock
+_day0_times	Utils.h	/^	std::vector<time_t> _day0_times;$/;"	m	class:RouteBlock
+_day_limit	Utils.h	/^	int _day_limit;$/;"	m	class:RouteBlock
+_debug_str	PathView.h	/^	std::string _debug_str;$/;"	m	class:PathView
+_deletable	Utils.h	/^	bool _deletable;  \/\/ 是否可删除$/;"	m	class:KeyNode
+_delete_luggage_feasible	Utils.h	/^	bool _delete_luggage_feasible;  \/\/ 在景点时间过短条件下可删除放行李酒店$/;"	m	class:RouteBlock
+_deleted	PathView.h	/^	bool _deleted;$/;"	m	class:PathView
+_departDate	PathView.h	/^	std::string _departDate;$/;"	m	class:PlanItem
+_departTime	PathView.h	/^	time_t _departTime;					\/\/ 出发时间 0表示尚未确定离开时间$/;"	m	class:PlanItem
+_departTraffic	PathView.h	/^	const TrafficItem* _departTraffic;	\/\/ 离开景点的交通信息$/;"	m	class:PlanItem
+_depart_dur	Utils.h	/^	time_t _depart_dur;  \/\/ 出发地停留时间$/;"	m	class:RouteBlock
+_depart_place	Utils.h	/^	const LYPlace* _depart_place;$/;"	m	class:RouteBlock
+_depart_time	Utils.h	/^	time_t _depart_time;$/;"	m	class:RouteBlock
+_deptID	PathView.h	/^	std::string _deptID;$/;"	m	class:PlanItem
+_dist	PathView.h	/^	int _dist;$/;"	m	class:PathView
+_dist	Utils.h	/^	int _dist;  \/\/ 球面距离$/;"	m	class:Line
+_dist	define.h	/^	int _dist;$/;"	m	class:NextItem
+_dist	define.h	/^	int _dist;$/;"	m	class:TrafficItem
+_dur	define.h	/^	int _dur;$/;"	m	class:Intensity
+_dur	define.h	/^	int _dur;\/\/暂时用来传递租车或还车所用时间$/;"	m	class:LYPlace
+_durS	PathView.h	/^	const DurS* _durS;$/;"	m	class:PlanItem
+_end	Utils.h	/^	int _end;$/;"	m	class:RestaurantTime
+_enname	define.h	/^	std::string _enname;$/;"	m	class:LYPlace
+_error_str	PathView.h	/^	std::string _error_str;$/;"	m	class:PathView
+_fake_hotel_traffic_item	TrafficData.cpp	/^TrafficItem* TrafficData::_fake_hotel_traffic_item = NULL;$/;"	m	class:TrafficData	file:
+_fake_hotel_traffic_item	TrafficData.h	/^	static TrafficItem* _fake_hotel_traffic_item;$/;"	m	class:TrafficData
+_fake_traffic_item	TrafficData.cpp	/^TrafficItem* TrafficData::_fake_traffic_item = NULL;$/;"	m	class:TrafficData	file:
+_fake_traffic_item	TrafficData.h	/^	static TrafficItem* _fake_traffic_item;$/;"	m	class:TrafficData
+_freq_group_set	PlaceGroup.cpp	/^std::tr1::unordered_set<std::string> PlaceGroup::_freq_group_set;$/;"	m	class:PlaceGroup	file:
+_freq_group_set	PlaceGroup.h	/^	static std::tr1::unordered_set<std::string> _freq_group_set;$/;"	m	class:PlaceGroup
+_freq_id_set	PlaceGroup.cpp	/^std::tr1::unordered_set<std::string> PlaceGroup::_freq_id_set;$/;"	m	class:PlaceGroup	file:
+_freq_id_set	PlaceGroup.h	/^	static std::tr1::unordered_set<std::string> _freq_id_set;$/;"	m	class:PlaceGroup
+_freq_map	PlaceGroup.cpp	/^std::tr1::unordered_map<std::string, std::tr1::unordered_set<std::string> > PlaceGroup::_freq_map;$/;"	m	class:PlaceGroup	file:
+_freq_map	PlaceGroup.h	/^	static std::tr1::unordered_map<std::string, std::tr1::unordered_set<std::string> > _freq_map;$/;"	m	class:PlaceGroup
+_from_place	Utils.h	/^	const LYPlace* _from_place;$/;"	m	class:Line
+_grade	define.h	/^	double _grade;$/;"	m	class:HotelInfo
+_grade	define.h	/^	double _grade;$/;"	m	class:VarPlace
+_hInfo_list	Utils.h	/^	std::vector<HInfo*> _hInfo_list;\/\/存储hotel的checkIn和checkOut信息$/;"	m	class:RouteBlock
+_hot	PathView.h	/^	int _hot;$/;"	m	class:PathView
+_hot	define.h	/^	double _hot;$/;"	m	class:City
+_hot_level	define.h	/^	double _hot_level;$/;"	m	class:VarPlace
+_hot_rank	define.h	/^	double _hot_rank;$/;"	m	class:VarPlace
+_hotel_info	Utils.h	/^	const HotelInfo* _hotel_info; \/\/暂时不用$/;"	m	class:RouteBlock
+_hotel_list	Utils.h	/^	std::vector<const LYPlace*>  _hotel_list;$/;"	m	class:RouteBlock
+_id	define.h	/^	std::string _id;$/;"	m	class:ViewType
+_id2ProdTickets	LYConstData.cpp	/^std::tr1::unordered_map<int,const TicketsFun*> LYConstData::_id2ProdTickets;$/;"	m	class:LYConstData	file:
+_id2ProdTickets	LYConstData.h	/^	static std::tr1::unordered_map<int, const TicketsFun*> _id2ProdTickets;$/;"	m	class:LYConstData
+_id2city_OnlyUsedInLoading	LYConstData.cpp	/^std::tr1::unordered_map<std::string,City*> LYConstData::_id2city_OnlyUsedInLoading;$/;"	m	class:LYConstData	file:
+_id2city_OnlyUsedInLoading	LYConstData.h	/^	static std::tr1::unordered_map<std::string,City*> _id2city_OnlyUsedInLoading;$/;"	m	class:LYConstData
+_id2hotel_OnlyUsedInLoading	LYConstData.cpp	/^std::tr1::unordered_map<std::string,LYPlace*> LYConstData::_id2hotel_OnlyUsedInLoading;$/;"	m	class:LYConstData	file:
+_id2hotel_OnlyUsedInLoading	LYConstData.h	/^	static std::tr1::unordered_map<std::string,LYPlace*> _id2hotel_OnlyUsedInLoading;$/;"	m	class:LYConstData
+_id2place	LYConstData.cpp	/^std::tr1::unordered_map<std::string,LYPlace*> LYConstData::_id2place;$/;"	m	class:LYConstData	file:
+_id2place	LYConstData.h	/^	static std::tr1::unordered_map<std::string,LYPlace*> _id2place;$/;"	m	class:LYConstData
+_id2restaurant_OnlyUsedInLoading	LYConstData.cpp	/^std::tr1::unordered_map<std::string,LYPlace*> LYConstData::_id2restaurant_OnlyUsedInLoading;$/;"	m	class:LYConstData	file:
+_id2restaurant_OnlyUsedInLoading	LYConstData.h	/^	static std::tr1::unordered_map<std::string,LYPlace*> _id2restaurant_OnlyUsedInLoading;$/;"	m	class:LYConstData
+_idle	PathView.h	/^	int _idle;  \/\/ 与下node的空余时间$/;"	m	class:PlanItem
+_ignore_open	define.h	/^	bool _ignore_open;$/;"	m	class:Intensity
+_img	define.h	/^	std::string _img;	\/\/图片$/;"	m	class:LYPlace
+_index	Utils.h	/^	int _index;$/;"	m	class:PlaceOrder
+_inited	PlaceGroup.cpp	/^bool PlaceGroup::_inited = false;$/;"	m	class:PlaceGroup	file:
+_inited	PlaceGroup.h	/^	static bool _inited;$/;"	m	class:PlaceGroup
+_intensity_list	define.h	/^	std::vector<Intensity*> _intensity_list;$/;"	m	class:VarPlace
+_interval_dur	Utils.h	/^	int _interval_dur;  \/\/ 间隔时长$/;"	m	class:TimeBlock
+_is_not_play	Utils.h	/^	bool _is_not_play;$/;"	m	class:TimeBlock
+_item_list	PathView.h	/^	PlanItem** _item_list;$/;"	m	class:PathView
+_label	define.h	/^	std::string _label;$/;"	m	class:Intensity
+_label_name_map	LYConstData.cpp	/^std::tr1::unordered_map<std::string, std::string> LYConstData::_label_name_map;$/;"	m	class:LYConstData	file:
+_label_name_map	LYConstData.h	/^	static std::tr1::unordered_map<std::string, std::string> _label_name_map;$/;"	m	class:LYConstData
+_left_avail_dur	Utils.h	/^	int _left_avail_dur;  \/\/ 包含当前block可用时长$/;"	m	class:TimeBlock
+_len	PathView.h	/^	int _len;$/;"	m	class:PathView
+_level	define.h	/^	int _level;$/;"	m	class:VarPlace
+_lname	define.h	/^	std::string _lname;		\/\/local name$/;"	m	class:LYPlace
+_lvl	define.h	/^	int _lvl;  \/\/ 星级$/;"	m	class:Hotel
+_mid	define.h	/^	std::string _mid;$/;"	m	class:TrafficItem
+_min_time_cost	Utils.h	/^	int _min_time_cost;$/;"	m	class:RestaurantTime
+_mode	define.h	/^	int _mode;  \/\/ 0驾车，1步行，2公共交通$/;"	m	class:TrafficItem
+_mysql	LYConstData.cpp	/^MYSQL LYConstData::_mysql;$/;"	m	class:LYConstData	file:
+_mysql	LYConstData.h	/^	static MYSQL _mysql;\/\/\/sql$/;"	m	class:LYConstData
+_name	define.h	/^	std::string _name;$/;"	m	class:Intensity
+_name	define.h	/^	std::string _name;$/;"	m	class:LYPlace
+_name	define.h	/^	std::string _name;$/;"	m	class:ViewType
+_name	define.h	/^    std::string _name; \/\/country name$/;"	m	class:Country
+_need_hotel	Utils.h	/^	bool _need_hotel;$/;"	m	class:RouteBlock
+_next_view	define.h	/^	const LYPlace* _next_view;$/;"	m	class:NextItem
+_night	define.h	/^	int _night;$/;"	m	class:HotelInfo
+_nodeFuncMap	Utils.h	/^	std::tr1::unordered_map<std::string, unsigned int> _nodeFuncMap;  \/\/ 在当前block内的infoType$/;"	m	class:TimeBlock
+_notPlan	Utils.h	/^	int _notPlan; \/\/该keynode和之前的keynode之间是否规划$/;"	m	class:KeyNode
+_open	Utils.h	/^	time_t _open;$/;"	m	class:KeyNode
+_openTime	PathView.h	/^	time_t _openTime;$/;"	m	class:PlanItem
+_open_date	Utils.h	/^	std::string _open_date;$/;"	m	class:KeyNode
+_pid	define.h	/^	std::string _pid;$/;"	m	class:LYPlace
+_pid2ticketsId	LYConstData.cpp	/^std::tr1::unordered_map<std::string, std::tr1::unordered_set<int> > LYConstData::_pid2ticketsId;$/;"	m	class:LYConstData	file:
+_pid2ticketsId	LYConstData.h	/^	static std::tr1::unordered_map<std::string, std::tr1::unordered_set<int> > _pid2ticketsId;$/;"	m	class:LYConstData
+_place	PathView.h	/^	const LYPlace* _place;				\/\/ 景点基本信息$/;"	m	class:PlanItem
+_place	Utils.h	/^	const LYPlace* _place;$/;"	m	class:KeyNode
+_place	Utils.h	/^	const LYPlace* _place;$/;"	m	class:PlaceOrder
+_placeNum	PathView.h	/^	int _placeNum;$/;"	m	class:PathView
+_playDur	PathView.h	/^	int _playDur;\/\/游玩时长$/;"	m	class:PathView
+_poi	define.h	/^	std::string _poi;$/;"	m	class:LYPlace
+_point	define.h	/^	Point _point;  \/\/ 映射到谷歌平面坐标系上的坐标$/;"	m	class:LYPlace
+_price	define.h	/^	double _price;$/;"	m	class:Intensity
+_price	define.h	/^	std::string _price;$/;"	m	class:VarPlace
+_ptid2tagIds	PrivateConstData.h	/^	std::tr1::unordered_map<std::string,std::tr1::unordered_set<std::string> > _ptid2tagIds;$/;"	m	class:PrivateConstData
+_queryParam	LYConstData.cpp	/^boost::thread_specific_ptr<QueryParam > LYConstData:: _queryParam;$/;"	m	class:LYConstData	file:
+_queryParam	LYConstData.h	/^	static boost::thread_specific_ptr<QueryParam > _queryParam;$/;"	m	class:LYConstData
+_ranking	define.h	/^	int _ranking;$/;"	m	class:VarPlace
+_rawPlace	define.h	/^	const LYPlace * _rawPlace; \/\/伪装的真实的点$/;"	m	class:LYPlace
+_rcmd_intensity	define.h	/^	Intensity* _rcmd_intensity;$/;"	m	class:VarPlace
+_rec_priority	define.h	/^	int _rec_priority; \/\/yc$/;"	m	class:LYPlace
+_redis	LYConstData.cpp	/^boost::thread_specific_ptr<MJ::MyRedis > LYConstData::_redis;$/;"	m	class:LYConstData	file:
+_redis	LYConstData.h	/^	static boost::thread_specific_ptr<MJ::MyRedis > _redis;$/;"	m	class:LYConstData
+_remind_tag	PathView.h	/^	std::string _remind_tag;$/;"	m	class:PlanItem
+_remind_tag_app	PathView.h	/^	std::string _remind_tag_app;$/;"	m	class:PlanItem
+_restNeed	Utils.h	/^	uint8_t _restNeed;  \/\/ 上一block与当前block间隔内包含的rest类型$/;"	m	class:TimeBlock
+_restNum	Utils.h	/^	int8_t _restNum;$/;"	m	class:TimeBlock
+_rnum	define.h	/^	int _rnum;              \/\/房间数$/;"	m	class:HotelInfo
+_score	PathView.h	/^	double _score;$/;"	m	class:PathView
+_score	define.h	/^	double _score;$/;"	m	class:NextItem
+_score	define.h	/^	int _score;		\/\/最终的路径得分$/;"	m	class:PathScore
+_self_traffic_item	TrafficData.cpp	/^TrafficItem* TrafficData::_self_traffic_item = NULL;$/;"	m	class:TrafficData	file:
+_self_traffic_item	TrafficData.h	/^	static TrafficItem* _self_traffic_item;  \/\/ 从A到A$/;"	m	class:TrafficData
+_service	define.h	/^	std::string _service;$/;"	m	class:HotelInfo
+_show	define.h	/^	std::string _show;$/;"	m	class:TrafficItem
+_sid	define.h	/^	std::string _sid;$/;"	m	class:LYPlace
+_source	define.h	/^	std::string _source;$/;"	m	class:HotelInfo
+_sourceId2Api	LYConstData.cpp	/^std::tr1::unordered_map<std::string, int> LYConstData::_sourceId2Api;$/;"	m	class:LYConstData	file:
+_sourceId2Api	LYConstData.h	/^	static std::tr1::unordered_map<std::string, int> _sourceId2Api;$/;"	m	class:LYConstData
+_sourceId2Name	LYConstData.cpp	/^std::tr1::unordered_map<std::string, std::string> LYConstData::_sourceId2Name;$/;"	m	class:LYConstData	file:
+_sourceId2Name	LYConstData.h	/^	static std::tr1::unordered_map<std::string, std::string> _sourceId2Name;$/;"	m	class:LYConstData
+_stable_line_list	Utils.h	/^	std::vector<Line*> _stable_line_list;$/;"	m	class:TimeBlock
+_stable_list	Utils.h	/^	std::vector<const LYPlace*> _stable_list;$/;"	m	class:TimeBlock
+_star	define.h	/^	int _star;$/;"	m	class:HotelInfo
+_start	Utils.h	/^	time_t _start;$/;"	m	class:TimeBlock
+_stop	Utils.h	/^	time_t _stop;$/;"	m	class:TimeBlock
+_t	define.h	/^	int _t;		\/\/类型 1:city 2:景点 3:酒店 4:车站（包括机场 火车站, 码头）$/;"	m	class:LYPlace
+_t_time	define.h	/^	int _t_time;	\/\/交通花费时间$/;"	m	class:PathScore
+_tags	define.h	/^	std::string _tags;$/;"	m	class:Hotel
+_tags	define.h	/^	std::string _tags;$/;"	m	class:VarPlace
+_time	PathView.h	/^	int _time;$/;"	m	class:PathView
+_time	define.h	/^	int _time;$/;"	m	class:TrafficItem
+_timeZone	PathView.h	/^	double _timeZone;$/;"	m	class:PlanItem
+_time_cost	Utils.h	/^	int _time_cost;$/;"	m	class:RestaurantTime
+_time_rule	define.h	/^	std::string _time_rule;$/;"	m	class:VarPlace
+_time_zone	Utils.h	/^	double _time_zone;$/;"	m	class:KeyNode
+_time_zone	Utils.h	/^	double _time_zone;$/;"	m	class:TimeBlock
+_time_zone	define.h	/^	double _time_zone;$/;"	m	class:LYPlace
+_to_place	Utils.h	/^	const LYPlace* _to_place;$/;"	m	class:Line
+_trafDate	PathView.h	/^	std::string _trafDate;   \/\/ 当前item与下一item的交通归属日期$/;"	m	class:PlanItem
+_trafDate	Utils.h	/^	std::string _trafDate;  \/\/ jDayList归属日期 影响实时交通 不一定是open或close的日期$/;"	m	class:KeyNode
+_trafDate	Utils.h	/^	std::string _trafDate;  \/\/ jDayList归属日期$/;"	m	class:TimeBlock
+_traffic	Utils.h	/^	const TrafficItem* _traffic;$/;"	m	class:Line
+_type	PathView.h	/^	int _type;$/;"	m	class:PlanItem
+_type	Utils.h	/^	int _type;				\/\/ bitsarray:hotel, view, resta, shop, station$/;"	m	class:KeyNode
+_type	Utils.h	/^	int _type;$/;"	m	class:RestaurantTime
+_type	Utils.h	/^	unsigned char _type;$/;"	m	class:PlaceOrder
+_type	define.h	/^	int _type;$/;"	m	class:View
+_type	define.h	/^	std::string _type;$/;"	m	class:HotelInfo
+_unallocable_place_set	PlaceInfoAlloc.h	/^	std::tr1::unordered_set<std::string> _unallocable_place_set;$/;"	m	class:PlaceInfoAlloc
+_unionkey	define.h	/^	std::string _unionkey;$/;"	m	class:LYPlace
+_uppers	define.h	/^	std::vector<std::string> _uppers;$/;"	m	class:City
+_used_dur	Utils.h	/^	int _used_dur;$/;"	m	class:TimeBlock
+_utime	define.h	/^    std::string _utime;$/;"	m	class:LYPlace
+_viewDis	define.h	/^	double _viewDis;  \/\/ 离city中心景点距离$/;"	m	class:Hotel
+_x	define.h	/^	double _x;$/;"	m	class:Point
+_y	define.h	/^	double _y;$/;"	m	class:Point
+available_sources	define.h	/^	std::tr1::unordered_map<std::string,std::tr1::unordered_set<std::string>> available_sources;$/;"	m	struct:QueryParam
+avgPrice	define.h	/^	int avgPrice;$/;"	m	class:VarPlace
+bit160	define.h	/^typedef std::bitset<160> bit160;$/;"	t
+book_pre	define.h	/^	int book_pre;			\/\/提前预定$/;"	m	class:TicketsFun
+branch_day_limit	RouteConfig.cpp	/^bool RouteConfig::branch_day_limit;$/;"	m	class:RouteConfig	file:
+branch_day_limit	RouteConfig.h	/^	static bool branch_day_limit;$/;"	m	class:RouteConfig
+buff	LogDump.h	/^	char buff[100];$/;"	m	class:DebugInfo
+cache_server_addr	RouteConfig.cpp	/^std::string RouteConfig::cache_server_addr;$/;"	m	class:RouteConfig	file:
+cache_server_addr	RouteConfig.h	/^	static std::string cache_server_addr;$/;"	m	class:RouteConfig
+ccy	define.h	/^	std::string ccy;\/\/币种$/;"	m	struct:QueryParam
+chooseDbg	TrafficData.cpp	/^int chooseDbg = 0;$/;"	v
+clashDelPoi	BasePlan.h	/^		bool clashDelPoi; \/\/控制是否删点$/;"	m	class:BasePlan
+cross_weight	RouteConfig.cpp	/^double RouteConfig::cross_weight;$/;"	m	class:RouteConfig	file:
+cross_weight	RouteConfig.h	/^	static double cross_weight;$/;"	m	class:RouteConfig
+csuid	define.h	/^	std::string csuid;$/;"	m	struct:QueryParam
+curCoiniSignMap	ToolFunc.cpp	/^std::tr1::unordered_map<std::string, std::string> RateExchange::curCoiniSignMap;$/;"	m	class:ToolFunc::RateExchange	file:
+curCoiniSignMap	ToolFunc.h	/^	static std::tr1::unordered_map<std::string, std::string> curCoiniSignMap;$/;"	m	class:ToolFunc::RateExchange
+curConv	ToolFunc.cpp	/^double RateExchange::curConv(double num, const std::string &src, const std::string &tgt) {$/;"	f	class:ToolFunc::RateExchange
+curUnitMap	ToolFunc.cpp	/^std::map<std::string, double> RateExchange::curUnitMap;$/;"	m	class:ToolFunc::RateExchange	file:
+curUnitMap	ToolFunc.h	/^	static std::map<std::string, double> curUnitMap;$/;"	m	class:ToolFunc::RateExchange
+cur_id	define.h	/^	std::string cur_id;$/;"	m	struct:QueryParam
+data_dir	RouteConfig.cpp	/^std::string RouteConfig::data_dir;$/;"	m	class:RouteConfig	file:
+data_dir	RouteConfig.h	/^	static std::string data_dir;$/;"	m	class:RouteConfig
+date	define.h	/^	std::string date;$/;"	m	struct:ProductTicket
+date_range	TimeIR.h	/^		std::vector<Date_range> date_range;$/;"	m	class:Rule_node
+db_host	RouteConfig.cpp	/^std::string RouteConfig::db_host;$/;"	m	class:RouteConfig	file:
+db_host	RouteConfig.h	/^	static std::string db_host;$/;"	m	class:RouteConfig
+db_name	RouteConfig.cpp	/^std::string RouteConfig::db_name;$/;"	m	class:RouteConfig	file:
+db_name	RouteConfig.h	/^	static std::string db_name;$/;"	m	class:RouteConfig
+db_passwd	RouteConfig.cpp	/^std::string RouteConfig::db_passwd;$/;"	m	class:RouteConfig	file:
+db_passwd	RouteConfig.h	/^	static std::string db_passwd;$/;"	m	class:RouteConfig
+db_user	RouteConfig.cpp	/^std::string RouteConfig::db_user;$/;"	m	class:RouteConfig	file:
+db_user	RouteConfig.h	/^	static std::string db_user;$/;"	m	class:RouteConfig
+dc_redis_address	RouteConfig.cpp	/^std::string RouteConfig::dc_redis_address;$/;"	m	class:RouteConfig	file:
+dc_redis_address	RouteConfig.h	/^	static std::string dc_redis_address;$/;"	m	class:RouteConfig
+dc_redis_db	RouteConfig.cpp	/^int RouteConfig::dc_redis_db;$/;"	m	class:RouteConfig	file:
+dc_redis_db	RouteConfig.h	/^	static int dc_redis_db;$/;"	m	class:RouteConfig
+dc_redis_passwd	RouteConfig.cpp	/^std::string RouteConfig::dc_redis_passwd;$/;"	m	class:RouteConfig	file:
+dc_redis_passwd	RouteConfig.h	/^	static std::string dc_redis_passwd;$/;"	m	class:RouteConfig
+debug_level	RouteConfig.cpp	/^int RouteConfig::debug_level;	\/\/调试输出的级别$/;"	m	class:RouteConfig	file:
+debug_level	RouteConfig.h	/^	static int debug_level;	\/\/调试输出的级别$/;"	m	class:RouteConfig
+deletable	Utils.cpp	/^bool KeyNode::deletable() const {$/;"	f	class:KeyNode
+destroy	LYConstData.cpp	/^bool LYConstData::destroy() {$/;"	f	class:LYConstData
+dev	define.h	/^	int dev;$/;"	m	struct:QueryParam
+dist_weight	RouteConfig.cpp	/^double RouteConfig::dist_weight;$/;"	m	class:RouteConfig	file:
+dist_weight	RouteConfig.h	/^	static double dist_weight;$/;"	m	class:RouteConfig
+doWork	LYConstData.h	/^		int doWork() {$/;"	f	class:LoadDataWorker
+dump	define.h	/^	int dump(const std::string& uID, const std::string& wID) {$/;"	f	class:Hotel
+dump	define.h	/^	int dump(const std::string& uID, const std::string& wID) {$/;"	f	class:LYPlace
+dump	define.h	/^	int dump(const std::string& uID, const std::string& wID) {$/;"	f	class:VarPlace
+e_date	TimeIR.h	/^		int e_date;$/;"	m	class:Date_range
+e_week	TimeIR.h	/^		int e_week;$/;"	m	class:Week_range
+earthRadius	LYConstData.cpp	/^static int earthRadius = 6378137;\/\/地球赤道半径(m)$/;"	v	file:
+freq_group_file	RouteConfig.cpp	/^std::vector<std::string> RouteConfig::freq_group_file;$/;"	m	class:RouteConfig	file:
+freq_group_file	RouteConfig.h	/^	static std::vector<std::string> freq_group_file;$/;"	m	class:RouteConfig
+getBaseLYPlace	LYConstData.cpp	/^const LYPlace* LYConstData::getBaseLYPlace(const std::string& id){$/;"	f	class:LYConstData
+getCity	LYConstData.cpp	/^const City* LYConstData::getCity(const std::string& id){$/;"	f	class:LYConstData
+getData	TimeIR.cpp	/^bool TimeIR::getData(const std::string &in_str, const std::string &key, bool order, int &date) {$/;"	f	class:TimeIR
+getMode	define.h	/^	int getMode(){$/;"	f	class:LYPlace
+getOpenCloseTime	ToolFunc.cpp	/^int getOpenCloseTime(const std::string& date, const std::string& time_rule, double time_zone, time_t& open_time, time_t& close_time) {$/;"	f	namespace:ToolFunc
+getOpenTimeRange	TimeIR.cpp	/^void TimeIR::getOpenTimeRange(const std::vector<std::string> &time_range, const std::string &in_date, std::vector<std::string> &out_times) {$/;"	f	class:TimeIR
+getPrice	ToolFunc.cpp	/^int getPrice(const std::string& date, const std::string& price_rule, double& cost) {$/;"	f	namespace:ToolFunc
+getRawType	define.h	/^	int getRawType() const$/;"	f	class:LYPlace
+getRedisHandle	LYConstData.cpp	/^MJ::MyRedis* LYConstData::getRedisHandle(){$/;"	f	class:LYConstData
+getRestaurantLocal	LYConstData.cpp	/^int LYConstData::getRestaurantLocal(const std::string& CityID, std::vector<const LYPlace*>& placeList, const std::string& ptid) {$/;"	f	class:LYConstData
+getShopLocal	LYConstData.cpp	/^int LYConstData::getShopLocal(const std::string& CityID, std::vector<const LYPlace*>& placeList, const std::string& ptid) {$/;"	f	class:LYConstData
+getStrBetween	TimeIR.cpp	/^std::string TimeIR::getStrBetween(std::string in_str, std::string left, bool is_left_forward, std::string right, bool is_right_forward)$/;"	f	class:TimeIR
+getTheDateOpenTimeRange	TimeIR.cpp	/^bool TimeIR::getTheDateOpenTimeRange(const std::string &rule, const std::string &in_date, std::vector<std::string> &out_timesList) {$/;"	f	class:TimeIR
+getUniqId	define.h	/^	virtual std::string getUniqId() const{$/;"	f	class:Hotel
+getUniqId	define.h	/^	virtual std::string getUniqId() const{$/;"	f	class:LYPlace
+getUniqId	define.h	/^	virtual std::string getUniqId() const{$/;"	f	class:Restaurant
+getUniqId	define.h	/^	virtual std::string getUniqId() const{$/;"	f	class:Shop
+getUniqId	define.h	/^	virtual std::string getUniqId() const{$/;"	f	class:View
+getVecStrBetween	TimeIR.cpp	/^void TimeIR::getVecStrBetween(std::string in_str,$/;"	f	class:TimeIR
+getViewLocal	LYConstData.cpp	/^int LYConstData::getViewLocal(const std::string& CityID, std::vector<const LYPlace*>& placeList, const std::string& ptid) {$/;"	f	class:LYConstData
+getWeekByDate	TimeIR.cpp	/^int TimeIR::getWeekByDate(const std::string& in_date) {$/;"	f	class:TimeIR
+hInfoCmp	define.h	/^struct hInfoCmp {$/;"	s
+hot_level_file	RouteConfig.h	/^	static std::vector<std::string> hot_level_file;$/;"	m	class:RouteConfig
+hotel_server_addr	RouteConfig.cpp	/^std::string RouteConfig::hotel_server_addr;$/;"	m	class:RouteConfig	file:
+hotel_server_addr	RouteConfig.h	/^	static std::string hotel_server_addr;$/;"	m	class:RouteConfig
+hotel_server_timeout	RouteConfig.cpp	/^int RouteConfig::hotel_server_timeout;$/;"	m	class:RouteConfig	file:
+hotel_server_timeout	RouteConfig.h	/^	static int hotel_server_timeout;$/;"	m	class:RouteConfig
+init	LYConstData.cpp	/^bool LYConstData::init(){$/;"	f	class:LYConstData
+init	RouteConfig.cpp	/^bool RouteConfig::init(const std::string& d_dir,const std::string& c_path){$/;"	f	class:RouteConfig
+initSQL	LYConstData.cpp	/^bool LYConstData::initSQL(MYSQL &mysql) {$/;"	f	class:LYConstData
+int2String	TimeIR.cpp	/^std::string TimeIR::int2String(int in_number)$/;"	f	class:TimeIR
+isChangeTraffic	BasePlan.h	/^		bool isChangeTraffic;  \/\/是否为修改交通 action字段$/;"	m	class:BasePlan
+isTheDateAvailable	TimeIR.cpp	/^bool TimeIR::isTheDateAvailable(const Json::Value& open_rule, const std::string& date) {$/;"	f	class:TimeIR
+isfind_vec	ToolFunc.cpp	/^bool isfind_vec(const int& val,const vector<int>& vec){$/;"	f	namespace:ToolFunc
+itoa	ToolFunc.cpp	/^std::string itoa(int a) {$/;"	f	namespace:ToolFunc
+join2String	ToolFunc.cpp	/^std::string join2String(const std::tr1::unordered_set<std::string>& input, const std::string& sep) {$/;"	f	namespace:ToolFunc
+join2String	ToolFunc.cpp	/^std::string join2String(const std::vector<std::string>& input, const std::string& sep) {$/;"	f	namespace:ToolFunc
+join2String	ToolFunc.h	/^std::string join2String(const STRING_MAP& input, const std::string& sep) {$/;"	f	namespace:ToolFunc
+joinName	ToolFunc.cpp	/^std::string joinName(std::vector<std::string>& inList) {$/;"	f	namespace:ToolFunc
+joinNameEn	ToolFunc.cpp	/^std::string joinNameEn(std::vector<std::string>& inList) {$/;"	f	namespace:ToolFunc
+kMaxIntervalTime	DataChecker.h	/^const int kMaxIntervalTime = 7200;$/;"	v
+kMealTime	DataChecker.h	/^const int kMealTime = 3600;$/;"	v
+kMonthDay	ConstDataCheck.h	/^const int kMonthDay[13] = {0,31,29,31,30,31,30,31,31,30,31,30,31};$/;"	v
+kPI	LYConstData.cpp	/^static double kPI = atan(1) * 4;$/;"	v	file:
+kTaxiForcedUseWalkLimit	TrafficData.h	/^const int kTaxiForcedUseWalkLimit = 500;$/;"	v
+kTaxiUseLimit	TrafficData.h	/^const int kTaxiUseLimit = 800;$/;"	v
+kWalkBusDistLimit	TrafficData.h	/^const int kWalkBusDistLimit = 1000;$/;"	v
+kWalkBusTaxiDistLimit	TrafficData.h	/^const int kWalkBusTaxiDistLimit = 1000;$/;"	v
+kWalkBusTaxiDistUpperLimit	TrafficData.h	/^const int kWalkBusTaxiDistUpperLimit = 2000;$/;"	v
+kWalkDistLimit	TrafficData.h	/^const int kWalkDistLimit = 2000;$/;"	v
+kWalkTaxiDistLimit	TrafficData.h	/^const int kWalkTaxiDistLimit = 1000;$/;"	v
+lFH_file	RouteConfig.cpp	/^std::string RouteConfig::lFH_file;$/;"	m	class:RouteConfig	file:
+lFH_file	RouteConfig.h	/^	static std::string lFH_file;$/;"	m	class:RouteConfig
+lang	define.h	/^	std::string lang;$/;"	m	struct:QueryParam
+loadExchange	ToolFunc.cpp	/^bool RateExchange::loadExchange(MYSQL& _mysql) {$/;"	f	class:ToolFunc::RateExchange
+loadStagData	LYConstData.cpp	/^bool LYConstData::loadStagData(){$/;"	f	class:LYConstData
+loadTag	LYConstData.cpp	/^bool LYConstData::loadTag() {$/;"	f	class:LYConstData
+log	define.h	/^	std::string log;$/;"	m	struct:QueryParam
+ltrim	ToolFunc.cpp	/^std::string& ltrim(std::string& in) {$/;"	f	namespace:ToolFunc
+m_ATRDist	BasePlan.h	/^		int m_ATRDist;               \/\/ 平均交通距离$/;"	m	class:BasePlan
+m_ATRTimeCost	BasePlan.h	/^		int m_ATRTimeCost;               \/\/ 平均交通时间$/;"	m	class:BasePlan
+m_AdultCount	BasePlan.h	/^		int m_AdultCount; \/\/请求人数 与玩乐门票张数相关$/;"	m	class:BasePlan
+m_ArriveTime	BasePlan.h	/^		int m_ArriveTime;$/;"	m	class:BasePlan
+m_AvgSleepTimeCost	BasePlan.h	/^		int m_AvgSleepTimeCost;$/;"	m	class:BasePlan
+m_AvgTrafDistMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, int> m_AvgTrafDistMap;$/;"	m	class:BasePlan
+m_AvgTrafTimeMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, int> m_AvgTrafTimeMap;$/;"	m	class:BasePlan
+m_BlockList	BasePlan.h	/^		std::vector<TimeBlock*> m_BlockList;	\/\/时间段$/;"	m	class:BasePlan
+m_City	BasePlan.h	/^		const City* m_City;$/;"	m	class:BasePlan
+m_CityViewList	BasePlan.h	/^		std::vector<const LYPlace*> m_CityViewList;  					\/\/ city内所有景点$/;"	m	class:BasePlan
+m_CutNullThres	BasePlan.h	/^		int m_CutNullThres;  \/\/ 无结果卡时$/;"	m	class:BasePlan
+m_CutThres	BasePlan.h	/^		int m_CutThres;  \/\/ 卡时$/;"	m	class:BasePlan
+m_CutTimer	BasePlan.h	/^		MJ::MyTimer m_CutTimer;  \/\/ 卡时$/;"	m	class:BasePlan
+m_Day0LeastViewTimeCost	BasePlan.h	/^		int m_Day0LeastViewTimeCost;  \/\/ 第一天所需最少游玩时间，小于该时间不玩了直接呆hotel$/;"	m	class:BasePlan
+m_DefaultRestaurantComp	BasePlan.h	/^		int m_DefaultRestaurantComp;  \/\/ 默认每天吃几顿饭$/;"	m	class:BasePlan
+m_DepartTime	BasePlan.h	/^		int m_DepartTime;$/;"	m	class:BasePlan
+m_EntryAirportTimeCost	BasePlan.h	/^		int m_EntryAirportTimeCost;  \/\/ 机场入境耗时$/;"	m	class:BasePlan
+m_EntryBusStationTimeCost	BasePlan.h	/^		int m_EntryBusStationTimeCost;  \/\/ 长途汽车站$/;"	m	class:BasePlan
+m_EntryCarStoreTimeCost	BasePlan.h	/^		int m_EntryCarStoreTimeCost;  \/\/ 租车$/;"	m	class:BasePlan
+m_EntryHotelTimeCost	BasePlan.h	/^		int m_EntryHotelTimeCost;	\/\/离开该城市的第一个点为酒店$/;"	m	class:BasePlan
+m_EntrySailStationTimeCost	BasePlan.h	/^		int m_EntrySailStationTimeCost;  \/\/ 港口$/;"	m	class:BasePlan
+m_EntryStationTimeCost	BasePlan.h	/^		int m_EntryStationTimeCost;  \/\/ 车站入境耗时$/;"	m	class:BasePlan
+m_EntryZipAirportTimeCost	BasePlan.h	/^		int m_EntryZipAirportTimeCost;  \/\/ 机场极限入境耗时$/;"	m	class:BasePlan
+m_EntryZipBusStationTimeCost	BasePlan.h	/^		int m_EntryZipBusStationTimeCost;  \/\/ 极限长途汽车站$/;"	m	class:BasePlan
+m_EntryZipCarStoreTimeCost	BasePlan.h	/^		int m_EntryZipCarStoreTimeCost;  \/\/ 极限租车$/;"	m	class:BasePlan
+m_EntryZipSailStationTimeCost	BasePlan.h	/^		int m_EntryZipSailStationTimeCost;  \/\/ 极限港口$/;"	m	class:BasePlan
+m_EntryZipStationTimeCost	BasePlan.h	/^		int m_EntryZipStationTimeCost;  \/\/ 车站极限入境耗时$/;"	m	class:BasePlan
+m_ExitAirportTimeCost	BasePlan.h	/^		int m_ExitAirportTimeCost;  \/\/ 机场出境耗时$/;"	m	class:BasePlan
+m_ExitBusStationTimeCost	BasePlan.h	/^		int m_ExitBusStationTimeCost;$/;"	m	class:BasePlan
+m_ExitCarStoreTimeCost	BasePlan.h	/^		int m_ExitCarStoreTimeCost;$/;"	m	class:BasePlan
+m_ExitHotelTimeCost	BasePlan.h	/^		int m_ExitHotelTimeCost;	\/\/到达该城市的第一个点为酒店$/;"	m	class:BasePlan
+m_ExitSailStationTimeCost	BasePlan.h	/^		int m_ExitSailStationTimeCost;$/;"	m	class:BasePlan
+m_ExitStationTimeCost	BasePlan.h	/^		int m_ExitStationTimeCost;  \/\/ 车站出境耗时$/;"	m	class:BasePlan
+m_ExitZipAirportTimeCost	BasePlan.h	/^		int m_ExitZipAirportTimeCost;  \/\/ 机场极限出境耗时$/;"	m	class:BasePlan
+m_ExitZipBusStationTimeCost	BasePlan.h	/^		int m_ExitZipBusStationTimeCost;$/;"	m	class:BasePlan
+m_ExitZipCarStoreTimeCost	BasePlan.h	/^		int m_ExitZipCarStoreTimeCost;$/;"	m	class:BasePlan
+m_ExitZipSailStationTimeCost	BasePlan.h	/^		int m_ExitZipSailStationTimeCost;$/;"	m	class:BasePlan
+m_ExitZipStationTimeCost	BasePlan.h	/^		int m_ExitZipStationTimeCost;  \/\/ 车站极限出境耗时$/;"	m	class:BasePlan
+m_HMPat	ToolFunc.cpp	/^regex_t FormatChecker::m_HMPat;$/;"	m	class:ToolFunc::FormatChecker	file:
+m_HMPat	ToolFunc.h	/^	static regex_t m_HMPat;$/;"	m	class:ToolFunc::FormatChecker
+m_HotelCloseTime	BasePlan.h	/^		int m_HotelCloseTime; \/\/酒店出发\/返回时间$/;"	m	class:BasePlan
+m_HotelOpenTime	BasePlan.h	/^		int m_HotelOpenTime;$/;"	m	class:BasePlan
+m_KeyNode	BasePlan.h	/^		std::vector<KeyNode*> m_KeyNode;		\/\/keynode$/;"	m	class:BasePlan
+m_KeyNodeFixRatio	BasePlan.h	/^		double m_KeyNodeFixRatio;$/;"	m	class:BasePlan
+m_LeaveLuggageTimeCost	BasePlan.h	/^		int m_LeaveLuggageTimeCost;  \/\/ 第一天先到hotel放行李时间$/;"	m	class:BasePlan
+m_MaxSleepTimeCost	BasePlan.h	/^		int m_MaxSleepTimeCost;$/;"	m	class:BasePlan
+m_MaxWaitOpenTimeCost	BasePlan.h	/^		int m_MaxWaitOpenTimeCost;  \/\/ 最大等开门时间$/;"	m	class:BasePlan
+m_MinSleepTimeCost	BasePlan.h	/^		int m_MinSleepTimeCost;  \/\/ hotel休息最少时间，少于该时间不住酒店$/;"	m	class:BasePlan
+m_MinViewDur	BasePlan.h	/^		int m_MinViewDur;\/\/最小景点游玩时间$/;"	m	class:BasePlan
+m_OptionMode	BasePlan.h	/^		std::bitset<3> m_OptionMode;$/;"	m	class:BasePlan
+m_POIList	BasePlan.h	/^		std::vector<POIDetail> m_POIList;	\/\/需要获取详情的POI p105$/;"	m	class:BasePlan
+m_PlaceDateMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, std::tr1::unordered_set<std::string> > m_PlaceDateMap;  \/\/景点规划所在天 key: id, value: set<date>$/;"	m	class:BasePlan
+m_PlanList	BasePlan.h	/^		PathView m_PlanList;\/\/规划结果$/;"	m	class:BasePlan
+m_PreferParamMap	LYConstData.h	/^	static std::tr1::unordered_map<int, std::bitset<TAG_BITSET_SIZE> > m_PreferParamMap;$/;"	m	class:LYConstData
+m_QuerySource	BasePlan.h	/^		int m_QuerySource;  \/\/ 请求来源 andorid ios web$/;"	m	class:BasePlan
+m_ReclaimLuggageTimeCost	BasePlan.h	/^		int m_ReclaimLuggageTimeCost;  \/\/ 最后一天去hotel取行李时间$/;"	m	class:BasePlan
+m_RestNeedNum	BasePlan.h	/^		int m_RestNeedNum;$/;"	m	class:BasePlan
+m_RestTypeMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, int> m_RestTypeMap;  \/\/ 某个饭店被设置成什么类型$/;"	m	class:BasePlan
+m_RestaurantTimeList	BasePlan.h	/^		std::vector<RestaurantTime> m_RestaurantTimeList;  \/\/ 早中晚、下午茶饭点时间（类型，开始时间，结束时间，花费时间, 最小花费时间）$/;"	m	class:BasePlan
+m_RouteBlockList	BasePlan.h	/^		std::vector<RouteBlock*> m_RouteBlockList;	\/\/城市$/;"	m	class:BasePlan
+m_SelectedOptMode	BasePlan.h	/^		std::bitset<3> m_SelectedOptMode; \/\/s130选择结果$/;"	m	class:BasePlan
+m_ShopNeedNum	BasePlan.h	/^		int m_ShopNeedNum;$/;"	m	class:BasePlan
+m_TimeZone	BasePlan.h	/^		double m_TimeZone;$/;"	m	class:BasePlan
+m_TrafficMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, TrafficItem*> m_TrafficMap;	\/\/ 交通信息$/;"	m	class:BasePlan
+m_UserDurMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, int> m_UserDurMap; 					\/\/游玩时长$/;"	m	class:BasePlan
+m_afternoonTeaTime	BasePlan.h	/^		static const RestaurantTime m_afternoonTeaTime;$/;"	m	class:BasePlan
+m_agemax	define.h	/^	int m_agemax;$/;"	m	class:TicketsFun
+m_agemin	define.h	/^	int m_agemin;$/;"	m	class:TicketsFun
+m_allocDurMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, int> m_allocDurMap;\/\/景点的估计时长$/;"	m	class:BasePlan
+m_arvID	define.h	/^	std::string m_arvID;$/;"	m	class:PlaceInfo
+m_arvNullPlace	LYConstData.cpp	/^LYPlace* LYConstData::m_arvNullPlace;$/;"	m	class:LYConstData	file:
+m_arvNullPlace	LYConstData.h	/^	static LYPlace* m_arvNullPlace;\/\/ 空到达点$/;"	m	class:LYConstData
+m_attachRest	LYConstData.cpp	/^Restaurant* LYConstData::m_attachRest;$/;"	m	class:LYConstData	file:
+m_attachRest	LYConstData.h	/^	static Restaurant* m_attachRest;  \/\/ 附着下一node 附近就餐点$/;"	m	class:LYConstData
+m_availDur	BasePlan.h	/^		int m_availDur;  		\/\/ block时长和$/;"	m	class:BasePlan
+m_availOpenCloseList	define.h	/^	std::vector<const OpenClose*> m_availOpenCloseList;$/;"	m	class:PlaceInfo
+m_bagSearch	LogDump.h	/^	int m_bagSearch;$/;"	m	class:BagCost
+m_bagThre	BagParam.cpp	/^double BagParam::m_bagThre = 0.5;$/;"	m	class:BagParam	file:
+m_bagThre	BagParam.h	/^        static double m_bagThre;$/;"	m	class:BagParam
+m_bagWeightA	BagParam.cpp	/^double BagParam::m_bagWeightA = 0.5;$/;"	m	class:BagParam	file:
+m_bagWeightA	BagParam.h	/^	static double m_bagWeightA; $/;"	m	class:BagParam
+m_basePlan	DataList.cpp	/^	BasePlan* m_basePlan;$/;"	m	class:TourCmp	file:
+m_bgPoolLimit	BagParam.cpp	/^int BagParam::m_bgPoolLimit = BagParam::m_rootHeapLimit * 2 + 100;$/;"	m	class:BagParam	file:
+m_bgPoolLimit	BagParam.h	/^	static int m_bgPoolLimit;$/;"	m	class:BagParam
+m_blank	LogDump.h	/^	int m_blank;$/;"	m	class:BaseStat
+m_blockBuild	LogDump.h	/^	int m_blockBuild;$/;"	m	class:BaseCost
+m_breakfastTime	BasePlan.h	/^		static const RestaurantTime m_breakfastTime;$/;"	m	class:BasePlan
+m_cbBagThre	BagParam.h	/^	double m_cbBagThre;$/;"	m	class:CityBParam
+m_cbBagWeightA	BagParam.h	/^	double m_cbBagWeightA;$/;"	m	class:CityBParam
+m_cbDFSHeapLimit	BagParam.h	/^	int m_cbDFSHeapLimit;$/;"	m	class:CityBParam
+m_cbP	BasePlan.h	/^		CityBParam m_cbP;$/;"	m	class:BasePlan
+m_cbPMap	BagParam.cpp	/^std::tr1::unordered_map<std::string, std::vector<std::pair<int, CityBParam> > > BagParam::m_cbPMap;$/;"	m	class:BagParam	file:
+m_cbPMap	BagParam.h	/^	static std::tr1::unordered_map<std::string, std::vector<std::pair<int, CityBParam> > > m_cbPMap;$/;"	m	class:BagParam
+m_cbPName	BagParam.cpp	/^std::string BagParam::m_cbPName = "cityBParam";$/;"	m	class:BagParam	file:
+m_cbPName	BagParam.h	/^	static std::string m_cbPName;$/;"	m	class:BagParam
+m_cbRichExtraDur	BagParam.h	/^	int m_cbRichExtraDur;$/;"	m	class:CityBParam
+m_cbRichHeapLimit	BagParam.h	/^	int m_cbRichHeapLimit;$/;"	m	class:CityBParam
+m_cbRichMissLimit	BagParam.h	/^	int m_cbRichMissLimit;$/;"	m	class:CityBParam
+m_cbRichTopK	BagParam.h	/^	int m_cbRichTopK;$/;"	m	class:CityBParam
+m_cbRootHeapLimit	BagParam.h	/^	int m_cbRootHeapLimit;$/;"	m	class:CityBParam
+m_cbRootRetLimit	BagParam.h	/^	int m_cbRootRetLimit;$/;"	m	class:CityBParam
+m_ccy	define.h	/^	std::string m_ccy;		\/\/币种$/;"	m	class:TicketsFun
+m_checkIn	define.h	/^	std::string m_checkIn;$/;"	m	class:HInfo
+m_checkOut	define.h	/^	std::string m_checkOut;$/;"	m	class:HInfo
+m_cityRestaurants	PrivateConstData.h	/^	std::tr1::unordered_map<std::string, CITYPLACES> m_cityViews,m_cityShops,m_cityRestaurants,m_cityTours;$/;"	m	class:PrivateConstData
+m_citySet	LYConstData.cpp	/^std::tr1::unordered_set<std::string> LYConstData::m_citySet;$/;"	m	class:LYConstData	file:
+m_citySet	LYConstData.h	/^	static std::tr1::unordered_set<std::string> m_citySet;\/\/城市 的集合$/;"	m	class:LYConstData
+m_cityShops	PrivateConstData.h	/^	std::tr1::unordered_map<std::string, CITYPLACES> m_cityViews,m_cityShops,m_cityRestaurants,m_cityTours;$/;"	m	class:PrivateConstData
+m_cityTours	PrivateConstData.h	/^	std::tr1::unordered_map<std::string, CITYPLACES> m_cityViews,m_cityShops,m_cityRestaurants,m_cityTours;$/;"	m	class:PrivateConstData
+m_cityViews	PrivateConstData.h	/^	std::tr1::unordered_map<std::string, CITYPLACES> m_cityViews,m_cityShops,m_cityRestaurants,m_cityTours;$/;"	m	class:PrivateConstData
+m_citys	PrivateConstData.h	/^	std::tr1::unordered_map<std::string,LYPlace*> m_citys,m_hotels,m_views,m_shops,m_restaurants,m_tours;$/;"	m	class:PrivateConstData
+m_close	define.h	/^	time_t m_close;$/;"	m	class:OpenClose
+m_closeNum	define.h	/^	int m_closeNum;$/;"	m	class:PathInfo
+m_confName	BagParam.cpp	/^std::string BagParam::m_confName = "bagParam.conf";$/;"	m	class:BagParam	file:
+m_confName	BagParam.h	/^	static std::string m_confName;$/;"	m	class:BagParam
+m_coordPat	ToolFunc.cpp	/^regex_t FormatChecker::m_coordPat;$/;"	m	class:ToolFunc::FormatChecker	file:
+m_coordPat	ToolFunc.h	/^	static regex_t m_coordPat;$/;"	m	class:ToolFunc::FormatChecker
+m_cost	BasePlan.h	/^		BaseCost m_cost;\/\/DoPlan 过程中各阶段花费的时间$/;"	m	class:BasePlan
+m_cost	define.h	/^	double m_cost;$/;"	m	class:PathInfo
+m_cost	define.h	/^	double m_cost;$/;"	m	class:PlaceInfo
+m_crossMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, int> m_crossMap;  \/\/路线交叉$/;"	m	class:BasePlan
+m_curCcy	define.h	/^		std::string m_curCcy;$/;"	m	class:MoneyPrice
+m_curPrice	define.h	/^		int m_curPrice;$/;"	m	class:MoneyPrice
+m_custom	define.h	/^	bool m_custom;\/\/自定义交通$/;"	m	class:TrafficItem
+m_custom	define.h	/^	int m_custom;$/;"	m	class:LYPlace
+m_customPlaceMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, LYPlace*> m_customPlaceMap;			\/\/自定义点集$/;"	m	class:BasePlan
+m_customTrafMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, TrafficItem*> m_customTrafMap;  \/\/ SS006 用户自定义交通$/;"	m	class:BasePlan
+m_dataCheck	LogDump.h	/^	int m_dataCheck;$/;"	m	class:BaseCost
+m_date2trafPrefer	BasePlan.h	/^		std::tr1::unordered_map<std::string, int> m_date2trafPrefer;\/\/某天对应的交通偏好$/;"	m	class:BasePlan
+m_datePat	ToolFunc.cpp	/^regex_t FormatChecker::m_datePat;$/;"	m	class:ToolFunc::FormatChecker	file:
+m_datePat	ToolFunc.h	/^	static regex_t m_datePat;$/;"	m	class:ToolFunc::FormatChecker
+m_date_price	define.h	/^	Json::Value m_date_price; \/\/价格(与日期相关)$/;"	m	class:TicketsFun
+m_dayEnd	define.h	/^	int m_dayEnd;$/;"	m	class:HInfo
+m_dayNodeLimit	BagParam.h	/^	static const int m_dayNodeLimit = 20;  \/\/ 每天允许最多几个点$/;"	m	class:BagParam
+m_dayOneLast3hNotPlan	BasePlan.h	/^		bool m_dayOneLast3hNotPlan;\/\/首尾天<3h不规划逻辑$/;"	m	class:BasePlan
+m_dayRangeMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, std::pair<time_t, time_t> > m_dayRangeMap;  \/\/ todo: 暂不填值 现有设计每天都相同范围$/;"	m	class:BasePlan
+m_dayStart	define.h	/^	int m_dayStart;$/;"	m	class:HInfo
+m_dayViewLimit	BagParam.cpp	/^int BagParam::m_dayViewLimit = 9;$/;"	m	class:BagParam	file:
+m_dayViewLimit	BagParam.h	/^	static int m_dayViewLimit;  \/\/ 每天最大景点(非餐厅)数$/;"	m	class:BagParam
+m_daysPlan	LogDump.h	/^	int m_daysPlan;$/;"	m	class:BaseCost
+m_dbg	BasePlan.h	/^		DebugInfo m_dbg;$/;"	m	class:BasePlan
+m_dbgDump	TrafRoute.h	/^	bool m_dbgDump;$/;"	m	class:TrafRoute
+m_dbgStr	LogDump.h	/^	std::string m_dbgStr;$/;"	m	class:DebugInfo
+m_delFarDist	ConstDataCheck.cpp	/^bool ConstDataCheck::m_delFarDist = 1;$/;"	m	class:ConstDataCheck	file:
+m_delFarDist	ConstDataCheck.h	/^	static bool m_delFarDist;$/;"	m	class:ConstDataCheck
+m_delIntensity	ConstDataCheck.cpp	/^bool ConstDataCheck::m_delIntensity = 1;$/;"	m	class:ConstDataCheck	file:
+m_delIntensity	ConstDataCheck.h	/^	static bool m_delIntensity;$/;"	m	class:ConstDataCheck
+m_delOpenClose	ConstDataCheck.cpp	/^bool ConstDataCheck::m_delOpenClose = 0;$/;"	m	class:ConstDataCheck	file:
+m_delOpenClose	ConstDataCheck.h	/^	static bool m_delOpenClose;$/;"	m	class:ConstDataCheck
+m_deptID	define.h	/^	std::string m_deptID;$/;"	m	class:PlaceInfo
+m_deptNullPlace	LYConstData.cpp	/^LYPlace* LYConstData::m_deptNullPlace;$/;"	m	class:LYConstData	file:
+m_deptNullPlace	LYConstData.h	/^	static LYPlace* m_deptNullPlace;\/\/ 空离开点$/;"	m	class:LYConstData
+m_dfSearch	LogDump.h	/^	int m_dfSearch;$/;"	m	class:BagCost
+m_dfsDayHeapLimit	BagParam.cpp	/^int BagParam::m_dfsDayHeapLimit = 1;$/;"	m	class:BagParam	file:
+m_dfsDayHeapLimit	BagParam.h	/^	static int m_dfsDayHeapLimit;  \/\/ DFS天内输入top几$/;"	m	class:BagParam
+m_dfsHeapLimit	BagParam.cpp	/^int BagParam::m_dfsHeapLimit = 100000;$/;"	m	class:BagParam	file:
+m_dfsHeapLimit	BagParam.h	/^	static int m_dfsHeapLimit;  \/\/ DFS输出长度$/;"	m	class:BagParam
+m_dfsNum	LogDump.h	/^	int m_dfsNum;$/;"	m	class:BagStat
+m_dfsSPSHashHeapLimit	BagParam.cpp	/^int BagParam::m_dfsSPSHashHeapLimit = 2;$/;"	m	class:BagParam	file:
+m_dfsSPSHashHeapLimit	BagParam.h	/^	static int m_dfsSPSHashHeapLimit;  \/\/ DFS相同点集输出top几 SPS: same point set$/;"	m	class:BagParam
+m_dfsScore	PathView.h	/^	double m_dfsScore;$/;"	m	class:PathView
+m_dfsTimeOut	BagParam.cpp	/^int BagParam::m_dfsTimeOut = 1000 * 10;  \/\/ 单位毫秒$/;"	m	class:BagParam	file:
+m_dfsTimeOut	BagParam.h	/^	static int m_dfsTimeOut;$/;"	m	class:BagParam
+m_dfsTimeOut	LogDump.h	/^	bool m_dfsTimeOut;$/;"	m	class:BagStat
+m_diffPushScale	BagParam.cpp	/^double BagParam::m_diffPushScale = 0.1;$/;"	m	class:BagParam	file:
+m_diffPushScale	BagParam.h	/^	static double m_diffPushScale;$/;"	m	class:BagParam
+m_dist	LogDump.h	/^	int m_dist;$/;"	m	class:BaseStat
+m_dur	define.h	/^	int m_dur;	\/\/停留时长$/;"	m	class:PlaceInfo
+m_dur	define.h	/^	int m_dur;$/;"	m	class:PathInfo
+m_durEmpty	define.h	/^	bool m_durEmpty;$/;"	m	class:Tour
+m_durLocker	BasePlan.h	/^		pthread_mutex_t m_durLocker; \/\/进程锁$/;"	m	class:BasePlan
+m_durS	Utils.h	/^	DurS* m_durS;$/;"	m	class:KeyNode
+m_durSMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, DurS*> m_durSMap;			\/\/城市对应各点游玩时长map$/;"	m	class:BasePlan
+m_eDate	define.h	/^	std::string m_eDate;$/;"	m	struct:POIDetail
+m_errID	LogDump.h	/^	int m_errID;$/;"	m	class:ErrorInfo
+m_errReason	LogDump.h	/^	std::string m_errReason;$/;"	m	class:ErrorInfo
+m_errStr	LogDump.h	/^	std::string m_errStr;$/;"	m	class:ErrorInfo
+m_error	BasePlan.h	/^		ErrorInfo m_error;$/;"	m	class:BasePlan
+m_extend	define.h	/^	int m_extend;$/;"	m	class:DurS
+m_failSet	BasePlan.h	/^		std::tr1::unordered_set<const LYPlace*> m_failSet;				\/\/waitList中无法规划的点(不满足开关门要求等)$/;"	m	class:BasePlan
+m_failedHotelDidx	BasePlan.h	/^		std::tr1::unordered_set<int> m_failedHotelDidx;\/\/报错酒店点的date下标 $/;"	m	class:BasePlan
+m_farDistLimit	ConstDataCheck.cpp	/^int ConstDataCheck::m_farDistLimit = 40 * 1000;$/;"	m	class:ConstDataCheck	file:
+m_farDistLimit	ConstDataCheck.h	/^	static int m_farDistLimit;$/;"	m	class:ConstDataCheck
+m_faultTolerant	BasePlan.h	/^		bool m_faultTolerant;  \/\/ 是否容错(开关门不OK也出Path)$/;"	m	class:BasePlan
+m_filterTags	BasePlan.h	/^		std::vector<std::string> m_filterTags; \/\/存储过滤tag$/;"	m	class:BasePlan
+m_firstLPenalty	PathEval.h	/^	static const int m_firstLPenalty = 3000;$/;"	m	class:PathEval
+m_gatherLocal	define.h	/^	std::vector<const LYPlace*> m_gatherLocal;      \/\/集合地点$/;"	m	class:Tour
+m_gridMap	LYConstData.cpp	/^MJ::MJSquareGrid LYConstData::m_gridMap; \/\/公里网映射结构体$/;"	m	class:LYConstData	file:
+m_gridMap	LYConstData.h	/^	static MJ::MJSquareGrid m_gridMap; \/\/公里网映射结构体$/;"	m	class:LYConstData
+m_hasAttach	PathView.h	/^	int m_hasAttach;$/;"	m	class:PlanItem
+m_hashFrom	PathView.h	/^	uint32_t m_hashFrom;$/;"	m	class:PathView
+m_hot	LogDump.h	/^	int m_hot;$/;"	m	class:BaseStat
+m_hotMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, int> m_hotMap;				\/\/place_Id 对应hot值$/;"	m	class:BasePlan
+m_hotValue	PathView.h	/^	double m_hotValue;$/;"	m	class:PathView
+m_hotel	define.h	/^	const LYPlace* m_hotel;$/;"	m	class:HInfo
+m_hotels	PrivateConstData.h	/^	std::tr1::unordered_map<std::string,LYPlace*> m_citys,m_hotels,m_views,m_shops,m_restaurants,m_tours;$/;"	m	class:PrivateConstData
+m_id	define.h	/^	int m_id;				\/\/门票ID$/;"	m	class:TicketsFun
+m_id	define.h	/^	std::string m_id;$/;"	m	class:HInfo
+m_id2Tag	LYConstData.h	/^	static std::tr1::unordered_map<std::string, const Tag*> m_id2Tag;$/;"	m	class:LYConstData
+m_id2productTickets	PrivateConstData.h	/^	std::tr1::unordered_map<int, TicketsFun*> m_id2productTickets; \/\/门票id对应门票信息$/;"	m	class:PrivateConstData
+m_index	PathUtil.h	/^	int m_index;$/;"	m	class:StretchItem
+m_info	define.h	/^	Json::Value m_info;		\/\/票务信息$/;"	m	class:TicketsFun
+m_intensity	define.h	/^	int m_intensity;$/;"	m	class:PathInfo
+m_intensityPrefer	Prefer.h	/^	int m_intensityPrefer;$/;"	m	class:CityPrefer
+m_interval	PrivateConstData.cpp	/^int PrivateConfig::m_interval;\/\/延迟更新$/;"	m	class:PrivateConfig	file:
+m_interval	PrivateConstData.h	/^	static int m_interval;\/\/延迟更新$/;"	m	class:PrivateConfig
+m_invalidPois	BasePlan.h	/^		std::vector<std::string> m_invalidPois;\/\/异常点报错 目前无该逻辑$/;"	m	class:BasePlan
+m_isCoreHotel	define.h	/^	bool m_isCoreHotel;$/;"	m	class:HInfo
+m_isImmediately	BasePlan.h	/^		bool m_isImmediately; \/\/控制是否直接游玩，不放行李，为true表示不放行李$/;"	m	class:BasePlan
+m_isPlan	BasePlan.h	/^		bool m_isPlan;  \/\/判断该城市是否需要规划$/;"	m	class:BasePlan
+m_isValid	PathView.h	/^	bool m_isValid;$/;"	m	class:PathView
+m_jDetailTraffic	define.h	/^	Json::Value m_jDetailTraffic;$/;"	m	class:TrafficDetail
+m_keepPlayRange	BasePlan.h	/^		bool m_keepPlayRange;\/\/是否保持每日出发返回时间$/;"	m	class:BasePlan
+m_keepTime	BasePlan.h	/^		bool m_keepTime;	\/\/是否保持游玩时长$/;"	m	class:BasePlan
+m_key	BasePlan.h	/^		std::string m_key;\/\/关键词检索时用的关键词（点id）$/;"	m	class:BasePlan
+m_keyBuild	LogDump.h	/^	int m_keyBuild;$/;"	m	class:BaseCost
+m_keyIdx	TrafRoute.h	/^	int m_keyIdx;$/;"	m	class:TrafRoute
+m_keyNum	TrafRoute.h	/^	int m_keyNum;$/;"	m	class:TrafRoute
+m_lFHViewIDListMap	LYConstData.cpp	/^std::tr1::unordered_map<std::string, std::tr1::unordered_map<int, std::vector<std::string> > > LYConstData::m_lFHViewIDListMap; \/\/<cid, <days, vidList> >$/;"	m	class:LYConstData	file:
+m_lFHViewIDListMap	LYConstData.h	/^	static std::tr1::unordered_map<std::string, std::tr1::unordered_map<int, std::vector<std::string> > > m_lFHViewIDListMap; \/\/<cid, <days, vidList> >$/;"	m	class:LYConstData
+m_lastItem	TrafRoute.h	/^	PlanItem* m_lastItem;$/;"	m	class:TrafRoute
+m_lastTripTrafMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, TrafficItem*> m_lastTripTrafMap;  \/\/保留用户前一次行程的交通 此map中不包括自定义交通$/;"	m	class:BasePlan
+m_latestArv	define.h	/^	time_t m_latestArv;$/;"	m	class:OpenClose
+m_leftLocal	define.h	/^	std::vector<const LYPlace*> m_leftLocal;        \/\/离开地点$/;"	m	class:Tour
+m_leftTime	Utils.h	/^	int m_leftTime;$/;"	m	class:PlanStats
+m_listCenter	BasePlan.h	/^		std::vector<std::string> m_listCenter;\/\/按距离搜索 中心点$/;"	m	class:BasePlan
+m_listCity	BasePlan.h	/^		std::vector<std::string> m_listCity;\/\/列表的城市串$/;"	m	class:BasePlan
+m_listDate	BasePlan.h	/^		std::string m_listDate;\/\/玩乐列表的日期$/;"	m	class:BasePlan
+m_lname	define.h	/^	std::string m_lname;$/;"	m	class:HInfo
+m_loadIdx	LYConstData.h	/^		int m_loadIdx;$/;"	m	class:LoadDataWorker
+m_lookSet	BasePlan.h	/^		std::tr1::unordered_set<const LYPlace*> m_lookSet;				\/\/必去点不满足开关门 通过缩短游玩时长 规划进行程 (外观游览)$/;"	m	class:BasePlan
+m_lunchTime	BasePlan.h	/^		static const RestaurantTime m_lunchTime;$/;"	m	class:BasePlan
+m_matchRate	define.h	/^	int m_matchRate;$/;"	m	class:PathInfo
+m_max	define.h	/^	int m_max;$/;"	m	class:DurS
+m_max	define.h	/^	int m_max;$/;"	m	class:TicketsFun
+m_maxDist	BasePlan.h	/^		long m_maxDist; \/\/列表页过滤时的最大距离$/;"	m	class:BasePlan
+m_maxPushScale	BagParam.cpp	/^double BagParam::m_maxPushScale = 0.85;$/;"	m	class:BagParam	file:
+m_maxPushScale	BagParam.h	/^	static double m_maxPushScale;  \/\/ 作为骨架最大时长占比(超过不继续搜索)$/;"	m	class:BagParam
+m_maxTrafDistMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, int> m_maxTrafDistMap;$/;"	m	class:BasePlan
+m_maxTrafTimeMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, int> m_maxTrafTimeMap;$/;"	m	class:BasePlan
+m_maxWalkDay	PathEval.h	/^	static const int m_maxWalkDay = 3000;$/;"	m	class:PathEval
+m_meals	define.h	/^	int m_meals;$/;"	m	class:OpenClose
+m_min	define.h	/^	int m_min;$/;"	m	class:DurS
+m_min	define.h	/^	int m_min;$/;"	m	class:TicketsFun
+m_minCBParam	BagParam.h	/^	static const CityBParam m_minCBParam;$/;"	m	class:BagParam
+m_minPushScale	BagParam.cpp	/^double BagParam::m_minPushScale = 0.5;$/;"	m	class:BagParam	file:
+m_minPushScale	BagParam.h	/^	static double m_minPushScale;  \/\/ 作为骨架最小时长占比$/;"	m	class:BagParam
+m_missLevel	PathView.h	/^	int m_missLevel;$/;"	m	class:PathView
+m_missLevelMap	BasePlan.h	/^		std::tr1::unordered_map<const LYPlace*, int> m_missLevelMap; 	\/\/必去点miss值 用于选取路线$/;"	m	class:BasePlan
+m_mode	define.h	/^	int m_mode; \/\/辅助信息;当地址为租车门店时,0代表取车门店,1代表换车门店$/;"	m	class:LYPlace
+m_mode	define.h	/^	int m_mode;$/;"	m	struct:POIDetail
+m_monitorList	PrivateConstData.cpp	/^std::vector<std::string> PrivateConfig::m_monitorList;\/\/监视的表名 格式如 (数据库A#表B)$/;"	m	class:PrivateConfig	file:
+m_monitorList	PrivateConstData.h	/^	static std::vector<std::string> m_monitorList;\/\/监视的表名 格式如 (数据库A#表B)$/;"	m	class:PrivateConfig
+m_multiPlaceMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, const LYPlace*> m_multiPlaceMap;	\/\/新id id#次数$/;"	m	class:BasePlan
+m_name	define.h	/^	std::string m_name;		\/\/票务名称$/;"	m	class:TicketsFun
+m_name	define.h	/^	std::string m_name;$/;"	m	class:HInfo
+m_name2Tag	LYConstData.h	/^	static std::tr1::unordered_map<std::string, const Tag*> m_name2Tag;$/;"	m	class:LYConstData
+m_needLog	ConstDataCheck.cpp	/^bool ConstDataCheck::m_needLog = 1;$/;"	m	class:ConstDataCheck	file:
+m_needLog	ConstDataCheck.h	/^	static bool m_needLog;$/;"	m	class:ConstDataCheck
+m_newHotlevel	PathView.h	/^	double m_newHotlevel;$/;"	m	class:PathView
+m_no	define.h	/^	std::string m_no;$/;"	m	class:TrafficItem
+m_nonWalkPenalty	PathEval.h	/^	static const int m_nonWalkPenalty = 2000;$/;"	m	class:PathEval
+m_normalTraffic	TrafficData.cpp	/^TrafficItem* TrafficData::m_normalTraffic = NULL;$/;"	m	class:TrafficData	file:
+m_normalTraffic	TrafficData.h	/^	static TrafficItem* m_normalTraffic;$/;"	m	class:TrafficData
+m_notPlanCityPark	BasePlan.h	/^		bool m_notPlanCityPark;\/\/跳过国家公园的规划$/;"	m	class:BasePlan
+m_notPlanDateSet	BasePlan.h	/^		std::tr1::unordered_set<std::string> m_notPlanDateSet;\/\/不规划的日期$/;"	m	class:BasePlan
+m_notPlanSet	BasePlan.h	/^		std::tr1::unordered_set<std::string> m_notPlanSet;\/\/不做规划的点集 适用于ssv005的接口$/;"	m	class:BasePlan
+m_numEachPage	BasePlan.h	/^		int m_numEachPage;\/\/每页展示个数$/;"	m	class:BasePlan
+m_open	define.h	/^	Json::Value m_open;						\/\/可用日期$/;"	m	class:Tour
+m_open	define.h	/^	time_t m_open;$/;"	m	class:OpenClose
+m_openClose	Utils.h	/^	OpenClose* m_openClose;$/;"	m	class:KeyNode
+m_openCloseList	Utils.h	/^	std::vector<const OpenClose*> m_openCloseList;$/;"	m	class:KeyNode
+m_openCloseList	define.h	/^	std::vector<const OpenClose*> m_openCloseList;$/;"	m	class:PlaceInfo
+m_order	define.h	/^	int m_order;$/;"	m	class:TrafficDetail
+m_order	define.h	/^	int m_order;$/;"	m	class:TrafficItem
+m_oriCcy	define.h	/^		std::string m_oriCcy;$/;"	m	class:MoneyPrice
+m_oriPrice	define.h	/^		int m_oriPrice;$/;"	m	class:MoneyPrice
+m_pCost	BasePlan.h	/^		ProcCost m_pCost;$/;"	m	class:BasePlan
+m_pInfoList	Utils.h	/^	std::vector<const PlaceInfo*> m_pInfoList;$/;"	m	class:TimeBlock
+m_pInfoMap	Utils.h	/^	std::tr1::unordered_map<std::string, const PlaceInfo*> m_pInfoMap;$/;"	m	class:TimeBlock
+m_pItem	PathUtil.h	/^	PlanItem* m_pItem;$/;"	m	class:StretchItem
+m_pStat	BasePlan.h	/^		ProcStat m_pStat;$/;"	m	class:BasePlan
+m_pageIndex	BasePlan.h	/^		int m_pageIndex;\/\/第几页$/;"	m	class:BasePlan
+m_parkCity	LYConstData.cpp	/^std::tr1::unordered_map<std::string, const LYPlace*> LYConstData::m_parkCity;\/\/国家公园城市~$/;"	m	class:LYConstData	file:
+m_parkCity	LYConstData.h	/^	static std::tr1::unordered_map<std::string, const LYPlace*> m_parkCity;\/\/国家公园城市~$/;"	m	class:LYConstData
+m_pathEnrich	LogDump.h	/^	int m_pathEnrich;$/;"	m	class:BaseCost
+m_perfect	LogDump.h	/^	int m_perfect;$/;"	m	class:BagCost
+m_pid	define.h	/^	std::string m_pid;						\/\/产品ID$/;"	m	class:Tour
+m_pid	define.h	/^	std::string m_pid;		\/\/门票产品ID$/;"	m	class:TicketsFun
+m_pid2ticketIdAndNum	BasePlan.h	/^		std::tr1::unordered_map<std::string, std::tr1::unordered_map<int, int> > m_pid2ticketIdAndNum;	\/\/pid ticketId ticketnum 玩乐票种及张数$/;"	m	class:BasePlan
+m_pid_3rd	define.h	/^	std::string m_pid_3rd;					\/\/第三方产品id$/;"	m	class:Tour
+m_place	define.h	/^	const LYPlace *m_place;$/;"	m	struct:POIDetail
+m_place	define.h	/^    const LYPlace* m_place;$/;"	m	class:ShowItem
+m_placeDurMap	Utils.h	/^	std::tr1::unordered_map<const LYPlace*, int> m_placeDurMap;$/;"	m	class:PlanStats
+m_placeIdx	TrafRoute.h	/^	int m_placeIdx;$/;"	m	class:TrafRoute
+m_placeNum	LogDump.h	/^	int m_placeNum;$/;"	m	class:BaseStat
+m_placeNum	TrafRoute.h	/^	int m_placeNum;$/;"	m	class:TrafRoute
+m_placeNumberMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, int> m_placeNumberMap;$/;"	m	class:BasePlan
+m_placeStatsMap	Utils.h	/^	std::tr1::unordered_map<const LYPlace*, int> m_placeStatsMap;$/;"	m	class:PlanStats
+m_planAfterZip	BasePlan.h	/^		bool m_planAfterZip;\/\/在压缩站点时间之后 是否做规划$/;"	m	class:BasePlan
+m_planStats	BasePlan.h	/^		PlanStats m_planStats;\/\/以block为单位，记录leftTime（剩余时间），trafTime（交通花费时间），throwNum（扔点数量）,place dur，扔点原因（eg：Greedy,dfs）$/;"	m	class:BasePlan
+m_poiFunc	BasePlan.h	/^		std::map<std::string,int> m_poiFunc;		\/\/poi的功能信息，如:到达\/离开站点 放\/取行李点$/;"	m	class:BasePlan
+m_poiPlays	BasePlan.h	/^		std::map<std::string,std::string> m_poiPlays;		\/\/poi的游玩信息，如:入内，外观$/;"	m	class:BasePlan
+m_poiType2smallTagNameAndId	LYConstData.cpp	/^std::tr1::unordered_map<int, std::tr1::unordered_map<std::string, std::string>> LYConstData::m_poiType2smallTagNameAndId;$/;"	m	class:LYConstData	file:
+m_poiType2smallTagNameAndId	LYConstData.h	/^	static std::tr1::unordered_map<int, std::tr1::unordered_map<std::string, std::string> > m_poiType2smallTagNameAndId;$/;"	m	class:LYConstData
+m_postProcess	LogDump.h	/^	int m_postProcess;$/;"	m	class:BaseCost
+m_preBook	define.h	/^	int m_preBook;$/;"	m	class:Tour
+m_preTime	define.h	/^	int m_preTime;$/;"	m	class:Tour
+m_price	define.h	/^	MoneyPrice m_price;$/;"	m	class:TrafficItem
+m_privateConstData	LYConstData.cpp	/^PrivateConstData* LYConstData::m_privateConstData = NULL;$/;"	m	class:LYConstData	file:
+m_privateConstData	LYConstData.h	/^	static PrivateConstData* m_privateConstData; \/\/私有库的 类$/;"	m	class:LYConstData
+m_privateFilter	BasePlan.h	/^		int m_privateFilter;\/\/私有数据筛选(纯私有) 玩乐没有公转私$/;"	m	class:BasePlan
+m_privateMysql	PrivateConstData.h	/^	MYSQL m_privateMysql;\/\/私有库数据库$/;"	m	class:PrivateConstData
+m_processor	LogDump.h	/^	int m_processor;$/;"	m	class:ProcCost
+m_productList	BasePlan.h	/^		std::vector<ProductTicket> m_productList;	\/\/需要验证的数据(解析请求中的玩乐信息)$/;"	m	class:BasePlan
+m_ptid	define.h	/^	std::string m_ptid;\/\/私有库来源$/;"	m	class:LYPlace
+m_qParam	BasePlan.h	/^		QueryParam m_qParam;$/;"	m	class:BasePlan
+m_queueTimeOut	BagParam.cpp	/^int BagParam::m_queueTimeOut = 10 * 1000; \/\/ 单位毫秒$/;"	m	class:BagParam	file:
+m_queueTimeOut	BagParam.h	/^	static int m_queueTimeOut;$/;"	m	class:BagParam
+m_rcmd	define.h	/^	int m_rcmd;$/;"	m	class:DurS
+m_rcmdDur	PathUtil.h	/^	int m_rcmdDur;$/;"	m	class:StretchItem
+m_realDist	define.h	/^	int m_realDist;$/;"	m	class:TrafficItem
+m_realTrafNeed	BasePlan.h	/^		int m_realTrafNeed;$/;"	m	class:BasePlan
+m_realTrafNum	LogDump.h	/^	int m_realTrafNum;$/;"	m	class:BaseStat
+m_refPoi	define.h	/^	std::tr1::unordered_set<std::string> m_refPoi;	\/\/关联景点$/;"	m	class:Tour
+m_refer	define.h	/^	std::string m_refer; \/\/私有来源时 引用静态库的id ，可为空$/;"	m	class:LYPlace
+m_reqMode	BasePlan.h	/^		int m_reqMode;  \/\/ 列表页的请求类型 餐馆\/购物\/景点\/玩乐$/;"	m	class:BasePlan
+m_reqParse	LogDump.h	/^	int m_reqParse;$/;"	m	class:BaseCost
+m_restNum	LogDump.h	/^	int m_restNum;$/;"	m	class:ProcStat
+m_restOpenCloseList	Utils.h	/^	std::vector<const OpenClose*> m_restOpenCloseList;$/;"	m	class:TimeBlock
+m_restaurants	PrivateConstData.h	/^	std::tr1::unordered_map<std::string,LYPlace*> m_citys,m_hotels,m_views,m_shops,m_restaurants,m_tours;$/;"	m	class:PrivateConstData
+m_ret	LYConstData.h	/^		bool m_ret;$/;"	m	class:LoadDataWorker
+m_richExtraDur	BagParam.cpp	/^int BagParam::m_richExtraDur = 18 * 3600;$/;"	m	class:BagParam	file:
+m_richExtraDur	BagParam.h	/^	static int m_richExtraDur;  \/\/ 多玩多久搜索深度$/;"	m	class:BagParam
+m_richHeapLimit	BagParam.cpp	/^int BagParam::m_richHeapLimit = 100000;$/;"	m	class:BagParam	file:
+m_richHeapLimit	BagParam.h	/^	static int m_richHeapLimit;  \/\/ rich长度限制$/;"	m	class:BagParam
+m_richMissLimit	BagParam.cpp	/^int BagParam::m_richMissLimit = 2;$/;"	m	class:BagParam	file:
+m_richMissLimit	BagParam.h	/^	static int m_richMissLimit;  \/\/ rich略过数量剪枝(高hot略过太多)$/;"	m	class:BagParam
+m_richNum	LogDump.h	/^	int m_richNum;$/;"	m	class:BagStat
+m_richPlace	BasePlan.h	/^		bool m_richPlace;  \/\/ 是否自动补充POI$/;"	m	class:BasePlan
+m_richSearch	LogDump.h	/^	int m_richSearch;$/;"	m	class:BagCost
+m_richTimeOut	BagParam.cpp	/^int BagParam::m_richTimeOut = 1000 * 30;  \/\/ 单位毫秒$/;"	m	class:BagParam	file:
+m_richTimeOut	BagParam.h	/^	static int m_richTimeOut;$/;"	m	class:BagParam
+m_richTimeOut	LogDump.h	/^	bool m_richTimeOut;$/;"	m	class:BagStat
+m_richTopK	BagParam.cpp	/^int BagParam::m_richTopK = 2;$/;"	m	class:BagParam	file:
+m_richTopK	BagParam.h	/^	static int m_richTopK;  \/\/ 距离剪枝只留前top近$/;"	m	class:BagParam
+m_rootHeapLimit	BagParam.cpp	/^int BagParam::m_rootHeapLimit = 100000;$/;"	m	class:BagParam	file:
+m_rootHeapLimit	BagParam.h	/^	static int m_rootHeapLimit;  \/\/ 骨架广搜队列长度$/;"	m	class:BagParam
+m_rootHotGap	BagParam.cpp	/^int BagParam::m_rootHotGap = 11;$/;"	m	class:BagParam	file:
+m_rootHotGap	BagParam.h	/^	static int m_rootHotGap;  \/\/ 骨架热度保留最高hot-grade路径$/;"	m	class:BagParam
+m_rootNum	LogDump.h	/^	int m_rootNum;$/;"	m	class:BagStat
+m_rootRetLimit	BagParam.cpp	/^int BagParam::m_rootRetLimit = 1000;$/;"	m	class:BagParam	file:
+m_rootRetLimit	BagParam.h	/^	static int m_rootRetLimit;  \/\/ 骨架最终输出长度$/;"	m	class:BagParam
+m_rootSearch	LogDump.h	/^	int m_rootSearch;$/;"	m	class:BagCost
+m_rootTimeOut	BagParam.cpp	/^int BagParam::m_rootTimeOut = 1000 * 30;  \/\/ 单位毫秒$/;"	m	class:BagParam	file:
+m_rootTimeOut	BagParam.h	/^	static int m_rootTimeOut;$/;"	m	class:BagParam
+m_rootTimeOut	LogDump.h	/^	bool m_rootTimeOut;$/;"	m	class:BagStat
+m_routeSearch	LogDump.h	/^	int m_routeSearch;$/;"	m	class:BagCost
+m_routeTimeOut	BagParam.cpp	/^int BagParam::m_routeTimeOut = 1000 * 30;  \/\/ 单位毫秒$/;"	m	class:BagParam	file:
+m_routeTimeOut	BagParam.h	/^	static int m_routeTimeOut;$/;"	m	class:BagParam
+m_routeTimeOut	LogDump.h	/^	bool m_routeTimeOut;$/;"	m	class:BagStat
+m_runType	BasePlan.h	/^		int m_runType;			\/\/算法类型 详见RUN_TYPE$/;"	m	class:BasePlan
+m_sDate	define.h	/^	std::string m_sDate;$/;"	m	struct:POIDetail
+m_scalePrefer	BasePlan.h	/^		double m_scalePrefer;\/\/游玩强度偏好$/;"	m	class:BasePlan
+m_score	LogDump.h	/^	int m_score;$/;"	m	class:BaseStat
+m_score	define.h	/^    double m_score;$/;"	m	class:ShowItem
+m_segmentPlace	LYConstData.cpp	/^LYPlace* LYConstData::m_segmentPlace;$/;"	m	class:LYConstData	file:
+m_segmentPlace	LYConstData.h	/^	static LYPlace* m_segmentPlace;\/\/ 两个城市间的分割点$/;"	m	class:LYConstData
+m_shields	PrivateConstData.h	/^	std::tr1::unordered_map<std::string, std::tr1::unordered_set<std::string> > m_shields;\/\/企业制定删除的点不再被显示,key为ptid$/;"	m	class:PrivateConstData
+m_shopIntensity	BasePlan.h	/^		int m_shopIntensity;  \/\/ 购物强度$/;"	m	class:BasePlan
+m_shopNum	LogDump.h	/^	int m_shopNum;$/;"	m	class:ProcStat
+m_shopPreferType	Prefer.h	/^	int m_shopPreferType;$/;"	m	class:CityPrefer
+m_shopSpecial	Prefer.h	/^	std::vector<int> m_shopSpecial;$/;"	m	class:CityPrefer
+m_shopTagList	Prefer.h	/^	std::vector<std::string> m_shopTagList;$/;"	m	class:CityPrefer
+m_shops	PrivateConstData.h	/^	std::tr1::unordered_map<std::string,LYPlace*> m_citys,m_hotels,m_views,m_shops,m_restaurants,m_tours;$/;"	m	class:PrivateConstData
+m_showItemList	BasePlan.h	/^		std::vector<ShowItem> m_showItemList;\/\/view,rest,shop,tour$/;"	m	class:BasePlan
+m_sid	define.h	/^	std::string m_sid;						\/\/源id$/;"	m	class:Tour
+m_sid	define.h	/^	std::string m_sid;$/;"	m	class:TicketsFun
+m_sid2sourceName	PrivateConstData.h	/^	std::tr1::unordered_map<std::string, std::string> m_sid2sourceName; \/\/源id对应源name信息$/;"	m	class:PrivateConstData
+m_sleepCut	BasePlan.h	/^		int m_sleepCut;  \/\/ 睡觉时间可被压缩$/;"	m	class:BasePlan
+m_sortMode	BasePlan.h	/^		int m_sortMode;\/\/排序选项规则 正序or逆序$/;"	m	class:BasePlan
+m_spAllocLimit	BagParam.cpp	/^int BagParam::m_spAllocLimit = std::max(BagParam::m_richHeapLimit, BagParam::m_dfsHeapLimit) * 1.5;$/;"	m	class:BagParam	file:
+m_spAllocLimit	BagParam.h	/^	static int m_spAllocLimit;  \/\/ 内存池大小 必须大于heap长度$/;"	m	class:BagParam
+m_srcJieSongPOI	define.h	/^	std::string m_srcJieSongPOI;		\/\/接送相关地点原始信息$/;"	m	class:Tour
+m_srcList	define.h	/^	std::vector<std::pair<std::string, std::string> > m_srcList;\/\/name ，url$/;"	m	class:TrafficDetail
+m_srcTimes	define.h	/^	Json::Value m_srcTimes;				\/\/时间相关原始信息$/;"	m	class:Tour
+m_stackSize	PrivateConstData.cpp	/^int PrivateConfig::m_stackSize;\/\/栈大小$/;"	m	class:PrivateConfig	file:
+m_stackSize	PrivateConstData.h	/^	static int m_stackSize;\/\/栈大小$/;"	m	class:PrivateConfig
+m_startP	define.h	/^	std::string m_startP;$/;"	m	class:TrafficItem
+m_startTime	Prefer.h	/^	std::string m_startTime;$/;"	m	class:CityPrefer
+m_stat	BasePlan.h	/^		BaseStat m_stat;$/;"	m	class:BasePlan
+m_stat	define.h	/^	int m_stat;$/;"	m	class:TrafficDetail
+m_stat	define.h	/^	int m_stat;$/;"	m	class:TrafficItem
+m_stopP	define.h	/^	std::string m_stopP;$/;"	m	class:TrafficItem
+m_stopTime	Prefer.h	/^	std::string m_stopTime;$/;"	m	class:CityPrefer
+m_supperTime	BasePlan.h	/^		static const RestaurantTime m_supperTime;$/;"	m	class:BasePlan
+m_systemOptSet	BasePlan.h	/^		std::tr1::unordered_set<const LYPlace*> m_systemOptSet;			\/\/系统推荐点集合(来源于不可删点或长远热点)$/;"	m	class:BasePlan
+m_tag	define.h	/^	std::tr1::unordered_set<std::string> m_tag;$/;"	m	class:LYPlace
+m_tagSmallStr	define.h	/^	std::string m_tagSmallStr;$/;"	m	class:LYPlace
+m_threadNum	BagParam.cpp	/^int BagParam::m_threadNum = 14;$/;"	m	class:BagParam	file:
+m_threadNum	BagParam.h	/^	static int m_threadNum;  \/\/ 线程数$/;"	m	class:BagParam
+m_throwNum	Utils.h	/^	int m_throwNum;$/;"	m	class:PlanStats
+m_ticketType	define.h	/^	int m_ticketType;$/;"	m	class:TicketsFun
+m_ticket_3rd	define.h	/^	std::string m_ticket_3rd;$/;"	m	class:TicketsFun
+m_ticket_id	define.h	/^	std::string m_ticket_id; \/\/综合公私票中,唯一的id$/;"	m	class:TicketsFun
+m_time	LogDump.h	/^	int m_time;$/;"	m	class:BaseStat
+m_timeOut	BagParam.cpp	/^int BagParam::m_timeOut = 1000 * 60 * 2;  \/\/ 单位毫秒$/;"	m	class:BagParam	file:
+m_timeOut	BagParam.h	/^	static int m_timeOut;$/;"	m	class:BagParam
+m_timePat	ToolFunc.cpp	/^regex_t FormatChecker::m_timePat;$/;"	m	class:ToolFunc::FormatChecker	file:
+m_timePat	ToolFunc.h	/^	static regex_t m_timePat;$/;"	m	class:ToolFunc::FormatChecker
+m_timeZone	define.h	/^	int m_timeZone;$/;"	m	class:PlaceInfo
+m_times	define.h	/^	Json::Value m_times;	\/\/场次$/;"	m	class:TicketsFun
+m_total	LogDump.h	/^	int m_total;$/;"	m	class:BaseCost
+m_totalTime	define.h	/^	int m_totalTime;$/;"	m	class:PathInfo
+m_tours	PrivateConstData.h	/^	std::tr1::unordered_map<std::string,LYPlace*> m_citys,m_hotels,m_views,m_shops,m_restaurants,m_tours;$/;"	m	class:PrivateConstData
+m_trafBusCnt	PathView.h	/^	int m_trafBusCnt;$/;"	m	class:PathView
+m_trafDist	PathView.h	/^	int m_trafDist;$/;"	m	class:PathView
+m_trafDur	PathView.h	/^	int m_trafDur;$/;"	m	class:PathView
+m_trafInterface	LogDump.h	/^	int m_trafInterface;$/;"	m	class:BaseCost
+m_trafKeySplit	TrafficData.h	/^	static const std::string m_trafKeySplit;$/;"	m	class:TrafficData
+m_trafNum	LogDump.h	/^	int m_trafNum;$/;"	m	class:BaseStat
+m_trafPrefer	BasePlan.h	/^		int m_trafPrefer; \/\/整体交通偏好$/;"	m	class:BasePlan
+m_trafTime	Utils.h	/^	int m_trafTime;$/;"	m	class:PlanStats
+m_traffic8002	LogDump.h	/^	int m_traffic8002;$/;"	m	class:BaseCost
+m_traffic8003	LogDump.h	/^	int m_traffic8003;$/;"	m	class:BaseCost
+m_traffic8004	LogDump.h	/^	int m_traffic8004;$/;"	m	class:BaseCost
+m_traffic8005	LogDump.h	/^	int m_traffic8005;$/;"	m	class:BaseCost
+m_trafficDist	define.h	/^	int m_trafficDist;$/;"	m	class:PathInfo
+m_trafficItem	define.h	/^	TrafficItem* m_trafficItem;$/;"	m	class:TrafficDetail
+m_trafficItemList	define.h	/^	std::vector<const TrafficItem *> m_trafficItemList;$/;"	m	class:TrafficItem
+m_trafficMode	TrafficData.cpp	/^std::tr1::unordered_map<std::string, int> TrafficData::m_trafficMode;$/;"	m	class:TrafficData	file:
+m_trafficMode	TrafficData.h	/^	static std::tr1::unordered_map<std::string, int> m_trafficMode;$/;"	m	class:TrafficData
+m_trafficPrefer	Prefer.h	/^	std::vector<int> m_trafficPrefer;$/;"	m	class:CityPrefer
+m_trafficRate	define.h	/^	double m_trafficRate;$/;"	m	class:PathInfo
+m_trafficTime	define.h	/^	int m_trafficTime;$/;"	m	class:PathInfo
+m_transit	define.h	/^	int m_transit;$/;"	m	class:TrafficDetail
+m_travalType	BasePlan.h	/^		int m_travalType;\/\/行程类型（常规／包车）$/;"	m	class:BasePlan
+m_traveller_3rd	define.h	/^	std::string m_traveller_3rd;$/;"	m	class:TicketsFun
+m_tryErrorMap	BasePlan.h	/^		std::multimap<int, std::pair<int, std::string> > m_tryErrorMap;	\/\/error <dayIdx, <errorId, content> >$/;"	m	class:BasePlan
+m_type	define.h	/^	int m_type;$/;"	m	class:PlaceInfo
+m_uberPrice	define.h	/^	MoneyPrice m_uberPrice;$/;"	m	class:TrafficItem
+m_useCBP	BasePlan.h	/^		bool m_useCBP;$/;"	m	class:BasePlan
+m_useCityBP	BagParam.cpp	/^bool BagParam::m_useCityBP = true;$/;"	m	class:BagParam	file:
+m_useCityBP	BagParam.h	/^	static bool m_useCityBP;$/;"	m	class:BagParam
+m_useDay17Limit	BasePlan.h	/^		bool m_useDay17Limit;\/\/17点后不规划$/;"	m	class:BasePlan
+m_useKpi	BasePlan.h	/^		bool m_useKpi;$/;"	m	class:BasePlan
+m_useRealTraf	BasePlan.h	/^		bool m_useRealTraf;$/;"	m	class:BasePlan
+m_useStaticTraf	BasePlan.h	/^		bool m_useStaticTraf;$/;"	m	class:BasePlan
+m_useTrafShow	BasePlan.h	/^		bool m_useTrafShow;$/;"	m	class:BasePlan
+m_userCommand	define.h	/^	bool m_userCommand;$/;"	m	class:HInfo
+m_userDelSet	BasePlan.h	/^		std::tr1::unordered_set<const LYPlace*> m_userDelSet;		\/\/未规划的用户必去点 报错$/;"	m	class:BasePlan
+m_userMustPlaceSet	BasePlan.h	/^		std::tr1::unordered_set<const LYPlace*> m_userMustPlaceSet;	\/\/用户必去点 (waitList中会排序，不需要使用vector)$/;"	m	class:BasePlan
+m_userNum	define.h	/^	int m_userNum;			\/\/可用人数$/;"	m	class:TicketsFun
+m_userOptSet	BasePlan.h	/^		std::tr1::unordered_set<const LYPlace*> m_userOptSet;			\/\/用户推荐点集合$/;"	m	class:BasePlan
+m_utime	BasePlan.h	/^		int m_utime;	\/\/更新时间过滤$/;"	m	class:BasePlan
+m_vPlace	define.h	/^	const VarPlace* m_vPlace;$/;"	m	class:PlaceInfo
+m_vPlaceOpenMap	BasePlan.h	/^		std::tr1::unordered_map<std::string, std::pair<int, int> > m_vPlaceOpenMap; \/\/开关门$/;"	m	class:BasePlan
+m_varPlaceInfoList	BasePlan.h	/^		std::vector<const PlaceInfo*> m_varPlaceInfoList;				\/\/景点、餐厅、商场信息$/;"	m	class:BasePlan
+m_view	define.h	/^	std::string m_view;$/;"	m	class:ViewTicket
+m_viewDur	define.h	/^	int m_viewDur;$/;"	m	class:PathInfo
+m_viewNum	LogDump.h	/^	int m_viewNum;$/;"	m	class:ProcStat
+m_viewTotal	define.h	/^	int m_viewTotal;$/;"	m	class:PathInfo
+m_views	PrivateConstData.h	/^	std::tr1::unordered_map<std::string,LYPlace*> m_citys,m_hotels,m_views,m_shops,m_restaurants,m_tours;$/;"	m	class:PrivateConstData
+m_waitPlaceList	BasePlan.h	/^		std::vector<const LYPlace*> m_waitPlaceList;\/\/待规划点$/;"	m	class:BasePlan
+m_walkDist	define.h	/^	int m_walkDist;$/;"	m	class:TrafficDetail
+m_walkDistPlus	PathView.h	/^	int m_walkDistPlus;$/;"	m	class:PathView
+m_whitePreferMap	TrafficData.cpp	/^std::tr1::unordered_map<std::string, int> TrafficData::m_whitePreferMap;$/;"	m	class:TrafficData	file:
+m_whitePreferMap	TrafficData.h	/^	static std::tr1::unordered_map<std::string, int> m_whitePreferMap;$/;"	m	class:TrafficData
+m_zeroTraffic	TrafficData.cpp	/^TrafficItem* TrafficData::m_zeroTraffic = NULL;$/;"	m	class:TrafficData	file:
+m_zeroTraffic	TrafficData.h	/^	static TrafficItem* m_zeroTraffic;$/;"	m	class:TrafficData
+m_zip	define.h	/^	int m_zip;$/;"	m	class:DurS
+m_zipTraffic	TrafficData.cpp	/^TrafficItem* TrafficData::m_zipTraffic = NULL ;$/;"	m	class:TrafficData	file:
+m_zipTraffic	TrafficData.h	/^	static TrafficItem* m_zipTraffic;$/;"	m	class:TrafficData
+main	TimeIR.cpp	/^int main() {$/;"	f
+mutex_locker_	LYConstData.h	/^	static pthread_mutex_t mutex_locker_;$/;"	m	class:LYConstData
+mysql_status	RouteConfig.cpp	/^std::string RouteConfig::mysql_status;$/;"	m	class:RouteConfig	file:
+mysql_status	RouteConfig.h	/^	static std::string mysql_status; \/\/ 0:status_test='Open', 1:status_online='Open'$/;"	m	class:RouteConfig
+needPlanner	RouteConfig.cpp	/^bool RouteConfig::needPlanner = true;$/;"	m	class:RouteConfig	file:
+needPlanner	RouteConfig.h	/^	static bool needPlanner;  \/\/ 是否需要规划类$/;"	m	class:RouteConfig
+operator !=	Utils.h	/^	bool operator!=(PlaceOrder placeOrder) {$/;"	f	class:PlaceOrder
+operator ()	DataList.cpp	/^	bool operator() (const LYPlace* plhs, const LYPlace* prhs) const {$/;"	f	class:TourCmp
+operator ()	DataList.h	/^	bool operator() (const LYPlace* p1, const LYPlace* p2) {$/;"	f	struct:VPlaceGradeCmp
+operator ()	DataList.h	/^	bool operator() (const LYPlace* p1, const LYPlace* p2) {$/;"	f	struct:VPlaceHotCmp
+operator ()	DataList.h	/^	bool operator() (const LYPlace* p1, const LYPlace* p2) {$/;"	f	struct:VPlaceRankCmp
+operator ()	PathUtil.h	/^	bool operator() (const StretchItem* sItemA, const StretchItem* sItemB) {$/;"	f	struct:StretchItemCmp
+operator ()	PathUtil.h	/^	bool operator() (const StretchItem* sItemA, const StretchItem* sItemB) {$/;"	f	struct:StretchItemRateCmp
+operator ()	TrafficData.h	/^	bool operator()(const TrafficItem* pa, const TrafficItem* pb) {$/;"	f	struct:TrafDistCmp
+operator ()	TrafficData.h	/^	bool operator()(const TrafficItem* pa, const TrafficItem* pb) {$/;"	f	struct:TrafTimeCmp
+operator ()	Utils.h	/^	bool operator()(const std::pair<T1,T2>&left, const std::pair<T1,T2>&right) {$/;"	f	struct:sort_pair_first
+operator ()	Utils.h	/^	bool operator()(const std::pair<T1,T2>&left, const std::pair<T1,T2>&right) {$/;"	f	struct:sort_pair_second
+operator ()	define.h	/^	bool operator()(const HInfo* A, const HInfo* B) {$/;"	f	struct:hInfoCmp
+operator ()	define.h	/^	bool operator()(const LYPlace* A, const LYPlace* B) {$/;"	f	struct:varPlaceCmp
+operator ()	define.h	/^	bool operator()(const LYPlace* pa, const LYPlace* pb) {$/;"	f	struct:PlaceIDCmp
+operator =	BagParam.h	/^	CityBParam& operator=(const CityBParam& cbP) {$/;"	f	class:CityBParam
+operator =	Utils.h	/^	RestaurantTime& operator= (const RestaurantTime& restTime) {$/;"	f	class:RestaurantTime
+operator =	define.h	/^	TrafficItem& operator= (const TrafficItem& trafItem) {$/;"	f	class:TrafficItem
+operator ==	Utils.h	/^	bool operator==(PlaceOrder placeOrder) {$/;"	f	class:PlaceOrder
+operator ==	define.h	/^	bool operator== (const TrafficItem trafItem) const {$/;"	f	class:TrafficItem
+overlapTimeWithRestSlot	PathPerfect.cpp	/^int PathPerfect::overlapTimeWithRestSlot(int timeZone, int stime, int etime, RestaurantTime& restTime, int type) {$/;"	f	class:PathPerfect
+priDataThreadId	define.h	/^	int priDataThreadId;$/;"	m	struct:QueryParam
+private_db_host	RouteConfig.cpp	/^std::string RouteConfig::private_db_host;$/;"	m	class:RouteConfig	file:
+private_db_host	RouteConfig.h	/^	static std::string private_db_host;$/;"	m	class:RouteConfig
+private_db_name	RouteConfig.cpp	/^std::string RouteConfig::private_db_name;$/;"	m	class:RouteConfig	file:
+private_db_name	RouteConfig.h	/^	static std::string private_db_name;$/;"	m	class:RouteConfig
+private_db_passwd	RouteConfig.cpp	/^std::string RouteConfig::private_db_passwd;$/;"	m	class:RouteConfig	file:
+private_db_passwd	RouteConfig.h	/^	static std::string private_db_passwd;$/;"	m	class:RouteConfig
+private_db_user	RouteConfig.cpp	/^std::string RouteConfig::private_db_user;$/;"	m	class:RouteConfig	file:
+private_db_user	RouteConfig.h	/^	static std::string private_db_user;$/;"	m	class:RouteConfig
+productId	define.h	/^	std::string productId;$/;"	m	struct:ProductTicket
+ptid	define.h	/^	std::string ptid;\/\/供应商id$/;"	m	struct:QueryParam
+qid	define.h	/^	std::string qid;$/;"	m	struct:QueryParam
+refer_id	define.h	/^	std::string refer_id;$/;"	m	struct:QueryParam
+removeCharsFirstANDLast	ToolFunc.cpp	/^void removeCharsFirstANDLast(std::string& strIn, const std::string& firstChars,const std::string& lastChars)$/;"	f	namespace:ToolFunc
+replaceString	ToolFunc.cpp	/^bool replaceString(std::string& ori_str,const std::string& rep_from,const std::string& rep_to)$/;"	f	namespace:ToolFunc
+reqHead	define.h	/^	mutable std::string reqHead;\/\/请求头$/;"	m	struct:QueryParam
+rtrim	ToolFunc.cpp	/^std::string& rtrim(std::string& in) {$/;"	f	namespace:ToolFunc
+runtime_error	RouteConfig.cpp	/^int RouteConfig::runtime_error;	\/\/运行时出现异常的处理方式 0：继续 1：exit$/;"	m	class:RouteConfig	file:
+runtime_error	RouteConfig.h	/^	static int runtime_error;	\/\/运行时出现异常的处理方式 0：继续 1：exi$/;"	m	class:RouteConfig
+s130reqAvail	BasePlan.h	/^		int s130reqAvail;\/\/130请求行程是否可用$/;"	m	class:BasePlan
+s_date	TimeIR.h	/^		int s_date;$/;"	m	class:Date_range
+s_week	TimeIR.h	/^		int s_week;$/;"	m	class:Week_range
+sepString	ToolFunc.cpp	/^int sepString(const std::string& input, const std::string& sep, std::tr1::unordered_set<std::string>& output) {$/;"	f	namespace:ToolFunc
+sepString	ToolFunc.cpp	/^int sepString(const std::string& input, const std::string& sep, std::vector<std::string>& output) {$/;"	f	namespace:ToolFunc
+sepString	ToolFunc.cpp	/^int sepString(const std::string& input, const std::string& sep, std::vector<std::string>& output, const std::string& blk) {$/;"	f	namespace:ToolFunc
+sepString	ToolFunc.cpp	/^std::vector<std::string> sepString(const std::string& input, const std::string& sep) {$/;"	f	namespace:ToolFunc
+setMode	define.h	/^	bool setMode(int mode){$/;"	f	class:LYPlace
+sort_pair_first	Utils.h	/^template <class T1, class T2, class Pred = std::less<T2> > struct sort_pair_first {$/;"	s
+sort_pair_second	Utils.h	/^template <class T1, class T2, class Pred = std::less<T2> > struct sort_pair_second {$/;"	s
+split	TimeIR.cpp	/^void TimeIR::split(const std::string& in_str, const std::string& delim, std::vector<std::string>& out_vec)$/;"	f	class:TimeIR
+str	TimeIR.cpp	/^char str[12][12] = {"20150103","20150228","20150311","20150411","20150511","20150611",$/;"	v
+string2int	TimeIR.cpp	/^int TimeIR::string2int(const std::string& in_str)$/;"	f	class:TimeIR
+thread_num	RouteConfig.cpp	/^int RouteConfig::thread_num=1;$/;"	m	class:RouteConfig	file:
+thread_num	RouteConfig.h	/^	static int thread_num;$/;"	m	class:RouteConfig
+thread_stack_size	RouteConfig.cpp	/^int RouteConfig::thread_stack_size=102400000;$/;"	m	class:RouteConfig	file:
+thread_stack_size	RouteConfig.h	/^	static int thread_stack_size;$/;"	m	class:RouteConfig
+ticketId	define.h	/^	std::string ticketId;$/;"	m	struct:ProductTicket
+ticket_detail_server_addr	RouteConfig.cpp	/^std::string RouteConfig::ticket_detail_server_addr;$/;"	m	class:RouteConfig	file:
+ticket_detail_server_addr	RouteConfig.h	/^	static std::string ticket_detail_server_addr;$/;"	m	class:RouteConfig
+ticket_server_timeout	RouteConfig.cpp	/^int RouteConfig::ticket_server_timeout;$/;"	m	class:RouteConfig	file:
+ticket_server_timeout	RouteConfig.h	/^	static int ticket_server_timeout;$/;"	m	class:RouteConfig
+ticket_simple_server_addr	RouteConfig.cpp	/^std::string RouteConfig::ticket_simple_server_addr;$/;"	m	class:RouteConfig	file:
+ticket_simple_server_addr	RouteConfig.h	/^	static std::string ticket_simple_server_addr;$/;"	m	class:RouteConfig
+time_range	TimeIR.h	/^		std::vector<std::string> time_range;$/;"	m	class:Rule_node
+time_weight	RouteConfig.cpp	/^double RouteConfig::time_weight;$/;"	m	class:RouteConfig	file:
+time_weight	RouteConfig.h	/^	static double time_weight;$/;"	m	class:RouteConfig
+toIntOffset	ToolFunc.cpp	/^int toIntOffset(const std::string& strTime, int& offset) {$/;"	f	namespace:ToolFunc
+toStrTime	ToolFunc.cpp	/^int toStrTime(int timeOffset, std::string& strTime) {$/;"	f	namespace:ToolFunc
+token	define.h	/^	std::string token;$/;"	m	struct:QueryParam
+traffic_redis_addr	RouteConfig.cpp	/^std::string RouteConfig::traffic_redis_addr;$/;"	m	class:RouteConfig	file:
+traffic_redis_addr	RouteConfig.h	/^    static std::string traffic_redis_addr;$/;"	m	class:RouteConfig
+traffic_server_addr	RouteConfig.cpp	/^std::string RouteConfig::traffic_server_addr;$/;"	m	class:RouteConfig	file:
+traffic_server_addr	RouteConfig.h	/^	static std::string traffic_server_addr;$/;"	m	class:RouteConfig
+traffic_server_port	RouteConfig.cpp	/^int RouteConfig::traffic_server_port;$/;"	m	class:RouteConfig	file:
+traffic_server_port	RouteConfig.h	/^	static int traffic_server_port;$/;"	m	class:RouteConfig
+traffic_server_timeout	RouteConfig.cpp	/^int RouteConfig::traffic_server_timeout;$/;"	m	class:RouteConfig	file:
+traffic_server_timeout	RouteConfig.h	/^	static int traffic_server_timeout;$/;"	m	class:RouteConfig
+traffic_white_file	RouteConfig.cpp	/^std::vector<std::string> RouteConfig::traffic_white_file;$/;"	m	class:RouteConfig	file:
+traffic_white_file	RouteConfig.h	/^	static std::vector<std::string> traffic_white_file;$/;"	m	class:RouteConfig
+type	TimeIR.h	/^		int type;$/;"	m	class:Rule_node
+type	define.h	/^	std::string type;$/;"	m	struct:QueryParam
+uid	define.h	/^	std::string uid;$/;"	m	struct:QueryParam
+varPlaceCmp	define.h	/^struct varPlaceCmp {$/;"	s
+ver	define.h	/^	std::string ver;$/;"	m	struct:QueryParam
+view_server_addr	RouteConfig.cpp	/^std::string RouteConfig::view_server_addr;$/;"	m	class:RouteConfig	file:
+view_server_addr	RouteConfig.h	/^	static std::string view_server_addr;$/;"	m	class:RouteConfig
+view_server_timeout	RouteConfig.cpp	/^int RouteConfig::view_server_timeout;$/;"	m	class:RouteConfig	file:
+view_server_timeout	RouteConfig.h	/^	static int view_server_timeout;$/;"	m	class:RouteConfig
+week_range	TimeIR.h	/^		std::vector<Week_range> week_range;$/;"	m	class:Rule_node
+wid	define.h	/^	std::string wid;$/;"	m	struct:QueryParam
+~BasePlan	BasePlan.h	/^		virtual ~BasePlan() {$/;"	f	class:BasePlan
+~CityPrefer	Prefer.h	/^	~CityPrefer() {$/;"	f	class:CityPrefer
+~Country	define.h	/^    ~Country(){};$/;"	f	class:Country
+~Intensity	define.h	/^	~Intensity() {$/;"	f	class:Intensity
+~KeyNode	Utils.h	/^	~KeyNode() {$/;"	f	class:KeyNode
+~LYPlace	define.h	/^	virtual ~LYPlace() {$/;"	f	class:LYPlace
+~PathScore	define.h	/^	~PathScore(){};$/;"	f	class:PathScore
+~PathView	PathView.h	/^	virtual ~PathView() {$/;"	f	class:PathView
+~PlaceInfo	define.h	/^	virtual ~PlaceInfo() {$/;"	f	class:PlaceInfo
+~PlanItem	PathView.h	/^	virtual ~PlanItem() {}$/;"	f	class:PlanItem
+~Prefer	Prefer.h	/^	virtual ~Prefer() {$/;"	f	class:Prefer
+~PrivateConstData	PrivateConstData.h	/^	~PrivateConstData() {$/;"	f	class:PrivateConstData
+~RouteBlock	Utils.h	/^	~RouteBlock() {$/;"	f	class:RouteBlock
+~RouteConfig	RouteConfig.cpp	/^RouteConfig::~RouteConfig(){$/;"	f	class:RouteConfig
+~TimeBlock	Utils.h	/^	~TimeBlock() {$/;"	f	class:TimeBlock
+~Tour	define.h	/^	virtual ~Tour() {$/;"	f	class:Tour
+~TrafficDetail	define.h	/^	~TrafficDetail() {$/;"	f	class:TrafficDetail
+~VarPlace	define.h	/^	virtual ~VarPlace() {$/;"	f	class:VarPlace

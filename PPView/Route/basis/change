@@ -1,0 +1,394 @@
+diff --git a/Route/basis/NodeJ.cpp b/Route/basis/NodeJ.cpp
+index 71fb6cb..d125ab5 100644
+--- a/Route/basis/NodeJ.cpp
++++ b/Route/basis/NodeJ.cpp
+@@ -177,7 +177,8 @@ bool NodeJ::setFixedCanDel(Json::Value& nodeJ,int canDel){
+ }
+ 
+ //判断是否可删除
+-bool NodeJ::isFixedCanDel(const Json::Value& nodeJ) {
++bool NodeJ::isNodeCanDel(const Json::Value& nodeJ) {
++    if (isFree(nodeJ)) return true;
+ 	if (nodeJ["fixed"].isMember("canDel") && nodeJ["fixed"]["canDel"].isInt() && nodeJ["fixed"]["canDel"].asInt()) {
+ 		return true;
+ 	}
+@@ -194,7 +195,7 @@ bool NodeJ::isDeleted(const Json::Value& nodeJ){
+ 
+ //判断是否按时到达
+ bool NodeJ::isFixedArvOnTime(const Json::Value& nodeJ) {
+-	if(nodeJ["arrange"]["error"].isArray() && nodeJ["arrange"]["error"].size() == 7 && nodeJ["arrange"]["error"][5].asInt()) return false;
++	if(nodeJ["arrange"]["error"].isArray() && nodeJ["arrange"]["error"][5].asInt()) return false;
+ 	return true;
+ }
+ 
+diff --git a/Route/basis/NodeJ.h b/Route/basis/NodeJ.h
+index 38abc2d..4ffb652 100644
+--- a/Route/basis/NodeJ.h
++++ b/Route/basis/NodeJ.h
+@@ -34,7 +34,7 @@ class NodeJ{
+ 		//设置fixed是否可删
+ 		static bool setFixedCanDel(Json::Value& nodeJ,int canDel);
+ 		//判断是否可删除
+-		static bool isFixedCanDel(const Json::Value& nodeJ);
++		static bool isNodeCanDel(const Json::Value& nodeJ);
+ 		//判断是否被删除
+ 		static bool isDeleted(const Json::Value& nodeJ);
+ 		//删除arrange
+diff --git a/Route/basis/PathGenerator.cpp b/Route/basis/PathGenerator.cpp
+index b51029d..293d045 100644
+--- a/Route/basis/PathGenerator.cpp
++++ b/Route/basis/PathGenerator.cpp
+@@ -3,7 +3,7 @@
+ #include<limits>
+ 
+ #define TopK 3
+-const bool debugInfo = false;
++const bool debugInfo = true;
+ using namespace std;
+ 
+ struct point{
+@@ -141,6 +141,7 @@ Json::Value PathGenerator::popBack() {
+ }
+ 
+ bool PathGenerator::DayPathExpand() {
++    if(debugInfo) cerr<<"before DayPathExpand"<<endl;
+ 	if (!NodeJ::checkRouteJ(m_inRouteJ)) {
+ 		_INFO("input routeJ is err");
+ 		return false;
+@@ -166,19 +167,33 @@ bool PathGenerator::DayPathExpandOpt() {
+ 		return false;
+ 	}
+ 	if (selectFixedPoiTimes()) {
++        _INFO("expandopt success");
+ 		//选取合理场次成功
+ 	} else {
+ 		m_outRouteJ.resize(0);
+ 		_INFO("expandopt error, use default expand");
+ 		DayPathExpand();
+ 	}
++    if(debugInfo) {
++        Json::FastWriter fw;
++        cerr<<"after selectFixedPoiTime"<<endl<<"m_outRouteJ: "<<fw.write(m_outRouteJ)<<endl;
++    }
++    for(int i=0;i<m_outRouteJ.size();i++) {
++        Json::Value& nodeJ=m_outRouteJ[i];
++        NodeJ::setDefaultError(nodeJ);
++    }
++    PathGenerator path(m_outRouteJ);
++    path.DayPathExpand();
++    m_outRouteJ=path.GetResult();
+ 	selectOpenClose(m_outRouteJ);
+ 	TimeEnrich();
+ }
+ bool PathGenerator::selectFixedPoiTimes() {
++    if(debugInfo) cerr<<"before selectFixedPoiTimes"<<endl;
+ 	Json::Value firstNode = m_inRouteJ[0u];
+ 	for (int tNum = 0; tNum < firstNode["fixed"]["times"].size(); tNum++) {
+ 		firstNode["arrange"]["time"] = firstNode["fixed"]["times"][tNum];
++		NodeJ::setRangeIdx(firstNode, tNum);
+ 		append(firstNode);
+ 		int fixIdx = 0;
+ 		int i = 0;
+@@ -186,7 +201,9 @@ bool PathGenerator::selectFixedPoiTimes() {
+ 			Json::Value nodeJ = m_inRouteJ[i];
+ 			if (NodeJ::isFree(nodeJ)) {
+ 				NodeJ::setRangeIdx(nodeJ, -1);
+-				setNodeError(nodeJ);
++				if(!setNodeError(nodeJ)) {
++                    return false;
++                }
+ 			} else if (NodeJ::isFixed(nodeJ)) {
+ 				fixIdx++;
+ 				bool appendSuccess = setFixedPoiTimes(nodeJ);
+@@ -215,7 +232,7 @@ bool PathGenerator::setFixedPoiTimes(Json::Value& nodeJ) {
+ 		if (!setNodeError(tmpNode)) {
+ 			return false;
+ 		}
+-		if (NodeJ::hasFixedConflictError(tmpNode)) {
++		if (NodeJ::hasFixedConflictError(tmpNode) || !NodeJ::isFixedArvOnTime(tmpNode)) {
+ 			continue;
+ 		} else {
+ 			break;
+@@ -327,11 +344,11 @@ bool PathGenerator::DoSearch(int depth) {
+ 	Json::Value lastNode = m_outRouteJ[m_outRouteJ.size()-1];
+ 	if (m_outRouteJ.size() == m_poiList.size() + 1) {
+ 		Json::Value node = m_inRouteJ[m_inRouteJ.size()-1];
+-//		NodeJ::setDefaultError(node);
++		NodeJ::setDefaultError(node);
+ 		if (!setNodeError(node)) {
+             return false;
+         }
+-		if (NodeJ::hasFixedConflictError(node)) {
++		if (NodeJ::hasFixedConflictError(node) || !NodeJ::isFixedArvOnTime(node)) {
+ 			return false;
+ 		}
+         /*
+@@ -351,7 +368,7 @@ bool PathGenerator::DoSearch(int depth) {
+ 			for (int size = 0; size < m_outRouteJ.size(); size++) {
+ 				Json::FastWriter fw;
+ 				Json::Value& nodeJ = m_outRouteJ[size];
+-				std::cerr << "node: " << nodeJ["id"].asString() << fw.write(nodeJ) << std::endl;
++//				std::cerr << "node: " << nodeJ["id"].asString() << fw.write(nodeJ) << std::endl;
+ 			}
+ 		}
+ 		int blockTime = m_playBorders.second - m_playBorders.first;
+@@ -388,20 +405,21 @@ bool PathGenerator::DoSearch(int depth) {
+ 
+ 				Json::Value node = m_poiList[nextIdx];
+ 				NodeJ::setDefaultError(node);
++                if(debugInfo)cerr<<"lastNode: "<<lastNode["id"].asString()<<" curNode: "<<node["id"].asString()<<endl;
+ 				if (NodeJ::isFixed(node)) {
+ 					//fixed 点基于场次搜索
+-					setFixedPoiTimes(node);
++					if (!setFixedPoiTimes(node)) {
++                        continue;
++                    }
+ 				} else if (NodeJ::isFree(node)) {
+ 					//设置free点为不关心开关门
+ 					NodeJ::setRangeIdx(node, -1);
+-					setNodeError(node);
++					if (!setNodeError(node)) {
++                        continue;
++                    }
+ 				}
+-				if (NodeJ::isFixed(node) && NodeJ::isFixedCanDel(node)
+-						&& (NodeJ::hasFixedConflictError(node) || isConflictWithBorders(node) || !NodeJ::isFixedArvOnTime(node))) {
+-					if (debugInfo) _INFO("fixed has conflict... continue");
+-					continue;
+-				} else if (NodeJ::isFree(node) && isConflictWithBorders(node)) {
+-					if (debugInfo) _INFO("free conflict with borders... continue");
++                if (isConflictWithBorders(node) && NodeJ::isNodeCanDel(node)) {
++					if (debugInfo) _INFO("conflict with borders... continue");
+ 					continue;
+ 				}
+ 				append(node);
+@@ -619,12 +637,14 @@ Json::Value PathGenerator::selectRouteJ(vector<Json::Value> ResultRouteJList){
+ }
+ 
+ bool PathGenerator::selectOpenClose(Json::Value& routeJ){
++    if(debugInfo) cerr<<"before selectOpenClose"<<endl;
+ 	MJ::MyTimer openCloseT;
+ 	openCloseT.start();
+     Json::FastWriter fw;
+     int fixId=0;
+-    for (int i=fixId;i<routeJ.size();i++) {
++    for (int i=0;i<routeJ.size();i++) {
+         if (NodeJ::isRightConflict(routeJ[i]) || NodeJ::hasFixedConflictError(routeJ[i])) {
++            _INFO("select failed");
+             return false;
+         }
+         if (NodeJ::isFixed(routeJ[i])) {
+@@ -726,17 +746,33 @@ int PathGenerator::ErrorCount(Json::Value routeJ){
+ 
+ bool PathGenerator::TimeEnrich() {
+ 	Json::Value& routeJ = m_outRouteJ;
++    Json::FastWriter fw;
++    if(debugInfo) {
++        cerr<<"before TimeEnrich: "<<fw.write(m_outRouteJ)<<endl;
++    }
+     int len=routeJ.size();
+     int vis[len];
+     int fixedId=0;
+     memset(vis,0,sizeof(vis));
+     for(int i=1;i<len;i++){
+         if(routeJ[i].isMember("fixed")){
+-            if(i-fixedId>1){                
++            if(i-fixedId>1){
+                 int num=0;
+                 Json::Value tempRouteJ;
++                float step[len];
++                int oriTime[len];
++                memset(step,0,sizeof(step));
++                memset(oriTime,0,sizeof(oriTime));
+                 for(int j=fixedId;j<=i;j++){
+-                    tempRouteJ[num++]=routeJ[j];
++                    tempRouteJ[num]=routeJ[j];
++                    if(tempRouteJ[num].isMember("free")) {
++                        int  time[3];
++                        time[0]=routeJ[j]["free"]["durs"][0].asInt();
++                        time[1]=routeJ[j]["free"]["durs"][1].asInt();
++                        step[num]=float(time[1]-time[0])/10;
++                        oriTime[num]=time[0];
++                    }
++                    num++;
+                 }
+                 num--;
+                 for(int u=1;u<=10;u++){
+@@ -754,27 +790,36 @@ bool PathGenerator::TimeEnrich() {
+                             }
+                             int oldErrorCount=ErrorCount(tempRouteJ);
+                             Json::Value ResultRouteJ=tempRouteJ;
+-                            float step=float(time[1]-time[0])/10;
+-                            int tempDur=floor(u*step);
+-                            NodeJ::setDurs(ResultRouteJ[j],time[0]+tempDur,time[1],time[2]);
++//                            float step=float(time[1]-time[0])/10;
++                            int tempDur=floor(u*step[j]);
++                            NodeJ::setDurs(ResultRouteJ[j],oriTime[j]+tempDur,time[1],time[2]);
+                             PathGenerator path(ResultRouteJ);
+                             path.DayPathExpand();
+                             ResultRouteJ=path.GetResult();
+ 
+                             int newErrorCount=ErrorCount(ResultRouteJ);
++                            if(debugInfo) {
++                                cerr<<"j: "<<j<<" oldError: "<<oldErrorCount<<" newError: "<<newErrorCount<<endl;
++                            }
+                             if (newErrorCount>oldErrorCount){
+-                                NodeJ::setDurs(tempRouteJ[j],time[0]+(u-1)*step,time[1],time[2]);
++                                if(debugInfo) {
++                                    cerr<<"j: "<<j<<" enrich over"<<"u: "<<u<<" step: "<<step[j]<<endl;
++                                }
++                                NodeJ::setDurs(tempRouteJ[j],oriTime[j]+(u-1)*step[j],time[1],time[2]);
+                                 PathGenerator path(tempRouteJ);
+                                 path.DayPathExpand();
+                                 tempRouteJ=path.GetResult();
+                                 vis[j]=1;
+                             }
+-                            if (u==10&&newErrorCount<=oldErrorCount){
+-                                NodeJ::setDurs(tempRouteJ[j],time[0]+tempDur,time[1],time[2]);
++                            else {
++                                if(debugInfo) {
++                                    cerr<<"strenth j:"<<j<<"u: "<<u<<" step: "<<step[j]<<endl;
++                                }
++                                NodeJ::setDurs(tempRouteJ[j],oriTime[j]+u*step[j],time[1],time[2]);
+                                 PathGenerator path(tempRouteJ);
+                                 path.DayPathExpand();
+                                 tempRouteJ=path.GetResult();
+-                                vis[j]=1;
++
+                             }
+                         }
+                     }
+@@ -783,6 +828,9 @@ bool PathGenerator::TimeEnrich() {
+                 for(int j=fixedId+1;j<i;j++){
+                     routeJ[j]=tempRouteJ[num++];
+                 }
++                if(debugInfo) {
++                    cerr<<fixedId<<" to "<<i<<" timeEnrich over, routeJ: "<<fw.write(routeJ)<<endl;
++                }
+             }
+             fixedId=i;
+         }
+diff --git a/Route/basis/PathGeneratorTest.cpp b/Route/basis/PathGeneratorTest.cpp
+index 2c49cb3..8f8487e 100644
+--- a/Route/basis/PathGeneratorTest.cpp
++++ b/Route/basis/PathGeneratorTest.cpp
+@@ -13,9 +13,11 @@ int main(){
+     const string host = "10.10.169.10";
+     const string db = "ppview_core_test";
+     unsigned int port = 3306;
++    map<string,string> in_id;
+     map<string,string> in_out;
+-    string fn,comment,num;
++    string fn,comment,num,id;
+     getline(cin,fn);
++//    getline(cin,id);
+ //    getline(cin,comment);
+ //    getline(cin,num);
+ //    cin>>fn>>comment>>num;
+@@ -30,7 +32,8 @@ int main(){
+         cout<<"connect success"<<endl;
+ //        string sqlstr="select input,output from cases where fn='"+fn+"' and comment='"+comment+"' and disable !=1 limit "+num+";";
+ //        string sqlstr="select input,output from cases where fn='"+fn+"' and disable !=1 limit "+num+";";
+-        string sqlstr="select input,output from cases where fn='"+fn+"' and disable !=1 ;";
++        string sqlstr="select input,output,id from cases where fn='"+fn+"' and disable !=1 ;";
++//        string sqlstr="select input,output,id from cases where fn='"+fn+"' and disable !=1 and id="+id+";";
+         printf("%s\n",sqlstr.c_str());
+         int t=mysql_query(&mysql,"set names utf8");
+         t=mysql_query(&mysql,sqlstr.c_str());
+@@ -46,6 +49,7 @@ int main(){
+ //                    if(row[0] == NULL || row[1] == NULL)
+ //                        continue;
+                     in_out[row[0]]=row[1];
++                    in_id[row[0]]=row[2];
+                 }
+             }
+             mysql_free_result(res);
+@@ -59,9 +63,7 @@ int main(){
+     int z=1;
+     for (it = in_out.begin();it != in_out.end();it++){
+         printf("case %d:\n",z++);
+-        cout<<"fn: "<<fn<<endl;
+         cout<<"input: "<<it->first.c_str()<<endl;
+-        cout<<"output: "<<it->second.c_str()<<endl;
+         string fin=it->first.c_str();
+         reader.parse(fin,routeJ);
+         PathGenerator* path = new PathGenerator(routeJ);
+@@ -72,43 +74,64 @@ int main(){
+             out_routeJ=path->GetResult();
+             result=fw.write(out_routeJ);
+         }
+-        
+-//        if(fn == "TimeEnrich"){
+-//
+-//        }
+         if(fn == "selectOpenClose"){
+             path->selectOpenClose(routeJ);
+             result=fw.write(routeJ);
+         }
++        if(fn == "DayPathExpand"){
++            path->DayPathExpand();
++            out_routeJ=path->GetResult();
++            result=fw.write(out_routeJ);
++        }
++        if(fn == "DayPathExpandOpt"){
++            path->DayPathExpandOpt();
++            out_routeJ=path->GetResult();
++            result=fw.write(out_routeJ);
++        }
+ 
++        cout<<"output: "<<it->second.c_str()<<endl;
++        Json::Value out;
++        reader.parse(it->second.c_str(),out);
++        for(int i=0;i<out.size();i++){
++            Json::Value node;
++            cout<<out[i]["id"].asString()<<" - ";
++        }cout<<endl;
+         cout<<"result: "<<result<<endl;
++        for(int i=0;i<out_routeJ.size();i++){
++            cout<<out_routeJ[i]["id"].asString()<<" - ";
++        }cout<<endl;
++
++            
++        cout<<"ID: "<<in_id[it->first.c_str()].c_str()<<endl;
+         if(strcmp(it->second.c_str(),result.c_str()) == 0){
+-            cout<<"success,as expected..."<<endl;
++            cout<<"YES, as expected..."<<endl;
+         }
+         else{
+-            cout<<"failed,unexpected..."<<endl;
++            cout<<"NO, unexpected..."<<endl;
+         }
+     }
+     /*
+ 	std::ifstream fin;
+ 	Json::Reader reader;
+-	fin.open("./timeCase.txt");
++	fin.open("./OptCase.txt");
+ 	int z=1;
+ 	if(fin.is_open()){
+ 		while(fin.good()&&!fin.eof()){
+ 			std::string line = "";
+-			Json::Value routeJ;
++			Json::Value in_routeJ,out_routeJ;
+ 			std::getline(fin, line);
+ 			if (!line.empty() && line[0] == '#') continue;
+-			reader.parse(line,routeJ);
+-			if (routeJ.isNull()) continue;
++			reader.parse(line,in_routeJ);
++			if (in_routeJ.isNull()) continue;
+ 			std::cout<<"case: "<<z<<std::endl;
+ 			Json::FastWriter fw;
+-			std::cout<<"input_routeJ: "<<endl<<fw.write(routeJ)<<std::endl;
++			std::cout<<"input_routeJ: "<<endl<<fw.write(in_routeJ)<<std::endl;
+ 			z++;
+-			PathGenerator* path = new PathGenerator(routeJ);
+-            path->TimeEnrich();
+-            Json::Value out_routeJ = path->GetResult();
++			PathGenerator* path = new PathGenerator(in_routeJ);
++            path->DayPathExpandOpt();
++            out_routeJ=path->GetResult();
++//            path->TimeEnrich();
++//            Json::Value out_routeJ = path->GetResult();
+ //            path->DayPathExpand();
+ //            Json::Value out_routeJ = path->GetResult();
+ //            path->selectOpenClose(routeJ);

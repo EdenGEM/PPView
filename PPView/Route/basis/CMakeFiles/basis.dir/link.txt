@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC    -shared -Wl,-soname,libbasis.so -o libbasis.so CMakeFiles/basis.dir/NodeJ.o CMakeFiles/basis.dir/PathGenerator.o -L/usr/local/mioji/lib -ltoolFunc -lbase -ljson -lmjcommon -Wl,-rpath,/usr/local/mioji/lib: 

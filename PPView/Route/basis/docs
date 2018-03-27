@@ -1,0 +1,80 @@
+分天拓展接口具体定义
+一. 点的定义
+首先定义一个点的格式,nodeJ，除arrange外的其它字段为只读:
+{“id”：”v123”,
+“locations“:{//到达和离开的经纬度,现在的逻辑暂时用不到,待用
+“in”:”23,45“,
+“out”:”23,45“
+}
+“toNext”:{在指定的key存在且交通时间>=0时方能到达;站点后紧跟行李点也在此设定;其值为null代表其是当天的最后一个点
+“v456”:390,
+“v789”:388
+}
+//free 与 fixed字段互斥
+“free”:{//非锁定点有景点 购物 餐厅和行李点共4类,特别地无场次玩乐也属于此类
+	“openClose”:[[11,22],[33,44]],左右皆闭的unix时间戳,关门时间大于开门时间且开关门时间均在天的范围内才算格式合法;排位靠前的开关门优先被尝试
+“durs”:[3600,7200,10800],分别代表min,rcmd,max,三个值均大于零且非严格单调递增;如果三个值相等即为锁定时长;点的最小游玩时长是要保证的,优先于开关门进行保证和其它
+}
+fixed:{//锁定点有站点,酒店 租车和有场次玩乐共4类点
+	“times”:[[11,22],[33,44]],左右皆闭的unix时间戳,离开时间大于等于到达时间才算格式合法;如果不在天的范围内,会由后面的检查报错流程,检查并报出来;锁定点的左右锁定可以超越左右边界，如果景点依次右排，非锁定点也可以超越右边界;左边和右边可以突破整个天的左右边界。fixed的时间范围可以重叠[[11,22],[15,22]],如用于智能优化时推荐下午7点到达，但可以突破到9点;排位靠前的锁定范围优先被尝试
+	“unavailable”:1,其值为0或者1,1代表当天不可用;前3类当天一定可用,玩乐经平移后当天可能不可用;用于高级编辑报错
+	“canDel”:其值为0或者1,现在只有玩乐值为1   
+}
+
+//只有arrange字段中的东西是可改变的
+“arrange”:{
+//在遍历与搜索过程中会改变的,相当于点在此次搜索中的一个配置 
+“controls”:{
+		“rangeIdx”: 表示从openClose或times数组中取用的下标;-1且点是free类型时代表不关心开关门;
+}
+“time”:[233,236]，最终该点的规划结果格式arrange,规划完成时被添加;所安排的时间戳,开始游玩时间和离开时间,[-1,-1]代表被删除;
+“error”:[1,1,0,0,0,0,0] //代表客观发生了第1和第2种客观冲突
+}
+}
+
+
+二. 接口定义
+routeJ:[nodeJ,nodeJ...],在开始时是一个空json,每次扩展的中间状态都反应在该结构里:
+在NodeJ和routeJ基础上定义PathGenerator
+class PathGenerator:{
+public:
+PathGenerator(json routeJ,json crotrols)
+//crotrols 中包含是否允许客观冲突删点等标志位,允许从外部控制路线生成的表现;比如指定优化顺序等
+{
+	bool checkRouteJ(json routeJ);//用于检查新加入的nodeJ格式是否正确
+	initPlayBorders(json routeJ);
+	setCrontrols(json crotrols);
+}
+对应的error标志
+static routeJ delFixedConflict(routeJ);//排序稍后
+DayPathExpand()
+{ 循环 append(nodeJ)}
+DayPathExpandOpt(); 基于DayPathExpand会搜索场次
+DayPathSearch();
+DayPathSearchOpt();会基于DayPathSearch搜索场次
+GetResultSpath(){}
+routeJ2Spath(){}
+GetResult()；{return m_outRouteJ}
+static timeenrich(json RouteJ) 在不影响开关门的前提下,在锁定点间均衡地增长各点的游玩时长;在所有点都添加完毕后调用
+priviate:
+bool isBackFixedConflict(routeJ);所添加的最后一个锁定点是否引起客观冲突报错,并且会置位
+json controls;
+pair<int,int> playBorders;报错用
+bool checkRouteJ(json routeJ);//用于检查新加入的nodeJ格式是否正确
+initplayBorders(json routeJ);
+setCrontrols(json crotrols);
+static Spath routeJ2Spath();//和现有程序衔接
+bool append(nodeJ) 可能会增加1~7中任何一种报错,最后一个点不报类型7
+nodeJ popBack() 弹出最后一个点 
+json m_inRouteJ;
+json m_outRouteJ；
+};
+//增加一个一个点时,可能会出现八种类型的错误,现编号如下:
+1.锁定点时间颠倒
+2.锁定点时间重叠
+3.锁定点两点之间时间不足
+4.锁定点之间交通时间不足
+5.非锁定时刻点无法满足开关门
+6.锁定时刻点无法再指定时刻或之前到达
+7.新增点离开时间和右边界冲突
+其中1~3称为客观冲突,1~4会在老的程序中报出错误,5~7是错误但不会展示给用户,5与6互斥
