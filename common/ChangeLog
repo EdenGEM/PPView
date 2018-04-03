@@ -1,0 +1,6 @@
+2016-08-12 lidongwei lidongwei@mioji.com
+	//这里列出了一些被去掉的函数及其替换方案
+	1.字符串处理  ------->     boost::string algo
+	2.编码转换                 boost::locale
+	3.基本数据类型转换 -->     boost::lexical_cast
+	4.计时             -->     boost::timer
