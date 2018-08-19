@@ -19,7 +19,7 @@ def main():
     parser.add_option('-e', '--etime', help = 'run like 23:59:59')
     parser.add_option('-u', '--uid', help = 'run type like DataPlan')
     parser.add_option('-t', '--type', help = 'run type like s125')
-    parser.add_option('-o', '--env', type="string",dest="env",help='the cmp_env run like test/offline or offline')
+    parser.add_option('-o', '--env', type="string",dest="env",help='the cmp_env run like test')
     parser.add_option('-m', '--mail', type="string",dest="mail",help='mail to like caoxiaolan@mioji.com ')
     opt, args = parser.parse_args()
     print "len of argv=%d"%len(sys.argv)

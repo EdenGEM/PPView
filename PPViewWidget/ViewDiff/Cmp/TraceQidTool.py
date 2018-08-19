@@ -43,7 +43,7 @@ class TraceQid:
         else:
             print "Type:",self.kType
             Types_dic[self.kType]=dict()
-            Types_dic[self.kType]=qid_dic
+            Types_dic[self.kType]=self.__LoadOneTypeData(self.kType)
             print "qid_dic size:",len(Types_dic[self.kType])
 
         self.Types_dic=Types_dic
@@ -59,7 +59,7 @@ class TraceQid:
 
         dbb="logQuery_"+kEnv
         conn=DBHandle(conf.Loadhost,conf.Loaduser,conf.Loadpasswd,dbb)
-        sqlstr="select qid,req_params from nginx_api_log_%s where uid='%s' and req_type='%s' and log_type='13' and qid > %s and qid <%s and req_params is not null group by qid having count(*)=1;"%(kDate,kUid,Type,kSqid,kEqid)
+        sqlstr="select qid,req_params from nginx_api_log_%s where uid='%s' and req_type='%s' and log_type='13' and qid >= %s and qid <= %s and req_params is not null group by qid having count(*)=1;"%(kDate,kUid,Type,kSqid,kEqid)
 #            sqlstr="select qid,req_params from nginx_api_log_%s where uid='%s' and log_type='13' and req_type='%s' and req_params is not null;"%(kDate,kUid,kType)
         print "sqlstr:",sqlstr
         qids=conn.do(sqlstr)
@@ -126,30 +126,13 @@ class TraceQid:
 
 
     def Mymail(self):
-        Types_dic=self.Types_dic
-        qids_dic=dict()
-        for Type,values in Types_dic.items():
-            for qid,item in values.items():
-                if not qids_dic.has_key(qid):
-                    qids_dic[qid]=list()
-                Type_dic=dict()
-                Type_dic[Type]=dict()
-                Type_dic[Type]["qid"]=qid
-                Type_dic[Type]["req_type"]=Type
-                Type_dic[Type]["req"]=item["req"]
-                Type_dic[Type]["resp"]=item["resp"]
-                qids_dic[qid].append(Type_dic)
-
-        print "qids_dic size: ",len(qids_dic)
-        for i in qids_dic:
-            print i
-        Dict=sorted(qids_dic.items(),key=lambda x:x[0])
-        print 'after sort'
-        for i in Dict: 
-            print i
-
-        env=self.kEnv
-        uid=self.kUid
+        conn=DBHandle(conf.Storehost,conf.Storeuser,conf.Storepasswd,conf.Storedb)
+        if self.kType == "":
+            sqlstr="select qid,req_type,env,req,resp from trace_qid where date='%s' and uid='%s' and qid >= %s and qid <=%s order by qid asc;"%(self.kDate,self.kUid,self.kSqid,self.kEqid)
+        else:
+            sqlstr="select qid,req_type,env,req,resp from trace_qid where date='%s' and uid='%s' and req_type='%s' and qid >= %s and qid <=%s order by qid asc;"%(self.kDate,self.kUid,self.kType,self.kSqid,self.kEqid)
+        resps=conn.do(sqlstr)
+        id_dic=dict()
         if len(self.Types_dic) == 0:
             html='''
             <html><body>
@@ -158,15 +141,16 @@ class TraceQid:
             '''
             return 0
 
+        env=self.kEnv
+        uid=self.kUid
         html='''
         <html><body>
         <h1 align="center">Trace env_uid:%s_%s</h1>
         <table border='1' align="center">
         <tr><th>type</th><th>query</th><th>req</th><th>resp</th></tr>
         <br>
-        '''%(self.kEnv,self.kUid)
-        for Type,item in Types_dic.items():
-            for qid,value in item.items():
+        '''%(env,uid)
+        for i,row in enumerate(resps):
                     html+='''
                     <tr>
                         <td>%s</td>
@@ -180,17 +164,17 @@ class TraceQid:
                         <a href="http://10.10.191.51:8000/cgi-bin/trace.py?env=%s&uid=%s&qid=%s&type=%s&load=resp" target="_blank">%s</a>
                         </td>
                     </tr>
-                    '''%(Type,env,uid,str(qid),Type,str(qid),\
-                            env,uid,str(qid),Type,str(qid),\
-                            env,uid,str(qid),Type,str(qid))
+                    '''%(row["req_type"],row["env"],uid,str(row["qid"]),row["req_type"],str(row["qid"]),\
+                            row["env"],uid,str(row["qid"]),row["req_type"],str(row["qid"]),\
+                            row["env"],uid,str(row["qid"]),row["req_type"],str(row["qid"]))
         html+='</table>'
         html+='</body></html>'
+
         with io.open('./traceQid.html','w',encoding='utf-8') as f:
             f.write((html).decode('utf-8'))
         print "Report ok"
         Dir=commands.getoutput('pwd')
         Report=Dir+"/traceQid.html"
-#        print Report
         mailto=self.kMail
         commands.getoutput('mioji-mail -m '+mailto+' -b "CmpInfo" -f '+Report+' -h 123')
         print "mail ok"
